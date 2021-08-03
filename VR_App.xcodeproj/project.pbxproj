@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3E926B8A45D00D6E492 /* AppDelegate.swift */; };
 		986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */; };
-		986BB3EE26B8A45D00D6E492 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3ED26B8A45D00D6E492 /* ViewController.swift */; };
+		986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */; };
 		986BB3F126B8A45D00D6E492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986BB3EF26B8A45D00D6E492 /* Main.storyboard */; };
 		986BB3F426B8A45D00D6E492 /* VR_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3F226B8A45D00D6E492 /* VR_App.xcdatamodeld */; };
 		986BB3F626B8A46200D6E492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 986BB3F526B8A46200D6E492 /* Assets.xcassets */; };
@@ -47,7 +47,7 @@
 		986BB3E626B8A45D00D6E492 /* VR_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VR_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB3E926B8A45D00D6E492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		986BB3ED26B8A45D00D6E492 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		986BB3F026B8A45D00D6E492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		986BB3F326B8A45D00D6E492 /* VR_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VR_App.xcdatamodel; sourceTree = "<group>"; };
 		986BB3F526B8A46200D6E492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,9 +128,9 @@
 		986BB3E826B8A45D00D6E492 /* VR_App */ = {
 			isa = PBXGroup;
 			children = (
+				9871161A26B8DA34001255E4 /* controller */,
 				986BB3E926B8A45D00D6E492 /* AppDelegate.swift */,
 				986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */,
-				986BB3ED26B8A45D00D6E492 /* ViewController.swift */,
 				986BB3EF26B8A45D00D6E492 /* Main.storyboard */,
 				986BB3F526B8A46200D6E492 /* Assets.xcassets */,
 				986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */,
@@ -158,6 +158,14 @@
 			path = VR_AppUITests;
 			sourceTree = "<group>";
 		};
+		9871161A26B8DA34001255E4 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		ED6A83B58131AFE4B684E3B7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +176,6 @@
 				BE6356C62AF26C33E01525E1 /* Pods-VR_AppTests.debug.xcconfig */,
 				716C668503DB1474B84223AA /* Pods-VR_AppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -446,7 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB3EE26B8A45D00D6E492 /* ViewController.swift in Sources */,
+				986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */,
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
 				986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */,
 				986BB3F426B8A45D00D6E492 /* VR_App.xcdatamodeld in Sources */,
