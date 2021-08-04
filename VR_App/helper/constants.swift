@@ -13,8 +13,12 @@ struct Constants {
         static let showOnboarding = "showOnboarding"
     }
     
+    struct StoryboardName{
+        static let authStoryboard = "Main"
+        static let tabBarStoryboard = "TabBar"
+    }
     struct StoryboardID{
-        static let mainStoryboard = "Main"
-        static let tabBarController = "MainTabController"
+        static let authController = "authController"
+        static let tabBarController = "mainTabController"
     }
 }
