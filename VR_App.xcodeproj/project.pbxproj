@@ -11,6 +11,17 @@
 		982CCC6926BA305200E260E3 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC6826BA305200E260E3 /* constants.swift */; };
 		982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC7226BACDA900E260E3 /* PresenterManager.swift */; };
 		982CCC7826BACFFB00E260E3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982CCC7726BACFFB00E260E3 /* TabBar.storyboard */; };
+		982CCC8826BAD96000E260E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC8726BAD96000E260E3 /* HomeViewController.swift */; };
+		982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC8C26BAD97500E260E3 /* TranscriptionsViewController.swift */; };
+		982CCC9226BAD98E00E260E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC9126BAD98E00E260E3 /* SettingsViewController.swift */; };
+		982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */; };
+		982CCC9C26BAD9D700E260E3 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */; };
+		982CCCA126BAD9EB00E260E3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCA026BAD9EB00E260E3 /* WelcomeViewController.swift */; };
+		982CCCA626BAD9F600E260E3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCA526BAD9F600E260E3 /* OnboardingViewController.swift */; };
+		982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCAA26BAD9FF00E260E3 /* SignUpViewController.swift */; };
+		982CCCB026BADA0900E260E3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCAF26BADA0900E260E3 /* SignInViewController.swift */; };
+		982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB426BADA1A00E260E3 /* GenderViewController.swift */; };
+		982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */; };
 		986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3E926B8A45D00D6E492 /* AppDelegate.swift */; };
 		986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */; };
 		986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */; };
@@ -52,6 +63,17 @@
 		982CCC6826BA305200E260E3 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		982CCC7226BACDA900E260E3 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		982CCC7726BACFFB00E260E3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		982CCC8726BAD96000E260E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		982CCC8C26BAD97500E260E3 /* TranscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionsViewController.swift; sourceTree = "<group>"; };
+		982CCC9126BAD98E00E260E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		982CCCA026BAD9EB00E260E3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		982CCCA526BAD9F600E260E3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		982CCCAA26BAD9FF00E260E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		982CCCAF26BADA0900E260E3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		982CCCB426BADA1A00E260E3 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentityViewController.swift; sourceTree = "<group>"; };
 		986BB3E626B8A45D00D6E492 /* VR_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VR_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB3E926B8A45D00D6E492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +157,32 @@
 			path = manager;
 			sourceTree = "<group>";
 		};
+		982CCC8526BAD92500E260E3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */,
+				982CCCA026BAD9EB00E260E3 /* WelcomeViewController.swift */,
+				982CCCA526BAD9F600E260E3 /* OnboardingViewController.swift */,
+				982CCCAA26BAD9FF00E260E3 /* SignUpViewController.swift */,
+				982CCCAF26BADA0900E260E3 /* SignInViewController.swift */,
+				982CCCB426BADA1A00E260E3 /* GenderViewController.swift */,
+				982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		982CCC8626BAD93000E260E3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				982CCC8726BAD96000E260E3 /* HomeViewController.swift */,
+				982CCC8C26BAD97500E260E3 /* TranscriptionsViewController.swift */,
+				982CCC9126BAD98E00E260E3 /* SettingsViewController.swift */,
+				982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */,
+				982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		986BB3DD26B8A45D00D6E492 = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +245,8 @@
 		9871161A26B8DA34001255E4 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */,
+				982CCC8626BAD93000E260E3 /* Main */,
+				982CCC8526BAD92500E260E3 /* Auth */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -491,11 +540,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */,
+				982CCC9C26BAD9D700E260E3 /* ErrorViewController.swift in Sources */,
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
+				982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */,
+				982CCC9226BAD98E00E260E3 /* SettingsViewController.swift in Sources */,
+				982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */,
 				986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */,
+				982CCCA126BAD9EB00E260E3 /* WelcomeViewController.swift in Sources */,
+				982CCC8826BAD96000E260E3 /* HomeViewController.swift in Sources */,
 				982CCC6126BA2BC900E260E3 /* helper.swift in Sources */,
+				982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */,
+				982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */,
 				986BB3F426B8A45D00D6E492 /* VR_App.xcdatamodeld in Sources */,
+				982CCCB026BADA0900E260E3 /* SignInViewController.swift in Sources */,
+				982CCCA626BAD9F600E260E3 /* OnboardingViewController.swift in Sources */,
 				982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */,
+				982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */,
 				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
