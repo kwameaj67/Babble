@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		982CCC6126BA2BC900E260E3 /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC6026BA2BC900E260E3 /* helper.swift */; };
+		982CCC6926BA305200E260E3 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC6826BA305200E260E3 /* constants.swift */; };
+		982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC7226BACDA900E260E3 /* PresenterManager.swift */; };
+		982CCC7826BACFFB00E260E3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982CCC7726BACFFB00E260E3 /* TabBar.storyboard */; };
 		986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3E926B8A45D00D6E492 /* AppDelegate.swift */; };
 		986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */; };
 		986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */; };
@@ -44,6 +48,10 @@
 		716C668503DB1474B84223AA /* Pods-VR_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_AppTests.release.xcconfig"; path = "Target Support Files/Pods-VR_AppTests/Pods-VR_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B6377A8797A8AF8EDEE0EE7 /* Pods-VR_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App.release.xcconfig"; path = "Target Support Files/Pods-VR_App/Pods-VR_App.release.xcconfig"; sourceTree = "<group>"; };
 		916D9875DF3EE2BBF74AAA11 /* Pods-VR_App-VR_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		982CCC6026BA2BC900E260E3 /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		982CCC6826BA305200E260E3 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		982CCC7226BACDA900E260E3 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
+		982CCC7726BACFFB00E260E3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		986BB3E626B8A45D00D6E492 /* VR_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VR_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB3E926B8A45D00D6E492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		982CCC5F26BA2B9500E260E3 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				982CCC6026BA2BC900E260E3 /* helper.swift */,
+				982CCC6826BA305200E260E3 /* constants.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		982CCC6D26BA993A00E260E3 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		982CCC7126BACD9A00E260E3 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				982CCC7226BACDA900E260E3 /* PresenterManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
 		986BB3DD26B8A45D00D6E492 = {
 			isa = PBXGroup;
 			children = (
@@ -128,10 +160,14 @@
 		986BB3E826B8A45D00D6E492 /* VR_App */ = {
 			isa = PBXGroup;
 			children = (
+				982CCC7126BACD9A00E260E3 /* manager */,
+				982CCC6D26BA993A00E260E3 /* custom */,
+				982CCC5F26BA2B9500E260E3 /* helper */,
 				9871161A26B8DA34001255E4 /* controller */,
 				986BB3E926B8A45D00D6E492 /* AppDelegate.swift */,
 				986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */,
 				986BB3EF26B8A45D00D6E492 /* Main.storyboard */,
+				982CCC7726BACFFB00E260E3 /* TabBar.storyboard */,
 				986BB3F526B8A46200D6E492 /* Assets.xcassets */,
 				986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */,
 				986BB3FA26B8A46200D6E492 /* Info.plist */,
@@ -289,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982CCC7826BACFFB00E260E3 /* TabBar.storyboard in Resources */,
 				986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */,
 				986BB3F626B8A46200D6E492 /* Assets.xcassets in Resources */,
 				986BB3F126B8A45D00D6E492 /* Main.storyboard in Resources */,
@@ -456,7 +493,10 @@
 				986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */,
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
 				986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */,
+				982CCC6126BA2BC900E260E3 /* helper.swift in Sources */,
 				986BB3F426B8A45D00D6E492 /* VR_App.xcdatamodeld in Sources */,
+				982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */,
+				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
