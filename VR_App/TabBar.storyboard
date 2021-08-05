@@ -8,17 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Transciptions-->
+        <!--Transcipts-->
         <scene sceneID="KlK-Ao-Oid">
             <objects>
-                <viewController id="WNV-Qo-mCe" sceneMemberID="viewController">
+                <viewController id="WNV-Qo-mCe" customClass="TranscriptionsViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CW6-Qt-4Jh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="i1w-uc-52s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Transciptions" id="7pr-2G-yc8"/>
+                    <tabBarItem key="tabBarItem" title="Transcipts" image="folder.fill" catalog="system" id="7pr-2G-yc8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogx-RL-VZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,14 +27,14 @@
         <!--Home-->
         <scene sceneID="euv-yC-CYo">
             <objects>
-                <viewController id="Rxx-xF-anN" sceneMemberID="viewController">
+                <viewController id="Rxx-xF-anN" customClass="HomeViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ft-f2-VeX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ho2-gj-tvQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="nZA-z0-EOR"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="nZA-z0-EOR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRV-XQ-84W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,14 +43,14 @@
         <!--Settings-->
         <scene sceneID="kl6-XM-lWN">
             <objects>
-                <viewController id="7Cg-xf-rBQ" sceneMemberID="viewController">
+                <viewController id="7Cg-xf-rBQ" customClass="SettingsViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fo-e8-ml4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nI5-Go-APm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="FKo-Pa-eYH"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="FKo-Pa-eYH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1X-LJ-2GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,6 +64,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <color key="selectedImageTintColor" red="0.26326613269999999" green="0.51634088789999999" blue="0.53542798759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Rxx-xF-anN" kind="relationship" relationship="viewControllers" id="gJl-9Y-ZCD"/>
@@ -77,7 +79,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
