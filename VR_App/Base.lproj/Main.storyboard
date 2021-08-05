@@ -16,16 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-ej-ckW">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-ej-ckW">
+                                <rect key="frame" x="188.5" y="540.5" width="37" height="37"/>
                                 <color key="color" systemColor="systemGray3Color"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Babble.me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVa-yK-6dI">
+                                <rect key="frame" x="101.5" y="425.5" width="211" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="gXN-8F-xIu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJh-jG-08E">
+                                <rect key="frame" x="155.5" y="848" width="103" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.26326613269999999" green="0.51634088789999999" blue="0.53542798759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fKe-ej-ckW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9gn-2f-dbT"/>
-                            <constraint firstItem="fKe-ej-ckW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qUW-0n-QfP"/>
+                            <constraint firstItem="fKe-ej-ckW" firstAttribute="top" secondItem="aVa-yK-6dI" secondAttribute="bottom" constant="60" id="3tg-mK-dk8"/>
+                            <constraint firstItem="fKe-ej-ckW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SA3-qq-VBO"/>
+                            <constraint firstItem="aVa-yK-6dI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Z4A-I8-SZG"/>
+                            <constraint firstItem="VJh-jG-08E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aIh-7O-FeL"/>
+                            <constraint firstItem="VJh-jG-08E" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="bvR-z2-lwX"/>
+                            <constraint firstItem="aVa-yK-6dI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jH5-PB-SJo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -34,19 +53,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-343" y="82"/>
+            <point key="canvasLocation" x="-343.47826086956525" y="81.696428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboarding View Controller-->
         <scene sceneID="xQH-K6-ux2">
             <objects>
-                <viewController storyboardIdentifier="authController" modalPresentationStyle="fullScreen" id="xdR-82-qee" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authController" modalPresentationStyle="fullScreen" id="xdR-82-qee" customClass="OnboardingViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4q6-PS-XYY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTy-Cu-Upj">
-                                <rect key="frame" x="162" y="438" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTy-Cu-Upj">
+                                <rect key="frame" x="162" y="442.5" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,6 +72,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Cb-XP-aK7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bTy-Cu-Upj" firstAttribute="centerX" secondItem="0Cb-XP-aK7" secondAttribute="centerX" id="gpO-QO-jcj"/>
+                            <constraint firstItem="bTy-Cu-Upj" firstAttribute="centerY" secondItem="0Cb-XP-aK7" secondAttribute="centerY" id="qK4-ba-E7X"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lr2-9g-TVS"/>
                     <connections>
@@ -64,16 +86,16 @@
             </objects>
             <point key="canvasLocation" x="472" y="82"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="kHh-Zc-XPS">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="haI-eO-gkd" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="haI-eO-gkd" customClass="WelcomeViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmz-sI-O5f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-lb-Cme">
-                                <rect key="frame" x="155" y="438" width="127" height="21"/>
+                                <rect key="frame" x="144" y="411" width="127" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
