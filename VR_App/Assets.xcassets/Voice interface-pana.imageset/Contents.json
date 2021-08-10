@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "Voice interface-pana@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Voice interface-pana@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
