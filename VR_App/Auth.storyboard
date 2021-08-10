@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="k9q-n2-G3a">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pz-dB-i4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="welcomeController" title="Welcome" modalPresentationStyle="fullScreen" id="gbw-9H-khE" customClass="WelcomeViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FO6-MI-NHP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Babble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPe-FX-KO9">
+                                <rect key="frame" x="106.5" y="280" width="201" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sB-Gy-Fxa">
+                                <rect key="frame" x="35" y="612" width="344" height="65"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="C5F-Qz-ZvL"/>
+                                    <constraint firstAttribute="height" constant="65" id="cef-jB-2af"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Get started">
+                                    <color key="titleColor" red="0.26326613269999999" green="0.51634088789999999" blue="0.53542798759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPressGetStartedButton:" destination="gbw-9H-khE" eventType="touchUpInside" id="VXW-O7-lTc"/>
+                                    <segue destination="X9V-Y4-iUY" kind="show" identifier="showSignup" id="ibw-MT-KQq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2X-me-r7a">
+                                <rect key="frame" x="35" y="697" width="344" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="dlK-Yt-1Op"/>
+                                    <constraint firstAttribute="height" constant="65" id="xUl-Hx-wcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPressloginButton:" destination="gbw-9H-khE" eventType="touchUpInside" id="pX5-ec-41v"/>
+                                    <segue destination="Cyc-Hz-Nln" kind="show" identifier="showSignin" id="0Dp-Dt-3dK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOO-B4-0Mq">
+                                <rect key="frame" x="40" y="431" width="334" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="9QI-89-9Sv"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Babble is useful for people with disabilities that make it difficult for them to use a keyboard.">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="16" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6000000000000001" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kub-qQ-xdS"/>
+                        <color key="backgroundColor" red="0.26326613269999999" green="0.51634088789999999" blue="0.53542798759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bOO-B4-0Mq" firstAttribute="centerX" secondItem="kub-qQ-xdS" secondAttribute="centerX" id="4AS-pk-7GP"/>
+                            <constraint firstItem="bOO-B4-0Mq" firstAttribute="leading" secondItem="FO6-MI-NHP" secondAttribute="leading" constant="40" id="5SF-C6-Liy"/>
+                            <constraint firstItem="w2X-me-r7a" firstAttribute="leading" secondItem="kub-qQ-xdS" secondAttribute="leading" constant="35" id="6bq-C2-g9X"/>
+                            <constraint firstItem="1sB-Gy-Fxa" firstAttribute="leading" secondItem="kub-qQ-xdS" secondAttribute="leading" constant="35" id="9ra-nK-RH7"/>
+                            <constraint firstItem="kub-qQ-xdS" firstAttribute="trailing" secondItem="1sB-Gy-Fxa" secondAttribute="trailing" constant="35" id="CRq-YH-3Ou"/>
+                            <constraint firstItem="HPe-FX-KO9" firstAttribute="top" secondItem="kub-qQ-xdS" secondAttribute="top" constant="140" id="DI9-SU-ccC"/>
+                            <constraint firstAttribute="trailing" secondItem="bOO-B4-0Mq" secondAttribute="trailing" constant="40" id="EwO-VZ-GnG"/>
+                            <constraint firstItem="bOO-B4-0Mq" firstAttribute="centerY" secondItem="kub-qQ-xdS" secondAttribute="centerY" id="KWz-GV-edf"/>
+                            <constraint firstItem="kub-qQ-xdS" firstAttribute="bottom" secondItem="w2X-me-r7a" secondAttribute="bottom" constant="100" id="LDc-gS-4q2"/>
+                            <constraint firstItem="w2X-me-r7a" firstAttribute="top" secondItem="1sB-Gy-Fxa" secondAttribute="bottom" constant="20" id="WO6-Qd-7fc"/>
+                            <constraint firstItem="HPe-FX-KO9" firstAttribute="centerX" secondItem="kub-qQ-xdS" secondAttribute="centerX" id="jrS-8r-r5S"/>
+                            <constraint firstItem="kub-qQ-xdS" firstAttribute="trailing" secondItem="w2X-me-r7a" secondAttribute="trailing" constant="35" id="rmA-03-koo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x2X-dz-RJB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XiV-Nd-dA0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="getStartedButton" destination="1sB-Gy-Fxa" id="wd2-Yf-x2n"/>
+                        <outlet property="loginButton" destination="w2X-me-r7a" id="kjf-FQ-o7a"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1962" y="82"/>
+        </scene>
+        <!--Sign Up-->
+        <scene sceneID="VHn-vZ-fVE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQc-Ak-drY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="signupController" title="Sign Up" modalPresentationStyle="formSheet" id="X9V-Y4-iUY" customClass="SignUpViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AMK-np-aAu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IQy-9N-GW6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create an account" id="FRe-FE-tWg">
+                        <barButtonItem key="backBarButtonItem" title=" " id="wtv-ps-fkG"/>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2993" y="-323"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="Vxr-Lg-nX6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FnE-cK-10R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="signinController" title="Sign In" modalPresentationStyle="formSheet" id="Cyc-Hz-Nln" customClass="SignInViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nps-S2-c0n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g56-FA-uGI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="hdX-U9-aw9">
+                        <barButtonItem key="backBarButtonItem" title=" " id="V1j-ln-MeN"/>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2994" y="368"/>
+        </scene>
+        <!--Custom Navigation View Controller-->
+        <scene sceneID="M8S-7p-Wva">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0C-YS-YcT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="authInitController" automaticallyAdjustsScrollViewInsets="NO" id="ZT5-dk-qC3" customClass="CustomNavigationViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kYt-hl-ETP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1ZX-SS-vAC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.11651788576684818" green="0.11651788576684818" blue="0.11651788576684818" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gbw-9H-khE" kind="relationship" relationship="rootViewController" id="zvP-uZ-QFB"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1200" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
