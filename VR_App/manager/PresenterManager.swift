@@ -16,6 +16,7 @@ class PresenterManager {
     enum VC {
         case mainTabController
         case onboarding
+        case authInit
     }
     
     func showViewController(vc:VC){
@@ -24,9 +25,11 @@ class PresenterManager {
         case .mainTabController:
             viewController = UIStoryboard(name:Constants.StoryboardName.tabBarStoryboard, bundle: nil).instantiateViewController (identifier: Constants.StoryboardID.tabBarController)
         case .onboarding:
-            viewController = UIStoryboard(name:Constants.StoryboardName.authStoryboard, bundle: nil).instantiateViewController (identifier: Constants.StoryboardID.authController)
-        
+            viewController = UIStoryboard(name:Constants.StoryboardName.onboardingStoryboard, bundle: nil).instantiateViewController (identifier: Constants.StoryboardID.onboardingController)
+        case .authInit:
+            viewController = UIStoryboard(name:Constants.StoryboardName.authStoryboard, bundle: nil).instantiateViewController (identifier: Constants.StoryboardID.authInitController)
         }
+        
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate, let window = sceneDelegate.window{
             window.rootViewController = viewController
             UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
