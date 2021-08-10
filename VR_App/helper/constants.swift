@@ -11,14 +11,22 @@ import Foundation
 struct Constants {
     struct Segue {
         static let showOnboarding = "showOnboarding"
+        static let showWelcome = "showWelcome"
+        static let showSignin = "showSignin"
+        static let showSignup = "showSignup"
     }
     
     struct StoryboardName{
-        static let authStoryboard = "Main"
+        static let onboardingStoryboard = "Main"
+        static let authStoryboard = "Auth"
         static let tabBarStoryboard = "TabBar"
     }
     struct StoryboardID{
-        static let authController = "authController"
+        static let onboardingController = "onboardingController"
+        static let authInitController = "authInitController"
+        static let welcomeController = "welcomeController"
+        static let signupController = "signupController"
+        static let signinController = "signinController"
         static let tabBarController = "mainTabController"
     }
 }
