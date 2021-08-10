@@ -9,21 +9,41 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var getStartedButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        buttonStyles()
+     
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func buttonStyles(){
+        roundCorners(button: loginButton)
+        roundCorners(button: getStartedButton)
+        loginButton.layer.backgroundColor = .none
+        loginButton.layer.borderWidth = 1.0
+        loginButton.layer.borderColor = CGColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
+        
     }
-    */
 
+    @IBAction func onPressGetStartedButton(_ sender: Any) {
+        modalPresentationStyle = .fullScreen
+    }
+    @IBAction func onPressloginButton(_ sender: Any) {
+        modalPresentationStyle = .fullScreen
+    }
+    
 }
