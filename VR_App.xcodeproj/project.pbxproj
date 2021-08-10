@@ -25,6 +25,9 @@
 		984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */; };
 		984EDF9B26C1942C00DBA40C /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9A26C1942C00DBA40C /* Swipe.swift */; };
 		984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */; };
+		984EDFB426C1C34200DBA40C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984EDFB326C1C34200DBA40C /* Auth.storyboard */; };
+		984EDFB526C1C34200DBA40C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984EDFB326C1C34200DBA40C /* Auth.storyboard */; };
+		984EDFB626C1C34200DBA40C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984EDFB326C1C34200DBA40C /* Auth.storyboard */; };
 		986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3E926B8A45D00D6E492 /* AppDelegate.swift */; };
 		986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */; };
 		986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB3ED26B8A45D00D6E492 /* LoadingViewController.swift */; };
@@ -80,6 +83,7 @@
 		984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		984EDF9A26C1942C00DBA40C /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperCollectionViewCell.swift; sourceTree = "<group>"; };
+		984EDFB326C1C34200DBA40C /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		986BB3E626B8A45D00D6E492 /* VR_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VR_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB3E926B8A45D00D6E492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 				986BB3EB26B8A45D00D6E492 /* SceneDelegate.swift */,
 				986BB3EF26B8A45D00D6E492 /* Main.storyboard */,
 				982CCC7726BACFFB00E260E3 /* TabBar.storyboard */,
+				984EDFB326C1C34200DBA40C /* Auth.storyboard */,
 				986BB3F526B8A46200D6E492 /* Assets.xcassets */,
 				986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */,
 				986BB3FA26B8A46200D6E492 /* Info.plist */,
@@ -417,6 +422,7 @@
 			files = (
 				982CCC7826BACFFB00E260E3 /* TabBar.storyboard in Resources */,
 				986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */,
+				984EDFB426C1C34200DBA40C /* Auth.storyboard in Resources */,
 				986BB3F626B8A46200D6E492 /* Assets.xcassets in Resources */,
 				986BB3F126B8A45D00D6E492 /* Main.storyboard in Resources */,
 			);
@@ -426,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984EDFB526C1C34200DBA40C /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984EDFB626C1C34200DBA40C /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
