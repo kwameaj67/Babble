@@ -152,7 +152,7 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="70U-N2-mg8">
-                                <rect key="frame" x="146" y="659.5" width="122" height="27.5"/>
+                                <rect key="frame" x="146" y="610" width="122" height="77"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.26326613269999999" green="0.51634088789999999" blue="0.53542798759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -168,6 +168,7 @@
                             <constraint firstItem="G2D-4a-y1s" firstAttribute="top" secondItem="70U-N2-mg8" secondAttribute="bottom" constant="70" id="bBu-vb-WKG"/>
                             <constraint firstItem="Wco-Ma-TrG" firstAttribute="trailing" secondItem="0Cb-XP-aK7" secondAttribute="trailing" id="cYh-Km-K5N"/>
                             <constraint firstItem="Wco-Ma-TrG" firstAttribute="top" secondItem="4q6-PS-XYY" secondAttribute="top" id="fve-e1-RUg"/>
+                            <constraint firstItem="70U-N2-mg8" firstAttribute="top" secondItem="Wco-Ma-TrG" secondAttribute="bottom" constant="10" id="uPc-i9-axI"/>
                             <constraint firstItem="0Cb-XP-aK7" firstAttribute="bottom" secondItem="G2D-4a-y1s" secondAttribute="bottom" constant="40" id="xvv-Dp-Bc0"/>
                         </constraints>
                     </view>
