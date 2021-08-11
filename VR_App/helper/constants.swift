@@ -16,11 +16,15 @@ struct Constants {
         static let showSignup = "showSignup"
         static let showGender = "showGender"
         static let showIdentity = "showIdentity"
+        
+//        Main App Segue IDs
     }
     
     struct StoryboardName{
         static let onboardingStoryboard = "Main"
         static let authStoryboard = "Auth"
+        
+//      Main App Storyborad file names
         static let tabBarStoryboard = "TabBar"
     }
     struct StoryboardID{
@@ -33,7 +37,7 @@ struct Constants {
         static let identityController = "identityController"
         
         
-//        Home
+//        Main App IDs
         static let tabBarController = "mainTabController"
     }
 }
