@@ -14,6 +14,8 @@ struct Constants {
         static let showWelcome = "showWelcome"
         static let showSignin = "showSignin"
         static let showSignup = "showSignup"
+        static let showGender = "showGender"
+        static let showIdentity = "showIdentity"
     }
     
     struct StoryboardName{
@@ -27,6 +29,11 @@ struct Constants {
         static let welcomeController = "welcomeController"
         static let signupController = "signupController"
         static let signinController = "signinController"
+        static let genderController = "genderController"
+        static let identityController = "identityController"
+        
+        
+//        Home
         static let tabBarController = "mainTabController"
     }
 }

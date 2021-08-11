@@ -94,11 +94,13 @@
                     <connections>
                         <outlet property="getStartedButton" destination="1sB-Gy-Fxa" id="wd2-Yf-x2n"/>
                         <outlet property="loginButton" destination="w2X-me-r7a" id="kjf-FQ-o7a"/>
+                        <segue destination="NyG-Wu-jRt" kind="show" identifier="showGender" id="5pw-Dt-BZX"/>
+                        <segue destination="4kL-AI-pis" kind="show" identifier="showIdentity" id="v0Q-cP-j5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pz-dB-i4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="82"/>
+            <point key="canvasLocation" x="1707" y="-190"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="VHn-vZ-fVE">
@@ -116,7 +118,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQc-Ak-drY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2993" y="-323"/>
+            <point key="canvasLocation" x="3457" y="-190"/>
+        </scene>
+        <!--Gender-->
+        <scene sceneID="RGc-rc-U0g">
+            <objects>
+                <viewController storyboardIdentifier="genderController" title="Gender" id="NyG-Wu-jRt" customClass="GenderViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BDx-EP-fCP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qEP-Vu-M7p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Gender" id="Ii9-gE-1uT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oh0-JQ-g7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="538"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="Vxr-Lg-nX6">
@@ -134,7 +152,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnE-cK-10R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2994" y="368"/>
+            <point key="canvasLocation" x="4271" y="-190"/>
+        </scene>
+        <!--UserIdentity-->
+        <scene sceneID="euL-p3-wsD">
+            <objects>
+                <viewController storyboardIdentifier="identityController" title="UserIdentity" id="4kL-AI-pis" customClass="UserIdentityViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ue8-fh-kiM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="G4y-mh-Bkw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your identity" id="bhu-3m-0j2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVp-q4-GqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="-736"/>
         </scene>
         <!--Custom Navigation View Controller-->
         <scene sceneID="M8S-7p-Wva">
@@ -162,7 +196,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0C-YS-YcT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="82"/>
+            <point key="canvasLocation" x="770" y="-189"/>
         </scene>
     </scenes>
     <resources>
