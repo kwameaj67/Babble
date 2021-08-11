@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomNavigationViewController: UINavigationController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         makeBarVisible()
@@ -20,6 +20,7 @@ class CustomNavigationViewController: UINavigationController {
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = true
     }
+    
 
 
 }

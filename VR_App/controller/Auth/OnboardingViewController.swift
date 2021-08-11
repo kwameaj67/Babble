@@ -9,6 +9,7 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
+    var img_index: Int = 0
     @IBOutlet weak var swipePageControl: UIPageControl!
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var swiperCollectionView: UICollectionView!
@@ -26,8 +27,10 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupCollectionView()
+        setupPageControls()
         swiperCollectionView.delegate = self
         swiperCollectionView.dataSource = self
+//        getStartedButton.setTitle("Get started", for: .normal)
         
     }
     
@@ -35,16 +38,30 @@ class OnboardingViewController: UIViewController {
       roundCorners(button: getStartedButton)
     }
    
-    @IBAction func onPressGetStartedButton(_ sender: UIButton){
-        PresenterManager.shared.showViewController(vc: .authInit)
+    private func setupPageControls(){
+        swipePageControl.numberOfPages = Swipe.swipeData.count
     }
-   
-
+    @IBAction func onPressGetStartedButton(_ sender: UIButton){
+        swiperCollectionView.scrollToNextItem()
+        let index = Int(swiperCollectionView.contentOffset.x) / Int(swiperCollectionView.frame.width)
+        print(index)
+        if index == 0{
+            self.swipePageControl.allowsContinuousInteraction = true
+            getStartedButton.setTitle("Next", for: .normal)
+        }else if index == 1{
+            self.swipePageControl.currentPage = index
+            getStartedButton.setTitle("Next", for: .normal)
+        }else{
+            self.swipePageControl.currentPage = index
+                getStartedButton.setTitle("Get started 👊🏽", for: .normal)
+                PresenterManager.shared.showViewController(vc: .authInit)
+        }
+    }
 }
 
 extension OnboardingViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return Swipe.swipeData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,6 +80,11 @@ extension OnboardingViewController:UICollectionViewDelegate,UICollectionViewData
         let index = Int(swiperCollectionView.contentOffset.x) / Int(swiperCollectionView.frame.width)
         print(index)
         self.swipePageControl.currentPage = index
+       if index == 1{
+            getStartedButton.setTitle("Next", for: .normal)
+        }else if index == 2{
+            getStartedButton.setTitle("Get started 👊🏽", for: .normal)
+        }
     }
     func setupCollectionView(){
         swiperCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
@@ -71,7 +93,18 @@ extension OnboardingViewController:UICollectionViewDelegate,UICollectionViewData
         self.swiperCollectionView.collectionViewLayout = layout
         swiperCollectionView.isPagingEnabled = true
         swiperCollectionView.showsHorizontalScrollIndicator = false
-        
     }
     
+    
+}
+
+extension UICollectionView {
+    func scrollToNextItem() {
+        let contentOffset = CGFloat(floor(self.contentOffset.x + self.bounds.size.width))
+        self.moveToFrame(contentOffset: contentOffset)
+        
+    }
+    func moveToFrame(contentOffset : CGFloat) {
+            self.setContentOffset(CGPoint(x: contentOffset, y: self.contentOffset.y), animated: true)
+    }
 }

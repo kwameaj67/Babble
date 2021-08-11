@@ -11,7 +11,6 @@
         <!--Welcome-->
         <scene sceneID="k9q-n2-G3a">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0pz-dB-i4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="welcomeController" title="Welcome" modalPresentationStyle="fullScreen" id="gbw-9H-khE" customClass="WelcomeViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FO6-MI-NHP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -64,7 +63,7 @@
                                     <fragment content="Babble is useful for people with disabilities that make it difficult for them to use a keyboard.">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="16" name="AvenirNext-Regular"/>
+                                            <font key="NSFont" size="18" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6000000000000001" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -97,13 +96,13 @@
                         <outlet property="loginButton" destination="w2X-me-r7a" id="kjf-FQ-o7a"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pz-dB-i4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1962" y="82"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="VHn-vZ-fVE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IQc-Ak-drY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="signupController" title="Sign Up" modalPresentationStyle="formSheet" id="X9V-Y4-iUY" customClass="SignUpViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AMK-np-aAu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -115,13 +114,13 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="wtv-ps-fkG"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQc-Ak-drY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2993" y="-323"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="Vxr-Lg-nX6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FnE-cK-10R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="signinController" title="Sign In" modalPresentationStyle="formSheet" id="Cyc-Hz-Nln" customClass="SignInViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nps-S2-c0n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -130,30 +129,30 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="hdX-U9-aw9">
-                        <barButtonItem key="backBarButtonItem" title=" " id="V1j-ln-MeN"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="EfH-CY-DwA"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FnE-cK-10R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2994" y="368"/>
         </scene>
         <!--Custom Navigation View Controller-->
         <scene sceneID="M8S-7p-Wva">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b0C-YS-YcT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="authInitController" automaticallyAdjustsScrollViewInsets="NO" id="ZT5-dk-qC3" customClass="CustomNavigationViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kYt-hl-ETP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1ZX-SS-vAC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.left" catalog="system" largeTitles="YES" backIndicatorTransitionMaskImage="arrow.left" id="1ZX-SS-vAC">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.11651788576684818" green="0.11651788576684818" blue="0.11651788576684818" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -161,11 +160,13 @@
                         <segue destination="gbw-9H-khE" kind="relationship" relationship="rootViewController" id="zvP-uZ-QFB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0C-YS-YcT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="82"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
