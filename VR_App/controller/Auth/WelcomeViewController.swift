@@ -40,9 +40,11 @@ class WelcomeViewController: UIViewController {
     }
 
     @IBAction func onPressGetStartedButton(_ sender: Any) {
+        animatePulseButton(getStartedButton)
         modalPresentationStyle = .fullScreen
     }
     @IBAction func onPressloginButton(_ sender: Any) {
+        animatePulseButton(loginButton)
         modalPresentationStyle = .fullScreen
     }
     

@@ -42,17 +42,16 @@ class OnboardingViewController: UIViewController {
         swipePageControl.numberOfPages = Swipe.swipeData.count
     }
     @IBAction func onPressGetStartedButton(_ sender: UIButton){
+        animatePulseButton(getStartedButton)
         swiperCollectionView.scrollToNextItem()
         let index = Int(swiperCollectionView.contentOffset.x) / Int(swiperCollectionView.frame.width)
+        self.swipePageControl.currentPage = index
         print(index)
         if index == 0{
-            self.swipePageControl.allowsContinuousInteraction = true
             getStartedButton.setTitle("Next", for: .normal)
         }else if index == 1{
-            self.swipePageControl.currentPage = index
             getStartedButton.setTitle("Next", for: .normal)
         }else{
-            self.swipePageControl.currentPage = index
                 getStartedButton.setTitle("Get started 👊🏽", for: .normal)
                 PresenterManager.shared.showViewController(vc: .authInit)
         }
