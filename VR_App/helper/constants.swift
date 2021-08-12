@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct Constants {
     struct Segue {
@@ -39,5 +39,9 @@ struct Constants {
         
 //        Main App IDs
         static let tabBarController = "mainTabController"
+    }
+    struct Colors {
+        static let green = UIColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00)
+        static let red = UIColor(red: 0.72, green: 0.00, blue: 0.00, alpha: 1.00)
     }
 }
