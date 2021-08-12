@@ -35,7 +35,8 @@ class LoadingViewController: UIViewController {
 //                window.rootViewController = tabBarController
 //            }
         }else{
-            performSegue(withIdentifier: Constants.Segue.showOnboarding , sender: nil)
+            PresenterManager.shared.showViewController(vc: .authInit)
+//            performSegue(withIdentifier: Constants.Segue.showOnboarding , sender: nil)
         }
     }
     
