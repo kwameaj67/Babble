@@ -9,21 +9,20 @@ import UIKit
 
 class UserIdentityViewController: UIViewController {
 
+    @IBOutlet weak var doneButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        Styles()
+    }
+    func Styles(){
+        roundCorners(button: doneButton)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onTapDoneButton(_ sender: Any) {
+        PresenterManager.shared.showViewController(vc: .mainTabController)
     }
-    */
+    
+    
 
 }
