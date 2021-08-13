@@ -38,6 +38,7 @@
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
+		98FD197F26C54C00009C4A5F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD197E26C54C00009C4A5F /* Validate.swift */; };
 		9CD8F1EBCA8796A2281EDFCA /* Pods_VR_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */; };
 		BBDE20820ABEFA8F941788A0 /* Pods_VR_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F267C99AB5379816744CED76 /* Pods_VR_App.framework */; };
 		DB2B15D3B297C4B1F3512F77 /* Pods_VR_App_VR_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DADD11EC998829F98BA985 /* Pods_VR_App_VR_AppUITests.framework */; };
@@ -101,6 +102,7 @@
 		986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_AppUITests.swift; sourceTree = "<group>"; };
 		986BB41026B8A46200D6E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
+		98FD197E26C54C00009C4A5F /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		A56652A0F5D558737BEA884A /* Pods-VR_App-VR_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VR_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6356C62AF26C33E01525E1 /* Pods-VR_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-VR_AppTests/Pods-VR_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		986BB3E826B8A45D00D6E492 /* VR_App */ = {
 			isa = PBXGroup;
 			children = (
+				98FD197A26C54BA1009C4A5F /* extensions */,
 				984EDF8626C1714700DBA40C /* views */,
 				984EDF8526C1713C00DBA40C /* model */,
 				982CCC7126BACD9A00E260E3 /* manager */,
@@ -306,6 +309,14 @@
 				989BE05A26C4332500A2F4CB /* Transcript.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		98FD197A26C54BA1009C4A5F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98FD197E26C54C00009C4A5F /* Validate.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		ED6A83B58131AFE4B684E3B7 /* Pods */ = {
@@ -611,6 +622,7 @@
 				982CCCA126BAD9EB00E260E3 /* WelcomeViewController.swift in Sources */,
 				982CCC8826BAD96000E260E3 /* HomeViewController.swift in Sources */,
 				982CCC6126BA2BC900E260E3 /* helper.swift in Sources */,
+				98FD197F26C54C00009C4A5F /* Validate.swift in Sources */,
 				982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */,
 				982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */,
 				986BB3F426B8A45D00D6E492 /* VR_App.xcdatamodeld in Sources */,

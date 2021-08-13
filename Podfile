@@ -5,13 +5,16 @@ target 'VR_App' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'GoogleSignIn'
+  pod 'MBProgressHUD'
+  pod 'loady'
   # Pods for VR_App
 
   target 'VR_AppTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
+  
   target 'VR_AppUITests' do
     # Pods for testing
   end

@@ -12,9 +12,13 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.5.0)
+  - loady (1.0.7)
+  - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
   - GoogleSignIn
+  - loady
+  - MBProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -22,13 +26,17 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - loady
+    - MBProgressHUD
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  loady: f2acbcbd53bdeb55425e478304da2f7ff3ec706e
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
-PODFILE CHECKSUM: 9ce862f0464a96f18e8b0a212c39e55e37e22c78
+PODFILE CHECKSUM: bbeae6a5c46364274151013a5b667a1fc0d8a87f
 
 COCOAPODS: 1.10.1
