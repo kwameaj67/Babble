@@ -37,6 +37,7 @@
 		986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */; };
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
+		9895DA8926C69E03000B6ACA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895DA8826C69E03000B6ACA /* User.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
 		98FD197F26C54C00009C4A5F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD197E26C54C00009C4A5F /* Validate.swift */; };
 		9CD8F1EBCA8796A2281EDFCA /* Pods_VR_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */; };
@@ -101,6 +102,7 @@
 		986BB40A26B8A46200D6E492 /* VR_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VR_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_AppUITests.swift; sourceTree = "<group>"; };
 		986BB41026B8A46200D6E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9895DA8826C69E03000B6ACA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
 		98FD197E26C54C00009C4A5F /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		A56652A0F5D558737BEA884A /* Pods-VR_App-VR_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				989BE05A26C4332500A2F4CB /* Transcript.swift */,
+				9895DA8826C69E03000B6ACA /* User.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				982CCCA626BAD9F600E260E3 /* OnboardingViewController.swift in Sources */,
 				982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */,
 				984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */,
+				9895DA8926C69E03000B6ACA /* User.swift in Sources */,
 				982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */,
 				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
 				989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */,

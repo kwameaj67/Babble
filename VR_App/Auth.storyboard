@@ -424,7 +424,6 @@
                                 <state key="normal" title="👦🏻  Male">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <state key="selected" title="I'm male"/>
                                 <connections>
                                     <action selector="onTapMale:" destination="NyG-Wu-jRt" eventType="touchUpInside" id="S0j-Rw-LHM"/>
                                 </connections>
