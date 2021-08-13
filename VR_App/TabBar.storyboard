@@ -105,7 +105,6 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="arrow.left" width="128" height="128"/>
         <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>

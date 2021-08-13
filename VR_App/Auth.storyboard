@@ -436,6 +436,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="pc5-D3-1Cy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="👩🏻  Female">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -484,7 +485,9 @@
                             <constraint firstItem="qEP-Vu-M7p" firstAttribute="trailing" secondItem="YlH-4v-exH" secondAttribute="trailing" constant="35" id="rVd-CF-Dgm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Gender" id="Ii9-gE-1uT"/>
+                    <navigationItem key="navigationItem" title="Select your gender" id="Ii9-gE-1uT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="8rl-Xh-OxH"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="InputContainer" destination="I8a-AQ-YUu" id="RAr-r6-pKg"/>
                         <outlet property="continueButton" destination="YlH-4v-exH" id="lsz-zV-bEm"/>
@@ -704,10 +707,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ue8-fh-kiM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ne-3u-8qC">
+                                <rect key="frame" x="35" y="757" width="344" height="65"/>
+                                <color key="backgroundColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Sve-LE-EXD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.97118188159999996" green="0.97337649500000001" blue="0.97543250189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapDoneButton:" destination="4kL-AI-pis" eventType="touchUpInside" id="pCL-cc-Hin"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="G4y-mh-Bkw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9ne-3u-8qC" firstAttribute="leading" secondItem="G4y-mh-Bkw" secondAttribute="leading" constant="35" id="MqH-oz-6z5"/>
+                            <constraint firstItem="G4y-mh-Bkw" firstAttribute="bottom" secondItem="9ne-3u-8qC" secondAttribute="bottom" constant="40" id="RHs-nz-hCA"/>
+                            <constraint firstItem="G4y-mh-Bkw" firstAttribute="trailing" secondItem="9ne-3u-8qC" secondAttribute="trailing" constant="35" id="dKz-1o-pqV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your identity" id="bhu-3m-0j2"/>
+                    <connections>
+                        <outlet property="doneButton" destination="9ne-3u-8qC" id="ZjM-P1-GY6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVp-q4-GqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
