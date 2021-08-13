@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJh-jG-08E">
-                                <rect key="frame" x="155.5" y="848" width="103" height="24"/>
+                                <rect key="frame" x="155.5" y="832" width="103" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -41,10 +41,10 @@
                         <color key="backgroundColor" red="0.26326613269999999" green="0.51634088789999999" blue="0.53542798759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fKe-ej-ckW" firstAttribute="top" secondItem="aVa-yK-6dI" secondAttribute="bottom" constant="60" id="3tg-mK-dk8"/>
+                            <constraint firstAttribute="bottom" secondItem="VJh-jG-08E" secondAttribute="bottom" constant="40" id="PM5-sa-rLL"/>
                             <constraint firstItem="fKe-ej-ckW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SA3-qq-VBO"/>
                             <constraint firstItem="aVa-yK-6dI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Z4A-I8-SZG"/>
                             <constraint firstItem="VJh-jG-08E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aIh-7O-FeL"/>
-                            <constraint firstItem="VJh-jG-08E" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="bvR-z2-lwX"/>
                             <constraint firstItem="aVa-yK-6dI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jH5-PB-SJo"/>
                         </constraints>
                     </view>

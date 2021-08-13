@@ -36,7 +36,6 @@ class WelcomeViewController: UIViewController {
         loginButton.layer.backgroundColor = .none
         loginButton.layer.borderWidth = 1.0
         loginButton.layer.borderColor = CGColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
-        
     }
 
     @IBAction func onPressGetStartedButton(_ sender: Any) {
