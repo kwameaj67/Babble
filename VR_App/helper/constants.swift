@@ -43,5 +43,11 @@ struct Constants {
     struct Colors {
         static let green = UIColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00)
         static let red = UIColor(red: 0.72, green: 0.00, blue: 0.00, alpha: 1.00)
+        static let white = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
+        
+//        CGColors
+        static let CGgreen = CGColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00)
+        static let CGred = CGColor(red: 0.72, green: 0.00, blue: 0.00, alpha: 1.00)
+        static let CGwhite = CGColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
     }
 }
