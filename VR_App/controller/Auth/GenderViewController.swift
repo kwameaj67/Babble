@@ -28,7 +28,7 @@ class GenderViewController: UIViewController {
         maleButton.isSelected = false
         femaleButton.isSelected = false
         
-        
+      
     }
     
     func Styles(){
@@ -47,6 +47,7 @@ class GenderViewController: UIViewController {
 
    
     @IBAction func onTapMale(_ sender: Any) {
+        animatePulseButton(maleButton)
         maleButton.isSelected = !maleButton.isSelected
         if  maleButton.isSelected{
            selectedMale()
@@ -56,6 +57,7 @@ class GenderViewController: UIViewController {
         }
     }
     @IBAction func onTapFemale(_ sender: Any) {
+        animatePulseButton(femaleButton)
         femaleButton.isSelected = !femaleButton.isSelected
         if  femaleButton.isSelected{
             selectedFemale()
@@ -67,10 +69,11 @@ class GenderViewController: UIViewController {
     
     func selectedMale(){
         maleButton.setTitle("I am male", for: .normal)
-        maleButton.layer.backgroundColor = Constants.Colors.CGgreen
         maleButton.layer.borderWidth = 0.0
+        maleButton.layer.backgroundColor = Constants.Colors.CGgreen
         maleButton.setTitleColor(Constants.Colors.white,for: .normal)
         femaleButton.isSelected = false
+        
     }
     func deSelectedMale(){
         maleButton.setTitle("👦🏻  Male", for: .normal)
@@ -96,8 +99,13 @@ class GenderViewController: UIViewController {
     }
     @IBAction func onTapContinue(_ sender: Any) {
     animatePulseButton(continueButton)
-        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.identityController) as! UserIdentityViewController
-        navigationController?.pushViewController(vc, animated: true)
+        if maleButton.isSelected == true || femaleButton.isSelected == true || genderTextField.text != ""{
+            let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.identityController) as! UserIdentityViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }else{
+            
+        }
+       
     }
     
     func createToolBar() -> UIToolbar{
@@ -114,8 +122,8 @@ class GenderViewController: UIViewController {
     }
     @objc func onSelectGender(){
         genderTextField.resignFirstResponder()
-        maleButton.isSelected = false
-        femaleButton.isSelected = false
+        deSelectedFemale()
+        deSelectedMale()
     }
     @objc func onCancelGender(){
         genderTextField.resignFirstResponder()
@@ -124,9 +132,11 @@ class GenderViewController: UIViewController {
     func createGenderPicker(){
         genderTextField.inputView = genderPicker
         genderTextField.inputAccessoryView = createToolBar()
+        
     }
     
     @IBAction func onTapGenderField(_ sender: Any) {
+//        self.view.isUserInteractionEnabled = false
         genderTextField.resignFirstResponder()
     }
 }
@@ -147,7 +157,7 @@ extension GenderViewController:UIPickerViewDataSource,UIPickerViewDelegate{
             let pickerLabel = UILabel()
             pickerLabel.textColor = UIColor.black
             pickerLabel.text = genders[row]
-            pickerLabel.font = UIFont(name: "Avenir-Regular", size: 14.0)
+            pickerLabel.font = UIFont(name: "Avenir", size: 14.0)
             pickerLabel.font = UIFont.boldSystemFont(ofSize: 20) // In this use your custom font
             pickerLabel.textAlignment = NSTextAlignment.center
             return pickerLabel
@@ -155,8 +165,7 @@ extension GenderViewController:UIPickerViewDataSource,UIPickerViewDelegate{
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         genderTextField.text = genders[row]
-        deSelectedFemale()
-        deSelectedMale()
+     
 //        genderTextField.resignFirstResponder()
     }
     
