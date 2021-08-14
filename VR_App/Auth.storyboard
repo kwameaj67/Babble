@@ -386,7 +386,7 @@
                                     <constraint firstAttribute="height" constant="95" id="Q9k-Yg-xfL"/>
                                     <constraint firstAttribute="width" constant="275" id="pKG-kw-VZh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzY-sJ-KCe">
@@ -451,7 +451,7 @@
                                         <rect key="frame" x="0.0" y="8" width="344" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="onTapGenderField:" destination="NyG-Wu-jRt" eventType="touchUpInside" id="Hms-yY-fD9"/>
@@ -498,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oh0-JQ-g7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2637.68115942029" y="537.05357142857144"/>
+            <point key="canvasLocation" x="2616" y="-134"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="Vxr-Lg-nX6">
@@ -722,23 +722,99 @@
                                     <action selector="onTapDoneButton:" destination="4kL-AI-pis" eventType="touchUpInside" id="pCL-cc-Hin"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you identify?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaz-ZP-tXa">
+                                <rect key="frame" x="98" y="190" width="218" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="Unv-2M-SpL"/>
+                                    <constraint firstAttribute="width" constant="218" id="r7h-vg-X48"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ci-jA-LDa" userLabel="BtnOption1">
+                                <rect key="frame" x="35" y="298" width="344" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="TGY-Hs-5at"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="I am Deaf and use signs🧏🏻‍♀️">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapDeafButton:" destination="4kL-AI-pis" eventType="touchUpInside" id="khn-s3-1ZM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-p8-N57" userLabel="BtnOption2">
+                                <rect key="frame" x="35" y="383" width="344" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="7Pu-2e-MGc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="Y9f-VA-7T4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="I am Dumb and use signs 🧏🏻‍♂️">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapDumbButton:" destination="4kL-AI-pis" eventType="touchUpInside" id="IXd-RI-6Sn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61u-ce-ifc" userLabel="InputContainer">
+                                <rect key="frame" x="35" y="468" width="344" height="65"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Other" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-eF-ecP">
+                                        <rect key="frame" x="2" y="2" width="340" height="61"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onTapIndentityInput:" destination="4kL-AI-pis" eventType="touchUpInside" id="2Mn-OP-acl"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8695368161" green="0.89041846690000004" blue="0.84862361990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EZ6-eF-ecP" firstAttribute="top" secondItem="61u-ce-ifc" secondAttribute="top" constant="2" id="2IJ-Al-Fwd"/>
+                                    <constraint firstItem="EZ6-eF-ecP" firstAttribute="leading" secondItem="61u-ce-ifc" secondAttribute="leading" constant="2" id="5dZ-cE-naJ"/>
+                                    <constraint firstAttribute="height" constant="65" id="DvU-xs-oFI"/>
+                                    <constraint firstAttribute="bottom" secondItem="EZ6-eF-ecP" secondAttribute="bottom" constant="2" id="cGl-oy-dLp"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZ6-eF-ecP" secondAttribute="trailing" constant="2" id="fF7-xk-QGu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G4y-mh-Bkw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="61u-ce-ifc" firstAttribute="top" secondItem="Nd3-p8-N57" secondAttribute="bottom" constant="20" id="D72-lU-sJJ"/>
+                            <constraint firstItem="Nd3-p8-N57" firstAttribute="top" secondItem="9Ci-jA-LDa" secondAttribute="bottom" constant="20" id="GOT-fS-iqs"/>
+                            <constraint firstItem="9Ci-jA-LDa" firstAttribute="top" secondItem="Eaz-ZP-tXa" secondAttribute="bottom" constant="20" id="INx-jh-Uex"/>
+                            <constraint firstItem="9Ci-jA-LDa" firstAttribute="leading" secondItem="G4y-mh-Bkw" secondAttribute="leading" constant="35" id="Kj8-Na-Vef"/>
                             <constraint firstItem="9ne-3u-8qC" firstAttribute="leading" secondItem="G4y-mh-Bkw" secondAttribute="leading" constant="35" id="MqH-oz-6z5"/>
                             <constraint firstItem="G4y-mh-Bkw" firstAttribute="bottom" secondItem="9ne-3u-8qC" secondAttribute="bottom" constant="40" id="RHs-nz-hCA"/>
+                            <constraint firstItem="Nd3-p8-N57" firstAttribute="leading" secondItem="G4y-mh-Bkw" secondAttribute="leading" constant="35" id="Shj-og-CI0"/>
+                            <constraint firstItem="61u-ce-ifc" firstAttribute="leading" secondItem="G4y-mh-Bkw" secondAttribute="leading" constant="35" id="WHE-AM-E0S"/>
+                            <constraint firstItem="G4y-mh-Bkw" firstAttribute="trailing" secondItem="61u-ce-ifc" secondAttribute="trailing" constant="35" id="aM6-SU-VT3"/>
                             <constraint firstItem="G4y-mh-Bkw" firstAttribute="trailing" secondItem="9ne-3u-8qC" secondAttribute="trailing" constant="35" id="dKz-1o-pqV"/>
+                            <constraint firstItem="Eaz-ZP-tXa" firstAttribute="top" secondItem="G4y-mh-Bkw" secondAttribute="top" constant="50" id="dwd-Gi-PoD"/>
+                            <constraint firstItem="G4y-mh-Bkw" firstAttribute="trailing" secondItem="Nd3-p8-N57" secondAttribute="trailing" constant="35" id="iaP-SG-Wm3"/>
+                            <constraint firstItem="G4y-mh-Bkw" firstAttribute="trailing" secondItem="9Ci-jA-LDa" secondAttribute="trailing" constant="35" id="k2H-5e-GG6"/>
+                            <constraint firstItem="Eaz-ZP-tXa" firstAttribute="centerX" secondItem="G4y-mh-Bkw" secondAttribute="centerX" id="mVd-md-Oeq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your identity" id="bhu-3m-0j2"/>
                     <connections>
+                        <outlet property="deafButton" destination="9Ci-jA-LDa" id="8az-QV-GEf"/>
                         <outlet property="doneButton" destination="9ne-3u-8qC" id="ZjM-P1-GY6"/>
+                        <outlet property="dumbButton" destination="Nd3-p8-N57" id="bNf-we-4f3"/>
+                        <outlet property="identityTextField" destination="EZ6-eF-ecP" id="eEl-y3-jfh"/>
+                        <outlet property="inputContainer" destination="61u-ce-ifc" id="x0J-wc-wHr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVp-q4-GqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="-736"/>
+            <point key="canvasLocation" x="2615.9420289855075" y="-804.24107142857144"/>
         </scene>
         <!--Custom Navigation View Controller-->
         <scene sceneID="M8S-7p-Wva">
