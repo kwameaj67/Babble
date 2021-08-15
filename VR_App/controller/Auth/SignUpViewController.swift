@@ -124,10 +124,6 @@ class SignUpViewController: UIViewController {
             confirmPasswordTextField.isSecureTextEntry = false
         }
     }
-    @IBAction func goToSignUp(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.signupController) as! SignUpViewController
-        navigationController?.pushViewController(vc, animated: true)
-    }
     @IBAction func onTapLogin(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.signinController) as! SignInViewController
         navigationController?.pushViewController(vc, animated: true)
