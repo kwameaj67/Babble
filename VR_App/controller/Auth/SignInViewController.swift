@@ -73,6 +73,10 @@ class SignInViewController: UIViewController {
         }
         
     }
+    @IBAction func onTapSignup(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.signupController)as! SignUpViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func onTapGoogleButton(_ sender: Any) {
         animatePulseButton(googleButton)
     }
