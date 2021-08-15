@@ -37,8 +37,7 @@ class UserIdentityViewController: UIViewController {
         btn1.layer.borderColor = Constants.Colors.CGgreen
         btn2.layer.borderColor = Constants.Colors.CGgreen
         btn1.layer.borderWidth = 1.0
-        btn2.layer.borderWidth = 1.0
-        
+        btn2.layer.borderWidth = 1.0        
     }
     
     func createToolBar() -> UIToolbar{
@@ -56,6 +55,8 @@ class UserIdentityViewController: UIViewController {
     
     @objc func onSelectIdentity(){
         identityTextField.resignFirstResponder()
+        deselectDumb()
+        deselectDeaf()
     }
     @objc func onCancel(){
         identityTextField.text = ""
@@ -67,16 +68,49 @@ class UserIdentityViewController: UIViewController {
         identityTextField.inputAccessoryView = createToolBar()
     }
     @IBAction func onTapDoneButton(_ sender: Any) {
+        animatePulseButton(doneButton)
         PresenterManager.shared.showViewController(vc: .mainTabController)
     }
     
     @IBAction func onTapIndentityInput(_ sender: Any) {
         identityTextField.resignFirstResponder()
     }
+    func selectDeaf(){
+        deafButton.setTitle("I am Deaf and use signs🧏🏻‍♀️ ✅", for: .normal)
+        dumbButton.isSelected = false
+    }
+    func deselectDeaf(){
+        deafButton.setTitle("I am Deaf and use signs🧏🏻‍♀️", for: .normal)
+        dumbButton.isSelected = false
+    }
+    func selectDumb(){
+        dumbButton.setTitle("I am Dumb and use signs 🧏🏻‍♂️ ✅", for: .normal)
+        deafButton.isSelected = false
+    }
+    func deselectDumb(){
+        dumbButton.setTitle("I am Dumb and use signs 🧏🏻‍♂️", for: .normal)
+        deafButton.isSelected = false
+    }
     @IBAction func onTapDeafButton(_ sender: Any) {
+        animatePulseButton(deafButton)
+        deafButton.isSelected = !deafButton.isSelected
+        if deafButton.isSelected{
+            selectDeaf()
+            deselectDumb()
+        }else{
+            deselectDeaf()
+        }
     }
     
     @IBAction func onTapDumbButton(_ sender: Any) {
+        animatePulseButton(dumbButton)
+        dumbButton.isSelected = !dumbButton.isSelected
+        if dumbButton.isSelected{
+            selectDumb()
+            deselectDeaf()
+        }else{
+            deselectDumb()
+        }
     }
 }
 
