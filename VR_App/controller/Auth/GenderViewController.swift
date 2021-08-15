@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class GenderViewController: UIViewController {
     let genders = ["Transexual Man","Transexual Woman","Transgender Man","Transgender Woman","Neither"]
   
@@ -28,7 +29,6 @@ class GenderViewController: UIViewController {
         maleButton.isSelected = false
         femaleButton.isSelected = false
         
-      
     }
     
     func Styles(){
@@ -36,6 +36,7 @@ class GenderViewController: UIViewController {
         roundCorners(button: femaleButton)
         roundCorners(button: continueButton)
         textInputRoundCorners(view: InputContainer)
+        
     }
     func otherCornerStyles(btn1:UIButton,btn2:UIButton){
         btn1.layer.borderColor = Constants.Colors.CGgreen
@@ -81,6 +82,7 @@ class GenderViewController: UIViewController {
         maleButton.layer.backgroundColor = Constants.Colors.CGwhite
         maleButton.layer.borderColor = Constants.Colors.CGgreen
         maleButton.setTitleColor(.systemGray3,for: .normal)
+        femaleButton.isSelected = false
     }
     func selectedFemale(){
         femaleButton.setTitle("I am Female", for: .normal)
@@ -99,12 +101,13 @@ class GenderViewController: UIViewController {
     }
     @IBAction func onTapContinue(_ sender: Any) {
     animatePulseButton(continueButton)
-        if maleButton.isSelected == true || femaleButton.isSelected == true || genderTextField.text != ""{
-            let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.identityController) as! UserIdentityViewController
-            navigationController?.pushViewController(vc, animated: true)
-        }else{
-            
-        }
+        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.identityController) as! UserIdentityViewController
+        navigationController?.pushViewController(vc, animated: true)
+//        if maleButton.isSelected == true || femaleButton.isSelected == true || genderTextField.text != ""{
+//
+//        }else{
+//
+//        }
        
     }
     
