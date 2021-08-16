@@ -7,6 +7,8 @@ target 'VR_App' do
   pod 'GoogleSignIn'
   pod 'MBProgressHUD'
   pod 'loady'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   # Pods for VR_App
 
   target 'VR_AppTests' do

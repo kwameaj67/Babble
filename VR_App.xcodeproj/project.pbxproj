@@ -22,6 +22,7 @@
 		982CCCB026BADA0900E260E3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCAF26BADA0900E260E3 /* SignInViewController.swift */; };
 		982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB426BADA1A00E260E3 /* GenderViewController.swift */; };
 		982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */; };
+		984C689D26C9E3C80046ED58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 984C689C26C9E3C70046ED58 /* GoogleService-Info.plist */; };
 		984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */; };
 		984EDF9B26C1942C00DBA40C /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9A26C1942C00DBA40C /* Swipe.swift */; };
 		984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */; };
@@ -83,6 +84,7 @@
 		982CCCAF26BADA0900E260E3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		982CCCB426BADA1A00E260E3 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentityViewController.swift; sourceTree = "<group>"; };
+		984C689C26C9E3C70046ED58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		984EDF9A26C1942C00DBA40C /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				984EDFB326C1C34200DBA40C /* Auth.storyboard */,
 				986BB3F526B8A46200D6E492 /* Assets.xcassets */,
 				986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */,
+				984C689C26C9E3C70046ED58 /* GoogleService-Info.plist */,
 				986BB3FA26B8A46200D6E492 /* Info.plist */,
 				986BB3F226B8A45D00D6E492 /* VR_App.xcdatamodeld */,
 			);
@@ -450,6 +453,7 @@
 				984EDFB426C1C34200DBA40C /* Auth.storyboard in Resources */,
 				986BB3F626B8A46200D6E492 /* Assets.xcassets in Resources */,
 				986BB3F126B8A45D00D6E492 /* Main.storyboard in Resources */,
+				984C689D26C9E3C80046ED58 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,7 +824,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Projects.VR-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.babble.babble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -840,7 +844,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Projects.VR-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.babble.babble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
