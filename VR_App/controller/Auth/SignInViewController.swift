@@ -10,12 +10,13 @@ import MBProgressHUD
 import FirebaseAuth
 
 class SignInViewController: UIViewController {
+    private let authManager = AuthManager()
 
     @IBOutlet weak var emailFieldContainer: UIView!
     @IBOutlet weak var passwordFieldContainer: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var emailError: UILabel!
+    @IBOutlet weak var  emailError: UILabel!
     @IBOutlet weak var passwordError: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
@@ -106,15 +107,15 @@ class SignInViewController: UIViewController {
             showAlert(message: "Password is not valid.")
         }else if email.isValidEmail() && password.isValidPassword(){
             MBProgressHUD.showAdded(to: view, animated: true)
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                if let err = error{
-                    print("\(err.localizedDescription)")
-                    self.showAlert(message: "\(err.localizedDescription)")
-                    MBProgressHUD.hide(for: self.view, animated: true)
-                }else if let userId = result?.user.uid{
-                    print("User signed in successfully:\(userId)\nEmail:\(String(describing: result?.user.email!))")
+            authManager.signInUser(withEmail: email, password: password) { [weak self] (result) in
+                switch result{
+                case .failure(let error):
+                    self?.showAlert(message: error.localizedDescription)
+                    MBProgressHUD.hide(for: self!.view, animated: true)
+                case .success(let user ):
+                    print("\(user.uid)")   // check if uid matches
                     delay(duration: 2.0) {
-                        MBProgressHUD.hide(for: self.view, animated: true)
+                        MBProgressHUD.hide(for: self!.view, animated: true)
                         PresenterManager.shared.showViewController(vc: .mainTabController)
                     }
                 }
