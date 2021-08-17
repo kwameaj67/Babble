@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import MBProgressHUD
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet weak var nameFieldContainer: UIView!
+    @IBOutlet weak var emailFieldContainer: UIView!
     @IBOutlet weak var passwordFieldContainer: UIView!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var passwordError: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
@@ -21,14 +24,14 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Styles()
-        nameTextField.becomeFirstResponder()
+        emailTextField.becomeFirstResponder()
         scrollView.showsVerticalScrollIndicator = false
 
     }
     func Styles(){
         roundCorners(button: loginButton)
         roundCorners(button: googleButton)
-        textInputRoundCorners(view: nameFieldContainer)
+        textInputRoundCorners(view: emailFieldContainer)
         textInputRoundCorners(view: passwordFieldContainer)
         
         googleButton.layer.borderWidth = 1.0
@@ -38,11 +41,22 @@ class SignInViewController: UIViewController {
     }
 
 
-    @IBAction func onTapLogin(_ sender: Any) {
-        animatePulseButton(loginButton)
-        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.genderController)as! GenderViewController
-        navigationController?.pushViewController(vc, animated: true)
+   
+    @IBAction func validateEmail(_ sender: Any) {
+        let email = emailTextField.text ?? ""
         
+        if email.isEmpty{
+            emailError.isHidden = true
+        }else{
+            emailError.isHidden = false
+        }
+        if email.isValidEmail(){
+            emailError.textColor = Constants.Colors.green
+            emailError.text = "Email address is valid ✅"
+        }else{
+            emailError.textColor = Constants.Colors.red
+            emailError.text = "Email address not valid ❌"
+        }
     }
     @IBAction func validatePassword(_ sender: Any) {
         let password = passwordTextField.text ?? ""
@@ -77,7 +91,47 @@ class SignInViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.signupController)as! SignUpViewController
         navigationController?.pushViewController(vc, animated: true)
     }
+    @IBAction func onTapLogin(_ sender: Any) {
+        animatePulseButton(loginButton)
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        if email.isEmpty{
+            showAlert(message: "Please enter your email address")
+        }else if password.isEmpty{
+            showAlert(message: "Please enter your unique password")
+        }else if !email.isValidEmail(){
+            showAlert(message: "Email address is not valid.")
+        }else if !password.isValidPassword(){
+            showAlert(message: "Password is not valid.")
+        }else if email.isValidEmail() && password.isValidPassword(){
+            MBProgressHUD.showAdded(to: view, animated: true)
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                if let err = error{
+                    print("\(err.localizedDescription)")
+                    self.showAlert(message: "\(err.localizedDescription)")
+                    MBProgressHUD.hide(for: self.view, animated: true)
+                }else if let userId = result?.user.uid{
+                    print("User signed in successfully:\(userId)\nEmail:\(String(describing: result?.user.email!))")
+                    delay(duration: 2.0) {
+                        MBProgressHUD.hide(for: self.view, animated: true)
+                        PresenterManager.shared.showViewController(vc: .mainTabController)
+                    }
+                }
+            }
+        }
+       
+        
+    }
     @IBAction func onTapGoogleButton(_ sender: Any) {
         animatePulseButton(googleButton)
+    }
+}
+
+extension SignInViewController{
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "Oops!", message:message, preferredStyle:UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
