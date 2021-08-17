@@ -69,7 +69,6 @@ class UserIdentityViewController: UIViewController {
     }
     @IBAction func onTapDoneButton(_ sender: Any) {
         animatePulseButton(doneButton)
-        PresenterManager.shared.showViewController(vc: .mainTabController)
     }
     
     @IBAction func onTapIndentityInput(_ sender: Any) {
