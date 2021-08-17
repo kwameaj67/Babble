@@ -10,7 +10,8 @@ import MBProgressHUD
 import FirebaseAuth
 
 class SettingsViewController: UIViewController {
-
+    
+    private let authManager = AuthManager()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,14 +24,17 @@ class SettingsViewController: UIViewController {
     func logoutUser(){
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(duration: 1.0) {
-            do {
-                try  Auth.auth().signOut()
+            let result = self.authManager.logoutUser()
+            switch result{
+            case .failure(let error):
+                print("\(error.localizedDescription)")
+                MBProgressHUD.hide(for: self.view, animated: true )
+            case .success():
                 print("Logout successfull")
                 MBProgressHUD.hide(for: self.view, animated: true )
-            } catch let error {
-                print(error.localizedDescription)
+                PresenterManager.shared.showViewController(vc: .authInit)
             }
-            PresenterManager.shared.showViewController(vc: .authInit)
+        
         }
     }
     
