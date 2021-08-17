@@ -11,6 +11,11 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
+    private let authManager = AuthManager()
+    
+    var finalGender: String = ""
+    var finalIdentity:String = ""
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameFieldContainer: UIView!
     @IBOutlet weak var emailFieldContainer: UIView!
@@ -35,7 +40,7 @@ class SignUpViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true
         Styles()
-        
+        print("\(finalGender)\n\(finalIdentity)")
         
     }
     
@@ -162,16 +167,16 @@ class SignUpViewController: UIViewController {
         }else if(email.isValidEmail() && password1.isValidPassword() && password2.isValidPassword()){
             MBProgressHUD.showAdded(to: view, animated: true)
             print("Name:\(name)\nEmail:\(email)\nPassword: \(password2)")
-            Auth.auth().createUser(withEmail: email, password: password2) { [weak self] (result, error) in
-                if let err = error{
-                    self!.showAlert(message: err.localizedDescription)
-                    print("\(err.localizedDescription)")
+            authManager.signUpUser(withEmail: email, password: password2) { [weak self] (result) in
+                switch result{
+                case .failure(let error):
+                    self!.showAlert(message: "\(error.localizedDescription)")
+                    print(error)
                     MBProgressHUD.hide(for: self!.view, animated: true)
-                }else if let userId = result?.user.uid{
-                    print("User created successfully:\(userId)")
+                case .success(let user):
+                    print("UserId:\(user.uid)\nEmail:\(user.email!)")
                     MBProgressHUD.hide(for: self!.view, animated: true)
-                    let vc = self!.storyboard?.instantiateViewController(identifier: Constants.StoryboardID.genderController)as! GenderViewController
-                    self!.navigationController?.pushViewController(vc, animated: true)
+                    PresenterManager.shared.showViewController(vc: .mainTabController)
                 }
             }
         }
@@ -194,3 +199,5 @@ extension SignUpViewController{
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+// 
