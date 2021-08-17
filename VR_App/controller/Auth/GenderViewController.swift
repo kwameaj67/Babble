@@ -9,8 +9,9 @@ import UIKit
 
 
 class GenderViewController: UIViewController {
-    let genders = ["Transexual Man","Transexual Woman","Transgender Man","Transgender Woman","Neither"]
-  
+    
+    let otherGenders = ["Transexual Man","Transexual Woman","Transgender Man","Transgender Woman","Neither"]
+    var userGender:String = ""
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
@@ -29,6 +30,12 @@ class GenderViewController: UIViewController {
         maleButton.isSelected = false
         femaleButton.isSelected = false
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! UserIdentityViewController
+        let myGender = userGender
+        
+        destinationVC.gender = myGender
     }
     
     func Styles(){
@@ -51,11 +58,14 @@ class GenderViewController: UIViewController {
         animatePulseButton(maleButton)
         maleButton.isSelected = !maleButton.isSelected
         if  maleButton.isSelected{
-           selectedMale()
+            selectedMale()
             deSelectedFemale()
+            userGender = "Male"
+
         }else{
             deSelectedMale()
         }
+        print(userGender)
     }
     @IBAction func onTapFemale(_ sender: Any) {
         animatePulseButton(femaleButton)
@@ -63,9 +73,13 @@ class GenderViewController: UIViewController {
         if  femaleButton.isSelected{
             selectedFemale()
             deSelectedMale()
+            userGender = "Female"
+          
         }else{
             deSelectedFemale()
+            
         }
+        print(userGender)
     }
     
     func selectedMale(){
@@ -74,6 +88,8 @@ class GenderViewController: UIViewController {
         maleButton.layer.backgroundColor = Constants.Colors.CGgreen
         maleButton.setTitleColor(Constants.Colors.white,for: .normal)
         femaleButton.isSelected = false
+        
+       
         
     }
     func deSelectedMale(){
@@ -102,11 +118,9 @@ class GenderViewController: UIViewController {
     @IBAction func onTapContinue(_ sender: Any) {
     animatePulseButton(continueButton)
         
-//        if maleButton.isSelected == true || femaleButton.isSelected == true || genderTextField.text != ""{
-//
-//        }else{
-//
-//        }
+        if userGender.isEmpty{
+            showAlert(message: "Please choose your gender 🙄")
+        }
        
     }
     
@@ -149,16 +163,16 @@ extension GenderViewController:UIPickerViewDataSource,UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genders.count
+        return otherGenders.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genders[row]
+        return otherGenders[row]
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
         {
             let pickerLabel = UILabel()
             pickerLabel.textColor = UIColor.black
-            pickerLabel.text = genders[row]
+            pickerLabel.text = otherGenders[row]
             pickerLabel.font = UIFont(name: "Avenir", size: 14.0)
             pickerLabel.font = UIFont.boldSystemFont(ofSize: 20) // In this use your custom font
             pickerLabel.textAlignment = NSTextAlignment.center
@@ -166,9 +180,16 @@ extension GenderViewController:UIPickerViewDataSource,UIPickerViewDelegate{
         }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderTextField.text = genders[row]
+        genderTextField.text = otherGenders[row]
+        userGender =  genderTextField.text ?? ""
+        print(userGender)
      
 //        genderTextField.resignFirstResponder()
+    }
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "Sorry!", message:message, preferredStyle:UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
