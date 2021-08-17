@@ -23,6 +23,7 @@
 		982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB426BADA1A00E260E3 /* GenderViewController.swift */; };
 		982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */; };
 		984C689D26C9E3C80046ED58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 984C689C26C9E3C70046ED58 /* GoogleService-Info.plist */; };
+		984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C68DA26CAB84C0046ED58 /* Alert.swift */; };
 		984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */; };
 		984EDF9B26C1942C00DBA40C /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9A26C1942C00DBA40C /* Swipe.swift */; };
 		984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */; };
@@ -38,7 +39,6 @@
 		986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */; };
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
-		9895DA8926C69E03000B6ACA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9895DA8826C69E03000B6ACA /* User.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
 		98FD197F26C54C00009C4A5F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD197E26C54C00009C4A5F /* Validate.swift */; };
 		9CD8F1EBCA8796A2281EDFCA /* Pods_VR_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */; };
@@ -85,6 +85,7 @@
 		982CCCB426BADA1A00E260E3 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentityViewController.swift; sourceTree = "<group>"; };
 		984C689C26C9E3C70046ED58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		984C68DA26CAB84C0046ED58 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		984EDF9A26C1942C00DBA40C /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		986BB40A26B8A46200D6E492 /* VR_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VR_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_AppUITests.swift; sourceTree = "<group>"; };
 		986BB41026B8A46200D6E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9895DA8826C69E03000B6ACA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
 		98FD197E26C54C00009C4A5F /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		A56652A0F5D558737BEA884A /* Pods-VR_App-VR_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */,
+				984C68DA26CAB84C0046ED58 /* Alert.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -312,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				989BE05A26C4332500A2F4CB /* Transcript.swift */,
-				9895DA8826C69E03000B6ACA /* User.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -623,6 +623,7 @@
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
 				982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */,
 				984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */,
+				984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */,
 				982CCC9226BAD98E00E260E3 /* SettingsViewController.swift in Sources */,
 				982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */,
 				986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */,
@@ -637,7 +638,6 @@
 				982CCCA626BAD9F600E260E3 /* OnboardingViewController.swift in Sources */,
 				982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */,
 				984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */,
-				9895DA8926C69E03000B6ACA /* User.swift in Sources */,
 				982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */,
 				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
 				989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */,

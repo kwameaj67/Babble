@@ -3,12 +3,13 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Transcriptions View Controller-->
+        <!--Transcriptions-->
         <scene sceneID="KlK-Ao-Oid">
             <objects>
                 <viewController id="WNV-Qo-mCe" customClass="TranscriptionsViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,11 +19,11 @@
                         <viewLayoutGuide key="safeArea" id="i1w-uc-52s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="folder.fill" catalog="system" id="7pr-2G-yc8"/>
+                    <navigationItem key="navigationItem" title="Transcriptions" id="P6N-rN-he7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogx-RL-VZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3973.913043478261" y="699.77678571428567"/>
+            <point key="canvasLocation" x="3362" y="1452"/>
         </scene>
         <!--Home-->
         <scene sceneID="euv-yC-CYo">
@@ -38,9 +39,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRV-XQ-84W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3255.072463768116" y="699.77678571428567"/>
+            <point key="canvasLocation" x="1861" y="1452"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="kl6-XM-lWN">
             <objects>
                 <viewController id="7Cg-xf-rBQ" customClass="SettingsViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,11 +51,19 @@
                         <viewLayoutGuide key="safeArea" id="nI5-Go-APm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="gearshape.fill" catalog="system" id="FKo-Pa-eYH"/>
+                    <navigationItem key="navigationItem" title="Settings" id="LMQ-uN-J2B">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" landscapeImage="square.and.arrow.up" catalog="system" id="CcA-vG-j3S">
+                            <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onTapLogoutIcon:" destination="7Cg-xf-rBQ" id="bVe-cp-2az"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1X-LJ-2GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4697.1014492753629" y="699.77678571428567"/>
+            <point key="canvasLocation" x="4819" y="1452"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="d8Y-uT-ryL">
@@ -70,8 +79,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="u64-4Q-DZk" kind="relationship" relationship="viewControllers" id="gJl-9Y-ZCD"/>
-                        <segue destination="WNV-Qo-mCe" kind="relationship" relationship="viewControllers" id="79L-D6-UXf"/>
-                        <segue destination="7Cg-xf-rBQ" kind="relationship" relationship="viewControllers" id="zEL-Wt-kLp"/>
+                        <segue destination="BkZ-Xe-xGE" kind="relationship" relationship="viewControllers" id="79L-D6-UXf"/>
+                        <segue destination="tLJ-gZ-DMh" kind="relationship" relationship="viewControllers" id="zEL-Wt-kLp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGp-bH-kQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,7 +99,7 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -100,7 +109,52 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuv-ET-APn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.9275362318845" y="699.77678571428567"/>
+            <point key="canvasLocation" x="2101" y="700"/>
+        </scene>
+        <!--Custom Navigation View Controller-->
+        <scene sceneID="dHu-e9-oIq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BkZ-Xe-xGE" customClass="CustomNavigationViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="folder.fill" catalog="system" id="7pr-2G-yc8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MjF-HV-5Sy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.97118188159999996" green="0.97337649500000001" blue="0.97543250189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WNV-Qo-mCe" kind="relationship" relationship="rootViewController" id="X3C-mF-yci"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysj-ky-ga3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3667" y="700"/>
+        </scene>
+        <!--Custom Navigation View Controller-->
+        <scene sceneID="Jkc-mi-ke5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tLJ-gZ-DMh" customClass="CustomNavigationViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="gearshape.fill" catalog="system" id="FKo-Pa-eYH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="lCp-4x-Vew">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Cg-xf-rBQ" kind="relationship" relationship="rootViewController" id="hNz-U7-PIe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oY0-ZJ-mwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5170" y="700"/>
         </scene>
     </scenes>
     <resources>
@@ -108,6 +162,7 @@
         <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

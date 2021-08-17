@@ -36,3 +36,5 @@ func inputConfig(input:UITextField){
     input.autocapitalizationType = .none
 }
 // CGColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00) 
+
+
