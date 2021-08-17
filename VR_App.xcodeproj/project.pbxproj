@@ -24,6 +24,7 @@
 		982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */; };
 		984C689D26C9E3C80046ED58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 984C689C26C9E3C70046ED58 /* GoogleService-Info.plist */; };
 		984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C68DA26CAB84C0046ED58 /* Alert.swift */; };
+		984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C690C26CB54E60046ED58 /* AuthManager.swift */; };
 		984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */; };
 		984EDF9B26C1942C00DBA40C /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9A26C1942C00DBA40C /* Swipe.swift */; };
 		984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */; };
@@ -40,6 +41,8 @@
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
+		98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */; };
+		98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31CE26CC2BF100A6439D /* Actor.swift */; };
 		98FD197F26C54C00009C4A5F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD197E26C54C00009C4A5F /* Validate.swift */; };
 		9CD8F1EBCA8796A2281EDFCA /* Pods_VR_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */; };
 		BBDE20820ABEFA8F941788A0 /* Pods_VR_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F267C99AB5379816744CED76 /* Pods_VR_App.framework */; };
@@ -86,6 +89,7 @@
 		982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentityViewController.swift; sourceTree = "<group>"; };
 		984C689C26C9E3C70046ED58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		984C68DA26CAB84C0046ED58 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		984C690C26CB54E60046ED58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		984EDF9A26C1942C00DBA40C /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		984EDFA026C1951A00DBA40C /* SwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 		986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_AppUITests.swift; sourceTree = "<group>"; };
 		986BB41026B8A46200D6E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
+		98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		98BB31CE26CC2BF100A6439D /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		98FD197E26C54C00009C4A5F /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		A56652A0F5D558737BEA884A /* Pods-VR_App-VR_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VR_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				982CCC7226BACDA900E260E3 /* PresenterManager.swift */,
+				984C690C26CB54E60046ED58 /* AuthManager.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -224,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				984EDF9A26C1942C00DBA40C /* Swipe.swift */,
+				98BB31CE26CC2BF100A6439D /* Actor.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				98FD197E26C54C00009C4A5F /* Validate.swift */,
+				98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -632,6 +641,7 @@
 				982CCC6126BA2BC900E260E3 /* helper.swift in Sources */,
 				98FD197F26C54C00009C4A5F /* Validate.swift in Sources */,
 				982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */,
+				98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */,
 				982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */,
 				986BB3F426B8A45D00D6E492 /* VR_App.xcdatamodeld in Sources */,
 				982CCCB026BADA0900E260E3 /* SignInViewController.swift in Sources */,
@@ -639,8 +649,10 @@
 				982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */,
 				984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */,
 				982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */,
+				98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */,
 				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
 				989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */,
+				984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

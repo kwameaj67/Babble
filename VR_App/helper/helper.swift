@@ -28,7 +28,7 @@ func textInputRoundCorners(view:UIView){
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             animateTo.transform = CGAffineTransform(scaleX: 1, y: 1)
         }, completion:nil)
-        print("Animation complete")
+//        print("Animation complete")
     }
 }
 func inputConfig(input:UITextField){

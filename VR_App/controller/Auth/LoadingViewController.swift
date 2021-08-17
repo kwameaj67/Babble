@@ -14,7 +14,9 @@ class LoadingViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        let data =  userDefaults.getStoreUserData
+        print(data ?? "")
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
