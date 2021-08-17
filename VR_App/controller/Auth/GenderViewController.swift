@@ -101,8 +101,7 @@ class GenderViewController: UIViewController {
     }
     @IBAction func onTapContinue(_ sender: Any) {
     animatePulseButton(continueButton)
-        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.identityController) as! UserIdentityViewController
-        navigationController?.pushViewController(vc, animated: true)
+        
 //        if maleButton.isSelected == true || femaleButton.isSelected == true || genderTextField.text != ""{
 //
 //        }else{
