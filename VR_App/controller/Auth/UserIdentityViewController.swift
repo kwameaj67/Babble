@@ -9,13 +9,19 @@ import UIKit
 
 class UserIdentityViewController: UIViewController {
     let othersIdentity = ["I am Deaf and Dumb 🦻🏻","I have little hearing impairment","I can hear well 👂🏻"]
-
+   
+    
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var deafButton: UIButton!
     @IBOutlet weak var dumbButton: UIButton!
     @IBOutlet weak var inputContainer: UIView!
     @IBOutlet weak var identityTextField: UITextField!
     let identityPicker = UIPickerView()
+    
+    var gender:String = ""
+    var userIdentity:String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         deafButton.isSelected = false
@@ -25,6 +31,12 @@ class UserIdentityViewController: UIViewController {
         identityPicker.delegate = self
         Styles()
         createIdentityPicker()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! SignUpViewController
+        destinationVC.finalGender = gender
+        destinationVC.finalIdentity = userIdentity
+        
     }
     func Styles(){
         roundCorners(button: doneButton)
@@ -69,6 +81,9 @@ class UserIdentityViewController: UIViewController {
     }
     @IBAction func onTapDoneButton(_ sender: Any) {
         animatePulseButton(doneButton)
+        if userIdentity.isEmpty{
+            showAlert(message: "Please select how you identify 🙄")
+        }
     }
     
     @IBAction func onTapIndentityInput(_ sender: Any) {
@@ -96,6 +111,8 @@ class UserIdentityViewController: UIViewController {
         if deafButton.isSelected{
             selectDeaf()
             deselectDumb()
+            userIdentity = "I am Deaf and use signs"
+            print(userIdentity)
         }else{
             deselectDeaf()
         }
@@ -107,6 +124,8 @@ class UserIdentityViewController: UIViewController {
         if dumbButton.isSelected{
             selectDumb()
             deselectDeaf()
+            userIdentity = "I am Dumb and use signs"
+            print(userIdentity)
         }else{
             deselectDumb()
         }
@@ -135,5 +154,12 @@ extension UserIdentityViewController:UIPickerViewDelegate,UIPickerViewDataSource
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         identityTextField.text = othersIdentity[row]
+        userIdentity = identityTextField.text ?? ""
+        print(userIdentity)
+    }
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "Sorry!", message:message, preferredStyle:UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
