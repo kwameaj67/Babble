@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MBProgressHUD
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
@@ -15,15 +17,36 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onTapLogoutIcon(_ sender: UIBarButtonItem) {
+       showAlert()
     }
-    */
+    func logoutUser(){
+        MBProgressHUD.showAdded(to: view, animated: true)
+        delay(duration: 1.0) {
+            do {
+                try  Auth.auth().signOut()
+                print("Logout successfull")
+                MBProgressHUD.hide(for: self.view, animated: true )
+            } catch let error {
+                print(error.localizedDescription)
+            }
+            PresenterManager.shared.showViewController(vc: .authInit)
+        }
+    }
+    
 
+}
+
+extension SettingsViewController{
+    func showAlert(){
+        let alert = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)
+        let Yes = UIAlertAction(title: "Yes", style: .cancel) { _ in
+            self.logoutUser()
+            self.dismiss(animated: true, completion: nil)
+        }
+        let No = UIAlertAction(title: "No", style: .default, handler: nil)
+        alert.addAction(Yes)
+        alert.addAction(No)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
