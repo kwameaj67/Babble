@@ -6,10 +6,12 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class LoadingViewController: UIViewController {
 
-    private let isLoggedIn = false
+    private var isLoggedIn:Bool {
+        return  (Auth.auth().currentUser != nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     
