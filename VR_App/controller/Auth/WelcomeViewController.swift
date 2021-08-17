@@ -40,7 +40,8 @@ class WelcomeViewController: UIViewController {
 
     @IBAction func onPressGetStartedButton(_ sender: Any) {
         animatePulseButton(getStartedButton)
-        modalPresentationStyle = .fullScreen
+        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.genderController) as! GenderViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func onPressloginButton(_ sender: Any) {
         animatePulseButton(loginButton)
