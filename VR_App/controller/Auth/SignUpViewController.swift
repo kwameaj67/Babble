@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MBProgressHUD
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
@@ -21,6 +23,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var showPwdButton: UIButton!
     @IBOutlet weak var showPwdButton2: UIButton!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var googleSignupButton: UIButton!
     @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var passwordError: UILabel!
     @IBOutlet weak var confirmPasswordError: UILabel!
@@ -47,6 +50,11 @@ class SignUpViewController: UIViewController {
         inputConfig(input: passwordTextField)
         inputConfig(input: confirmPasswordTextField)
         roundCorners(button: signupButton)
+        roundCorners(button: googleSignupButton)
+        
+        googleSignupButton.layer.borderWidth = 1.0
+        googleSignupButton.layer.borderColor = Constants.Colors.CGgreen
+        
     }
    
     @IBAction func validateEmail(_ sender: Any) {
@@ -129,6 +137,60 @@ class SignUpViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func onTapSignup(_ sender: Any) {
+        
         animatePulseButton(signupButton)
+        let name = nameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let password1 = passwordTextField.text ?? ""
+        let password2 = confirmPasswordTextField.text ?? ""
+        
+        if(name == "") {
+            showAlert(message: "Please enter your name")
+        }else if(email == ""){
+            showAlert(message: "Please enter your email address")
+        }else if(password1 == ""){
+            showAlert(message: "Please enter a unique password")
+        }else if(password2 == ""){
+            showAlert(message: "Please re-type your unique password")
+        }else if(password1 != password2){
+            showAlert(message: "Passwords do not match. Kindly check again❌")
+        }else if(!email.isValidEmail()){
+            showAlert(message: "Email address is not valid.")
+        }
+        else if(!password1.isValidPassword() || !password2.isValidPassword()){
+            showAlert(message: "Password is not valid.")
+        }else if(email.isValidEmail() && password1.isValidPassword() && password2.isValidPassword()){
+            MBProgressHUD.showAdded(to: view, animated: true)
+            print("Name:\(name)\nEmail:\(email)\nPassword: \(password2)")
+            Auth.auth().createUser(withEmail: email, password: password2) { [weak self] (result, error) in
+                if let err = error{
+                    self!.showAlert(message: err.localizedDescription)
+                    print("\(err.localizedDescription)")
+                    MBProgressHUD.hide(for: self!.view, animated: true)
+                }else if let userId = result?.user.uid{
+                    print("User created successfully:\(userId)")
+                    MBProgressHUD.hide(for: self!.view, animated: true)
+                    let vc = self!.storyboard?.instantiateViewController(identifier: Constants.StoryboardID.genderController)as! GenderViewController
+                    self!.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        }
+       
+       
+    }
+    @IBAction func onTapGoogleSignUp(_ sender: Any) {
+        animatePulseButton(googleSignupButton)
+        
+        
+        
+        
+    }
+}
+
+extension SignUpViewController{
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "Oops!", message:message, preferredStyle:UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
