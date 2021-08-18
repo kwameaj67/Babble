@@ -8,22 +8,18 @@
 import UIKit
 
 class TranscriptionsViewController: UIViewController {
-
+    
+    let searchBar = UISearchController()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationItem.searchController = searchBar
+        
+        let searchTextAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        searchTextAppearance.font = UIFont(name: "Avenir", size: 14)
+        searchTextAppearance.textColor = .black
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
