@@ -15,6 +15,7 @@ class SignUpViewController: UIViewController {
     
     var finalGender: String = ""
     var finalIdentity:String = ""
+    var finalUuid:String = ""
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameFieldContainer: UIView!
@@ -175,13 +176,26 @@ class SignUpViewController: UIViewController {
                     MBProgressHUD.hide(for: self!.view, animated: true)
                 case .success(let user):
                     print("UserId:\(user.uid)\nEmail:\(user.email!)")
-                    MBProgressHUD.hide(for: self!.view, animated: true)
-                    PresenterManager.shared.showViewController(vc: .mainTabController)
+                    self!.finalUuid = user.uid
+                    self?.createFireStoreUser()
+                   
                 }
             }
         }
-       
-       
+    }
+    func createFireStoreUser(){
+        authManager.createUserCollection(email:  emailTextField.text ?? "", gender: finalGender, username: nameTextField.text ?? "", identity: finalIdentity, uid: finalUuid) { (result) in
+            switch result{
+            case .failure(let error):
+                self.showAlert(message: error.localizedDescription)
+                MBProgressHUD.hide(for: self.view, animated: true)
+                print("Firestore error")
+            case .success():
+                print("User add to fireStore successfully")
+                MBProgressHUD.hide(for: self.view, animated: true)
+                PresenterManager.shared.showViewController(vc: .mainTabController)
+            }
+        }
     }
     @IBAction func onTapGoogleSignUp(_ sender: Any) {
         animatePulseButton(googleSignupButton)
