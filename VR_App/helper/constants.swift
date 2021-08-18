@@ -50,4 +50,7 @@ struct Constants {
         static let CGred = CGColor(red: 0.72, green: 0.00, blue: 0.00, alpha: 1.00)
         static let CGwhite = CGColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
     }
+    struct DBCollection {
+        static let users = "users"
+    }
 }
