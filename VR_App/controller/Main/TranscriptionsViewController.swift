@@ -12,14 +12,33 @@ class TranscriptionsViewController: UIViewController {
     let searchBar = UISearchController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         navigationItem.searchController = searchBar
         
-        let searchTextAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-        searchTextAppearance.font = UIFont(name: "Avenir", size: 14)
-        searchTextAppearance.textColor = .black
+        
+        
+       
     }
     
 
 
+}
+
+extension TranscriptionsViewController{
+    func styles(){
+//        edits search bar
+        let searchTextAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        searchTextAppearance.font = UIFont(name: "Avenir", size: 18)
+        searchTextAppearance.textColor = .black
+        searchTextAppearance.autocapitalizationType = .none
+        searchTextAppearance.autocorrectionType = .no
+        
+        let attributes:[NSAttributedString.Key: Any] = [  // edits cancel button
+            .foregroundColor: Constants.Colors.green,
+            .font: UIFont.systemFont(ofSize: 16)
+            
+                
+        ]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
+    }
 }

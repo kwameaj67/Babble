@@ -19,27 +19,109 @@
                         <viewLayoutGuide key="safeArea" id="i1w-uc-52s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Transcriptions" id="P6N-rN-he7"/>
+                    <navigationItem key="navigationItem" title="Transcriptions" id="P6N-rN-he7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="aK7-Ql-bWq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UdK-nY-C3C">
+                                <rect key="frame" x="319" y="9.5" width="75" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <color key="tintColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Filter" image="line.horizontal.3.decrease" catalog="system">
+                                    <color key="titleColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogx-RL-VZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3360.8695652173915" y="1451.7857142857142"/>
+            <point key="canvasLocation" x="3667" y="1476"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="euv-yC-CYo">
             <objects>
                 <viewController id="Rxx-xF-anN" customClass="HomeViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ft-f2-VeX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Tap to start captions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0y-UD-Vhc">
+                                <rect key="frame" x="100" y="287.5" width="214.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="145" translatesAutoresizingMaskIntoConstraints="NO" id="5im-rP-G1w">
+                                <rect key="frame" x="25" y="138" width="364" height="55"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-Gx-ioO">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Hey, Kwame 👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Th-1j-NoO">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="31.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-Yg-aKk">
+                                                <rect key="frame" x="0.0" y="31.5" width="116" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-man-curly-hair-medium-skin-tone-48" translatesAutoresizingMaskIntoConstraints="NO" id="J4z-0f-Dtp">
+                                        <rect key="frame" x="309" y="0.0" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="ivf-1s-nPw"/>
+                                            <constraint firstAttribute="height" constant="55" id="trf-iI-Z1w"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-microphone-51" translatesAutoresizingMaskIntoConstraints="NO" id="nEc-hA-LVj">
+                                <rect key="frame" x="184.5" y="425.5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="KSV-Pf-tXy"/>
+                                    <constraint firstAttribute="width" constant="45" id="Qs9-FO-cRE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1I-mX-TaQ">
+                                <rect key="frame" x="122" y="363" width="170" height="170"/>
+                                <color key="backgroundColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="OLB-7f-qgf"/>
+                                    <constraint firstAttribute="width" constant="170" id="geB-6D-fol"/>
+                                </constraints>
+                                <state key="normal" image="icons8-microphone-51"/>
+                                <connections>
+                                    <action selector="onTapRecordBustton:" destination="Rxx-xF-anN" eventType="touchUpInside" id="m2I-Fq-mc5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ho2-gj-tvQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nEc-hA-LVj" firstAttribute="centerX" secondItem="5ft-f2-VeX" secondAttribute="centerX" id="8I0-Z7-EfY"/>
+                            <constraint firstItem="5im-rP-G1w" firstAttribute="top" secondItem="ho2-gj-tvQ" secondAttribute="top" constant="50" id="97R-hA-2Pa"/>
+                            <constraint firstItem="nEc-hA-LVj" firstAttribute="centerY" secondItem="5ft-f2-VeX" secondAttribute="centerY" id="9do-9L-TUR"/>
+                            <constraint firstItem="y1I-mX-TaQ" firstAttribute="top" secondItem="b0y-UD-Vhc" secondAttribute="bottom" constant="45" id="FEX-pA-igY"/>
+                            <constraint firstItem="b0y-UD-Vhc" firstAttribute="centerX" secondItem="ho2-gj-tvQ" secondAttribute="centerX" id="V33-Ed-gQv"/>
+                            <constraint firstItem="5im-rP-G1w" firstAttribute="leading" secondItem="ho2-gj-tvQ" secondAttribute="leading" constant="25" id="b4O-4J-tec"/>
+                            <constraint firstItem="y1I-mX-TaQ" firstAttribute="centerX" secondItem="5ft-f2-VeX" secondAttribute="centerX" id="g5R-O9-sa7"/>
+                            <constraint firstItem="y1I-mX-TaQ" firstAttribute="centerY" secondItem="5ft-f2-VeX" secondAttribute="centerY" id="gB7-fC-m0d"/>
+                            <constraint firstItem="ho2-gj-tvQ" firstAttribute="trailing" secondItem="5im-rP-G1w" secondAttribute="trailing" constant="25" id="oNp-4s-9uo"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="MyV-6z-2vg"/>
+                    <navigationItem key="navigationItem" id="MyV-6z-2vg"/>
+                    <connections>
+                        <outlet property="recordButton" destination="y1I-mX-TaQ" id="oRO-Y8-q6y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRV-XQ-84W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="1452"/>
+            <point key="canvasLocation" x="1531.8840579710145" y="1451.7857142857142"/>
         </scene>
         <!--Settings-->
         <scene sceneID="kl6-XM-lWN">
@@ -93,8 +175,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u64-4Q-DZk" customClass="CustomNavigationViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="nZA-z0-EOR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.left" catalog="system" largeTitles="YES" backIndicatorTransitionMaskImage="arrow.left" id="85c-z8-fkP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.left" catalog="system" backIndicatorTransitionMaskImage="arrow.left" id="85c-z8-fkP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,6 +244,9 @@
         <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="icons8-man-curly-hair-medium-skin-tone-48" width="48" height="48"/>
+        <image name="icons8-microphone-51" width="50" height="50"/>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

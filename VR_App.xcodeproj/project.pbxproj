@@ -40,6 +40,7 @@
 		986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */; };
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
+		988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B499726CDC98900EC7DAE /* CoreDataManager.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
 		98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */; };
 		98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31CE26CC2BF100A6439D /* Actor.swift */; };
@@ -109,6 +110,7 @@
 		986BB40A26B8A46200D6E492 /* VR_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VR_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_AppUITests.swift; sourceTree = "<group>"; };
 		986BB41026B8A46200D6E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988B499726CDC98900EC7DAE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
 		98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		98BB31CE26CC2BF100A6439D /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				982CCC7226BACDA900E260E3 /* PresenterManager.swift */,
 				984C690C26CB54E60046ED58 /* AuthManager.swift */,
+				988B499726CDC98900EC7DAE /* CoreDataManager.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */,
 				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
 				989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */,
+				988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */,
 				984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -836,7 +840,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.babble.babble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babblbe.babble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -856,7 +860,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.babble.babble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babblbe.babble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

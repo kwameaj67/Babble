@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Person+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Person+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:VR_App.xcodeproj">
    </FileRef>
    <FileRef
