@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1046386911895-ejkemmrbchdr28l9jv9c9gvk2kmu1elo.apps.googleusercontent.com</string>
+	<string>1046386911895-pmr1jpmi0ad838vlej2usvq08hvbun4h.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1046386911895-ejkemmrbchdr28l9jv9c9gvk2kmu1elo</string>
+	<string>com.googleusercontent.apps.1046386911895-pmr1jpmi0ad838vlej2usvq08hvbun4h</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBf8DujbLwFq7m9vFd-MeunsgBHdH_nPvQ</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.babble.babble</string>
+	<string>com.project.babble</string>
 	<key>PROJECT_ID</key>
 	<string>babble-c7b11</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1046386911895:ios:9b34ef46b486656c3b57d2</string>
+	<string>1:1046386911895:ios:1e8abd0ad1a3f8493b57d2</string>
 </dict>
 </plist>

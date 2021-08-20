@@ -212,6 +212,7 @@ extension SignUpViewController{
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
 }
 
 // 
