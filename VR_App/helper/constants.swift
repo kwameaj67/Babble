@@ -39,6 +39,8 @@ struct Constants {
         
 //        Main App IDs
         static let tabBarController = "mainTabController"
+        static let errorViewController = "errorController"
+        static let recordingViewController = "recordingController"
     }
     struct Colors {
         static let green = UIColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00)
