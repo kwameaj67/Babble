@@ -50,9 +50,10 @@ struct Transcript:Decodable {
     var transcript:String?
 }
 
+
 // choose where you want captions - select situations where you'd like to better understand what people say
 // e.g conference calls, face-to-face, group hangout, online videos, student life, stores and shops, place of worship, events
 
 // show alert, Continue without saving the transcript? Continue & Save
 
-// screens - Settings, Transcribes, Home
+// https://cloud.google.com/speech-to-text/docs/samples/speech-transcribe-streaming-mic#speech_transcribe_streaming_mic-nodejs

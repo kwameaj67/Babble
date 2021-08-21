@@ -28,13 +28,12 @@ func textInputRoundCorners(view:UIView){
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             animateTo.transform = CGAffineTransform(scaleX: 1, y: 1)
         }, completion:nil)
-//        print("Animation complete")
     }
 }
 func inputConfig(input:UITextField){
     input.autocorrectionType = .no
     input.autocapitalizationType = .none
 }
-// CGColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00) 
+
 
 

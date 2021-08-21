@@ -40,6 +40,8 @@
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
 		987B64F226CF2D2B003F21A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987B64F126CF2D2B003F21A8 /* GoogleService-Info.plist */; };
+		987B64F426D00E8C003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987B64F326D00E8B003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist */; };
+		987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B64F526D04DD0003F21A8 /* userDefault.swift */; };
 		988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B499726CDC98900EC7DAE /* CoreDataManager.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
 		98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */; };
@@ -110,6 +112,8 @@
 		986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR_AppUITests.swift; sourceTree = "<group>"; };
 		986BB41026B8A46200D6E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		987B64F126CF2D2B003F21A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		987B64F326D00E8B003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		987B64F526D04DD0003F21A8 /* userDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefault.swift; sourceTree = "<group>"; };
 		988B499726CDC98900EC7DAE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
 		98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				982CCC7226BACDA900E260E3 /* PresenterManager.swift */,
 				984C690C26CB54E60046ED58 /* AuthManager.swift */,
 				988B499726CDC98900EC7DAE /* CoreDataManager.swift */,
+				987B64F526D04DD0003F21A8 /* userDefault.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				984EDFB326C1C34200DBA40C /* Auth.storyboard */,
 				986BB3F526B8A46200D6E492 /* Assets.xcassets */,
 				986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */,
+				987B64F326D00E8B003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist */,
 				987B64F126CF2D2B003F21A8 /* GoogleService-Info.plist */,
 				986BB3FA26B8A46200D6E492 /* Info.plist */,
 				986BB3F226B8A45D00D6E492 /* VR_App.xcdatamodeld */,
@@ -464,6 +470,7 @@
 				986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */,
 				984EDFB426C1C34200DBA40C /* Auth.storyboard in Resources */,
 				986BB3F626B8A46200D6E492 /* Assets.xcassets in Resources */,
+				987B64F426D00E8C003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist in Resources */,
 				986BB3F126B8A45D00D6E492 /* Main.storyboard in Resources */,
 				987B64F226CF2D2B003F21A8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -633,6 +640,7 @@
 				982CCC9C26BAD9D700E260E3 /* ErrorViewController.swift in Sources */,
 				984EDF9B26C1942C00DBA40C /* Swipe.swift in Sources */,
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
+				987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */,
 				982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */,
 				984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */,
 				984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */,

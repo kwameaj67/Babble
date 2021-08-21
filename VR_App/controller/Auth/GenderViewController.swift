@@ -21,7 +21,7 @@ class GenderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Styles()
+        styles()
         otherCornerStyles(btn1: maleButton, btn2: femaleButton)
         createGenderPicker()
         genderPicker.dataSource = self
@@ -38,7 +38,7 @@ class GenderViewController: UIViewController {
         destinationVC.gender = myGender
     }
     
-    func Styles(){
+    func styles(){
         roundCorners(button: maleButton)
         roundCorners(button: femaleButton)
         roundCorners(button: continueButton)
