@@ -40,28 +40,13 @@ class SignUpViewController: UIViewController {
         scrollView.showsVerticalScrollIndicator = false
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true
-        Styles()
+        styles()
         print("\(finalGender)\n\(finalIdentity)")
         
     }
     
     
-    func Styles(){
-        textInputRoundCorners(view: nameFieldContainer)
-        textInputRoundCorners(view: emailFieldContainer)
-        textInputRoundCorners(view: passwordFieldContainer)
-        textInputRoundCorners(view: confirmPasswordFieldContainer)
-        inputConfig(input: nameTextField)
-        inputConfig(input: emailTextField)
-        inputConfig(input: passwordTextField)
-        inputConfig(input: confirmPasswordTextField)
-        roundCorners(button: signupButton)
-        roundCorners(button: googleSignupButton)
-        
-        googleSignupButton.layer.borderWidth = 1.0
-        googleSignupButton.layer.borderColor = Constants.Colors.CGgreen
-        
-    }
+  
    
     @IBAction func validateEmail(_ sender: Any) {
         let email = emailTextField.text ?? ""
@@ -150,6 +135,7 @@ class SignUpViewController: UIViewController {
         let password1 = passwordTextField.text ?? ""
         let password2 = confirmPasswordTextField.text ?? ""
         
+        
         if(name == "") {
             showAlert(message: "Please enter your name")
         }else if(email == ""){
@@ -177,6 +163,7 @@ class SignUpViewController: UIViewController {
                 case .success(let user):
                     print("UserId:\(user.uid)\nEmail:\(user.email!)")
                     self!.finalUuid = user.uid
+                   
                     self?.createFireStoreUser()
                    
                 }
@@ -193,16 +180,13 @@ class SignUpViewController: UIViewController {
             case .success():
                 print("User add to fireStore successfully")
                 MBProgressHUD.hide(for: self.view, animated: true)
+                self.setUserDefaults()
                 PresenterManager.shared.showViewController(vc: .mainTabController)
             }
         }
     }
     @IBAction func onTapGoogleSignUp(_ sender: Any) {
         animatePulseButton(googleSignupButton)
-        
-        
-        
-        
     }
 }
 
@@ -211,6 +195,33 @@ extension SignUpViewController{
         let alert = UIAlertController(title: "Oops!", message:message, preferredStyle:UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    func styles(){
+        textInputRoundCorners(view: nameFieldContainer)
+        textInputRoundCorners(view: emailFieldContainer)
+        textInputRoundCorners(view: passwordFieldContainer)
+        textInputRoundCorners(view: confirmPasswordFieldContainer)
+        inputConfig(input: nameTextField)
+        inputConfig(input: emailTextField)
+        inputConfig(input: passwordTextField)
+        inputConfig(input: confirmPasswordTextField)
+        roundCorners(button: signupButton)
+        roundCorners(button: googleSignupButton)
+        
+        googleSignupButton.layer.borderWidth = 1.0
+        googleSignupButton.layer.borderColor = Constants.Colors.CGgreen
+        
+    }
+    func setUserDefaults(){
+        let user = [
+            "email":emailTextField.text ?? "",
+            "username":nameTextField.text ?? "",
+            "gender":self.finalGender,
+            "identity":self.finalIdentity,
+            "uuid":self.finalUuid,
+        ]
+        userDefaultManager.userDefault.set(user, forKey: "user")
+        print("user data saved in defaults\n\(user)")
     }
     
 }
