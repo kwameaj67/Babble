@@ -12,16 +12,9 @@ class TranscriptionsViewController: UIViewController {
     let searchBar = UISearchController()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        styles()
         navigationItem.searchController = searchBar
-        
-        
-        
-       
     }
-    
-
-
 }
 
 extension TranscriptionsViewController{
@@ -30,8 +23,6 @@ extension TranscriptionsViewController{
         let searchTextAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
         searchTextAppearance.font = UIFont(name: "Avenir", size: 18)
         searchTextAppearance.textColor = .black
-        searchTextAppearance.autocapitalizationType = .none
-        searchTextAppearance.autocorrectionType = .no
         
         let attributes:[NSAttributedString.Key: Any] = [  // edits cancel button
             .foregroundColor: Constants.Colors.green,

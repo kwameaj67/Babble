@@ -11,11 +11,11 @@ class CustomNavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeBarVisible()
+        hideBarVisible()
      
     }
     
-    func makeBarVisible(){
+    func hideBarVisible(){
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = true

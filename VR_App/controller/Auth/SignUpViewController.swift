@@ -60,7 +60,7 @@ class SignUpViewController: UIViewController {
             emailError.text = "Email address is valid ✅"
         }else{
             emailError.textColor = Constants.Colors.red
-            emailError.text = "Email address not valid ❌"
+            emailError.text = "Incorrect email was entered ❌"
         }
         
     }
@@ -76,7 +76,7 @@ class SignUpViewController: UIViewController {
             passwordError.text = "Password valid ✅"
         }else{
             passwordError.textColor = Constants.Colors.red
-            passwordError.text = "Password must have small, capital characters & numbers from 6-15 ❌"
+            passwordError.text = "Password must have small, capital characters & numbers from 6-15"
         }
     }
 
@@ -97,7 +97,7 @@ class SignUpViewController: UIViewController {
             confirmPasswordError.text = "Passwords do not match. Check again❌"
         }else if(!password2.isValidPassword()){
             confirmPasswordError.textColor = Constants.Colors.red
-            confirmPasswordError.text = "Password must have small, capital characters & numbers from 6-15 ❌"
+            confirmPasswordError.text = "Password must have small, capital characters & numbers from 6-15 "
         }
     }
     @IBAction func toggleSecureTextEntry(_ sender: UIButton) {
@@ -162,8 +162,8 @@ class SignUpViewController: UIViewController {
                     MBProgressHUD.hide(for: self!.view, animated: true)
                 case .success(let user):
                     print("UserId:\(user.uid)\nEmail:\(user.email!)")
-                    self!.finalUuid = user.uid
-                   
+                    self?.finalUuid = user.uid
+                    self?.setUserDefaults()
                     self?.createFireStoreUser()
                    
                 }
@@ -180,7 +180,7 @@ class SignUpViewController: UIViewController {
             case .success():
                 print("User add to fireStore successfully")
                 MBProgressHUD.hide(for: self.view, animated: true)
-                self.setUserDefaults()
+                
                 PresenterManager.shared.showViewController(vc: .mainTabController)
             }
         }

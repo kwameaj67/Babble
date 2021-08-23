@@ -56,7 +56,7 @@ class SignInViewController: UIViewController {
             emailError.text = "Email address is valid ✅"
         }else{
             emailError.textColor = Constants.Colors.red
-            emailError.text = "Email address not valid ❌"
+            emailError.text = "Incorrect email was entered ❌"
         }
     }
     @IBAction func validatePassword(_ sender: Any) {
@@ -72,7 +72,7 @@ class SignInViewController: UIViewController {
             passwordError.text = "Password valid ✅"
         }else{
             passwordError.textColor = Constants.Colors.red
-            passwordError.text = "Password must have small, capital characters & numbers from 6-15 ❌"
+            passwordError.text = "Password must have small, capital characters & numbers from 6-15 "
         }
         
     }

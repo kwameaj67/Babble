@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9808544426D13E9400A8538D /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9808544326D13E9400A8538D /* PulseAnimation.swift */; };
+		9808544826D161A400A8538D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9808544726D161A400A8538D /* NoteViewController.swift */; };
 		982CCC6126BA2BC900E260E3 /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC6026BA2BC900E260E3 /* helper.swift */; };
 		982CCC6926BA305200E260E3 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC6826BA305200E260E3 /* constants.swift */; };
 		982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC7226BACDA900E260E3 /* PresenterManager.swift */; };
@@ -75,6 +77,8 @@
 		716C668503DB1474B84223AA /* Pods-VR_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_AppTests.release.xcconfig"; path = "Target Support Files/Pods-VR_AppTests/Pods-VR_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B6377A8797A8AF8EDEE0EE7 /* Pods-VR_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App.release.xcconfig"; path = "Target Support Files/Pods-VR_App/Pods-VR_App.release.xcconfig"; sourceTree = "<group>"; };
 		916D9875DF3EE2BBF74AAA11 /* Pods-VR_App-VR_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9808544326D13E9400A8538D /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		9808544726D161A400A8538D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		982CCC6026BA2BC900E260E3 /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		982CCC6826BA305200E260E3 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		982CCC7226BACDA900E260E3 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 			children = (
 				984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */,
 				984C68DA26CAB84C0046ED58 /* Alert.swift */,
+				9808544326D13E9400A8538D /* PulseAnimation.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				982CCC9126BAD98E00E260E3 /* SettingsViewController.swift */,
 				982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */,
 				982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */,
+				9808544726D161A400A8538D /* NoteViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 				982CCC8826BAD96000E260E3 /* HomeViewController.swift in Sources */,
 				982CCC6126BA2BC900E260E3 /* helper.swift in Sources */,
 				98FD197F26C54C00009C4A5F /* Validate.swift in Sources */,
+				9808544826D161A400A8538D /* NoteViewController.swift in Sources */,
 				982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */,
 				98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */,
 				982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */,
@@ -664,6 +671,7 @@
 				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
 				989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */,
 				988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */,
+				9808544426D13E9400A8538D /* PulseAnimation.swift in Sources */,
 				984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

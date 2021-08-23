@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -183,10 +183,9 @@
                                                 <rect key="frame" x="30" y="244.5" width="354" height="55"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OVi-ld-xKh">
-                                                        <rect key="frame" x="32" y="8.5" width="270" height="38"/>
+                                                        <rect key="frame" x="32" y="8.5" width="276" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="6p7-S3-ZFi"/>
-                                                            <constraint firstAttribute="width" constant="270" id="vay-rv-Ie7"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
@@ -204,7 +203,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNm-7H-ri2">
-                                                        <rect key="frame" x="306" y="11.5" width="42" height="32"/>
+                                                        <rect key="frame" x="312" y="11.5" width="36" height="32"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Show">
@@ -231,9 +230,8 @@
                                                 <rect key="frame" x="30" y="332" width="354" height="55"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ooa-95-bGQ">
-                                                        <rect key="frame" x="32" y="8.5" width="270" height="38"/>
+                                                        <rect key="frame" x="32" y="8.5" width="276" height="38"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="270" id="FB6-dc-fop"/>
                                                             <constraint firstAttribute="height" constant="38" id="aXZ-yb-6vk"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -254,7 +252,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wz-IG-5PT">
-                                                        <rect key="frame" x="306" y="11.5" width="42" height="32"/>
+                                                        <rect key="frame" x="312" y="11.5" width="36" height="32"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Show">
@@ -484,7 +482,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="ZD8-Yl-GsO"/>
                                     <constraint firstAttribute="height" constant="65" id="n5l-5e-0Ef"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="👦🏻  Male">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -499,7 +497,7 @@
                                     <constraint firstAttribute="height" constant="65" id="j3P-J4-GhZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="pc5-D3-1Cy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="👩🏻  Female">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -515,7 +513,7 @@
                                         <rect key="frame" x="0.0" y="8" width="344" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="onTapGenderField:" destination="NyG-Wu-jRt" eventType="touchUpInside" id="Hms-yY-fD9"/>
@@ -616,10 +614,9 @@
                                                 <rect key="frame" x="30" y="164.5" width="354" height="55"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-Cl-ytf">
-                                                        <rect key="frame" x="32" y="8.5" width="270" height="38"/>
+                                                        <rect key="frame" x="32" y="8.5" width="276" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="0Uc-cT-h08"/>
-                                                            <constraint firstAttribute="width" constant="270" id="OvK-kP-app"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
@@ -638,7 +635,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WX-sF-Hfj">
-                                                        <rect key="frame" x="306" y="11.5" width="42" height="32"/>
+                                                        <rect key="frame" x="312" y="11.5" width="36" height="32"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Show">
@@ -835,7 +832,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="TGY-Hs-5at"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="I am Deaf and use signs🧏🏻‍♀️">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -850,7 +847,7 @@
                                     <constraint firstAttribute="height" constant="65" id="7Pu-2e-MGc"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="Y9f-VA-7T4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="I am Dumb and use signs 🧏🏻‍♂️">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -864,7 +861,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Other" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-eF-ecP">
                                         <rect key="frame" x="2" y="2" width="340" height="61"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="onTapIndentityInput:" destination="4kL-AI-pis" eventType="touchUpInside" id="2Mn-OP-acl"/>
