@@ -24,6 +24,7 @@ class ErrorViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func onTapTryAgain(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 
@@ -38,9 +39,8 @@ extension ErrorViewController{
         tryAgainButton.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
     func hideBottomBar(){
-        let navigationBar = navigationController?.navigationBar
-        navigationBar?.setBackgroundImage(UIImage(), for: .default)
-        navigationBar?.isTranslucent = true
-        navigationBar?.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
     }
 }
