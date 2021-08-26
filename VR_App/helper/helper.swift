@@ -35,5 +35,3 @@ func inputConfig(input:UITextField){
     input.autocapitalizationType = .none
 }
 
-
-
