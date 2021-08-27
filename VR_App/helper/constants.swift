@@ -56,4 +56,7 @@ struct Constants {
     struct DBCollection {
         static let users = "users"
     }
+    struct Audio {
+        static let SAMPLE_RATE = 44100.0
+    }
 }
