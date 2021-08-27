@@ -27,7 +27,7 @@ import Foundation
 //}
 
 
-struct Data: Decodable{
+struct ResponseData: Decodable{
     var data:Response
     var done: Bool
     var metadata:MetaData
