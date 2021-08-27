@@ -18,7 +18,7 @@ struct AuthManager{
     enum AuthError{
         case unknownError
     }
-
+//MARK:- create user
     func signUpUser(withEmail email:String, password:String, completion: @escaping (Result<User,Error>) -> Void){
         auth.createUser(withEmail: email, password: password) { (user, error) in
             if let err = error{
@@ -31,7 +31,7 @@ struct AuthManager{
             }
         }
     }
-    
+//    MARK:- sign in
     func signInUser(withEmail email:String,password:String, completion: @escaping (Result<User,Error>) -> Void){
         auth.signIn(withEmail: email, password: password) { (user, error) in
             if let err = error{
@@ -44,7 +44,7 @@ struct AuthManager{
             }
         }
     }
-    
+//    MARK: - logout user
     func logoutUser() -> Result<Void,Error>{
         do {
             try auth.signOut()
@@ -54,7 +54,7 @@ struct AuthManager{
         }
     }
     
-//    configure firestore
+//  MARK:-  configure firestore
     func createUserCollection(email:String,gender:String,username:String,identity:String,uid:String,completion:@escaping (Result<Void,Error>) -> Void){
         var ref: DocumentReference? = nil
         let userData: [String:Any] = [
