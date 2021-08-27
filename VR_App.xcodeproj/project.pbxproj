@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9808544426D13E9400A8538D /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9808544326D13E9400A8538D /* PulseAnimation.swift */; };
 		9808544826D161A400A8538D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9808544726D161A400A8538D /* NoteViewController.swift */; };
+		980C9F4F26D88F210043F3E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987B64F126CF2D2B003F21A8 /* GoogleService-Info.plist */; };
+		980C9F5126D895160043F3E3 /* GoogleSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980C9F5026D895160043F3E3 /* GoogleSpeechManager.swift */; };
 		982CCC6126BA2BC900E260E3 /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC6026BA2BC900E260E3 /* helper.swift */; };
 		982CCC6926BA305200E260E3 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC6826BA305200E260E3 /* constants.swift */; };
 		982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC7226BACDA900E260E3 /* PresenterManager.swift */; };
@@ -24,6 +26,31 @@
 		982CCCB026BADA0900E260E3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCAF26BADA0900E260E3 /* SignInViewController.swift */; };
 		982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB426BADA1A00E260E3 /* GenderViewController.swift */; };
 		982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */; };
+		9832867C26D7D5C30002E185 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832867A26D7D5C20002E185 /* SpeechRecognitionService.swift */; };
+		9832867D26D7D5C30002E185 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832867B26D7D5C30002E185 /* AudioController.swift */; };
+		983286AB26D7D5DA0002E185 /* operations.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832868026D7D5D70002E185 /* operations.proto */; };
+		983286AC26D7D5DA0002E185 /* Operations.pbrpc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832868126D7D5D70002E185 /* Operations.pbrpc.m */; };
+		983286AD26D7D5DA0002E185 /* Operations.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832868226D7D5D70002E185 /* Operations.pbobjc.m */; };
+		983286AF26D7D5DA0002E185 /* cloud_speech.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832868B26D7D5D70002E185 /* cloud_speech.proto */; };
+		983286B026D7D5DA0002E185 /* CloudSpeech.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832868C26D7D5D70002E185 /* CloudSpeech.pbobjc.m */; };
+		983286B126D7D5DA0002E185 /* CloudSpeech.pbrpc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832868D26D7D5D70002E185 /* CloudSpeech.pbrpc.m */; };
+		983286B226D7D5DA0002E185 /* http.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832868F26D7D5D70002E185 /* http.proto */; };
+		983286B326D7D5DA0002E185 /* MonitoredResource.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832869026D7D5D70002E185 /* MonitoredResource.pbobjc.m */; };
+		983286B426D7D5DA0002E185 /* Label.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832869226D7D5D70002E185 /* Label.pbobjc.m */; };
+		983286B526D7D5DA0002E185 /* monitored_resource.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832869426D7D5D70002E185 /* monitored_resource.proto */; };
+		983286B626D7D5DA0002E185 /* annotations.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832869526D7D5D70002E185 /* annotations.proto */; };
+		983286B726D7D5DA0002E185 /* label.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832869726D7D5D70002E185 /* label.proto */; };
+		983286B826D7D5DA0002E185 /* HTTP.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832869826D7D5D70002E185 /* HTTP.pbobjc.m */; };
+		983286B926D7D5DA0002E185 /* Annotations.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832869A26D7D5D70002E185 /* Annotations.pbobjc.m */; };
+		983286BA26D7D5DA0002E185 /* code.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832869C26D7D5D70002E185 /* code.proto */; };
+		983286BB26D7D5DA0002E185 /* status.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9832869F26D7D5D70002E185 /* status.proto */; };
+		983286BC26D7D5DA0002E185 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 983286A126D7D5D70002E185 /* README.md */; };
+		983286BD26D7D5DA0002E185 /* Code.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 983286A226D7D5D70002E185 /* Code.pbobjc.m */; };
+		983286BE26D7D5DA0002E185 /* Status.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 983286A326D7D5D70002E185 /* Status.pbobjc.m */; };
+		983286BF26D7D5DA0002E185 /* ErrorDetails.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 983286A426D7D5D70002E185 /* ErrorDetails.pbobjc.m */; };
+		983286C026D7D5DA0002E185 /* error_details.proto in Sources */ = {isa = PBXBuildFile; fileRef = 983286A526D7D5D70002E185 /* error_details.proto */; };
+		983286C126D7D5DA0002E185 /* descriptor.proto in Sources */ = {isa = PBXBuildFile; fileRef = 983286A826D7D5D70002E185 /* descriptor.proto */; };
+		983286C226D7D5DA0002E185 /* Descriptor.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 983286A926D7D5D70002E185 /* Descriptor.pbobjc.m */; };
 		984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C68DA26CAB84C0046ED58 /* Alert.swift */; };
 		984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C690C26CB54E60046ED58 /* AuthManager.swift */; };
 		984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */; };
@@ -41,7 +68,6 @@
 		986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986BB3F726B8A46200D6E492 /* LaunchScreen.storyboard */; };
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
-		987B64F226CF2D2B003F21A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987B64F126CF2D2B003F21A8 /* GoogleService-Info.plist */; };
 		987B64F426D00E8C003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987B64F326D00E8B003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist */; };
 		987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B64F526D04DD0003F21A8 /* userDefault.swift */; };
 		988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B499726CDC98900EC7DAE /* CoreDataManager.swift */; };
@@ -49,9 +75,7 @@
 		98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */; };
 		98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31CE26CC2BF100A6439D /* Actor.swift */; };
 		98FD197F26C54C00009C4A5F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD197E26C54C00009C4A5F /* Validate.swift */; };
-		9CD8F1EBCA8796A2281EDFCA /* Pods_VR_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */; };
 		BBDE20820ABEFA8F941788A0 /* Pods_VR_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F267C99AB5379816744CED76 /* Pods_VR_App.framework */; };
-		DB2B15D3B297C4B1F3512F77 /* Pods_VR_App_VR_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DADD11EC998829F98BA985 /* Pods_VR_App_VR_AppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,12 +97,11 @@
 
 /* Begin PBXFileReference section */
 		2B110CD5816E554680045A1A /* Pods-VR_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App.debug.xcconfig"; path = "Target Support Files/Pods-VR_App/Pods-VR_App.debug.xcconfig"; sourceTree = "<group>"; };
-		44DADD11EC998829F98BA985 /* Pods_VR_App_VR_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VR_App_VR_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		716C668503DB1474B84223AA /* Pods-VR_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_AppTests.release.xcconfig"; path = "Target Support Files/Pods-VR_AppTests/Pods-VR_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B6377A8797A8AF8EDEE0EE7 /* Pods-VR_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App.release.xcconfig"; path = "Target Support Files/Pods-VR_App/Pods-VR_App.release.xcconfig"; sourceTree = "<group>"; };
-		916D9875DF3EE2BBF74AAA11 /* Pods-VR_App-VR_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9808544326D13E9400A8538D /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		9808544726D161A400A8538D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		980C9F4C26D832100043F3E3 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		980C9F5026D895160043F3E3 /* GoogleSpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSpeechManager.swift; sourceTree = "<group>"; };
 		982CCC6026BA2BC900E260E3 /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		982CCC6826BA305200E260E3 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		982CCC7226BACDA900E260E3 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
@@ -94,6 +117,45 @@
 		982CCCAF26BADA0900E260E3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		982CCCB426BADA1A00E260E3 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentityViewController.swift; sourceTree = "<group>"; };
+		9832867A26D7D5C20002E185 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		9832867B26D7D5C30002E185 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		9832868026D7D5D70002E185 /* operations.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = operations.proto; sourceTree = "<group>"; };
+		9832868126D7D5D70002E185 /* Operations.pbrpc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operations.pbrpc.m; sourceTree = "<group>"; };
+		9832868226D7D5D70002E185 /* Operations.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operations.pbobjc.m; sourceTree = "<group>"; };
+		9832868326D7D5D70002E185 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9832868426D7D5D70002E185 /* Operations.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operations.pbobjc.h; sourceTree = "<group>"; };
+		9832868526D7D5D70002E185 /* Operations.pbrpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operations.pbrpc.h; sourceTree = "<group>"; };
+		9832868926D7D5D70002E185 /* CloudSpeech.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudSpeech.pbobjc.h; sourceTree = "<group>"; };
+		9832868A26D7D5D70002E185 /* CloudSpeech.pbrpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudSpeech.pbrpc.h; sourceTree = "<group>"; };
+		9832868B26D7D5D70002E185 /* cloud_speech.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = cloud_speech.proto; sourceTree = "<group>"; };
+		9832868C26D7D5D70002E185 /* CloudSpeech.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudSpeech.pbobjc.m; sourceTree = "<group>"; };
+		9832868D26D7D5D70002E185 /* CloudSpeech.pbrpc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudSpeech.pbrpc.m; sourceTree = "<group>"; };
+		9832868F26D7D5D70002E185 /* http.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = http.proto; sourceTree = "<group>"; };
+		9832869026D7D5D70002E185 /* MonitoredResource.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoredResource.pbobjc.m; sourceTree = "<group>"; };
+		9832869126D7D5D70002E185 /* Annotations.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotations.pbobjc.h; sourceTree = "<group>"; };
+		9832869226D7D5D70002E185 /* Label.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.pbobjc.m; sourceTree = "<group>"; };
+		9832869326D7D5D70002E185 /* HTTP.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTP.pbobjc.h; sourceTree = "<group>"; };
+		9832869426D7D5D70002E185 /* monitored_resource.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = monitored_resource.proto; sourceTree = "<group>"; };
+		9832869526D7D5D70002E185 /* annotations.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = annotations.proto; sourceTree = "<group>"; };
+		9832869626D7D5D70002E185 /* MonitoredResource.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoredResource.pbobjc.h; sourceTree = "<group>"; };
+		9832869726D7D5D70002E185 /* label.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = label.proto; sourceTree = "<group>"; };
+		9832869826D7D5D70002E185 /* HTTP.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTP.pbobjc.m; sourceTree = "<group>"; };
+		9832869926D7D5D70002E185 /* Label.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label.pbobjc.h; sourceTree = "<group>"; };
+		9832869A26D7D5D70002E185 /* Annotations.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotations.pbobjc.m; sourceTree = "<group>"; };
+		9832869C26D7D5D70002E185 /* code.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = code.proto; sourceTree = "<group>"; };
+		9832869D26D7D5D70002E185 /* Status.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.pbobjc.h; sourceTree = "<group>"; };
+		9832869E26D7D5D70002E185 /* Code.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Code.pbobjc.h; sourceTree = "<group>"; };
+		9832869F26D7D5D70002E185 /* status.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = status.proto; sourceTree = "<group>"; };
+		983286A026D7D5D70002E185 /* ErrorDetails.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorDetails.pbobjc.h; sourceTree = "<group>"; };
+		983286A126D7D5D70002E185 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		983286A226D7D5D70002E185 /* Code.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Code.pbobjc.m; sourceTree = "<group>"; };
+		983286A326D7D5D70002E185 /* Status.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.pbobjc.m; sourceTree = "<group>"; };
+		983286A426D7D5D70002E185 /* ErrorDetails.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorDetails.pbobjc.m; sourceTree = "<group>"; };
+		983286A526D7D5D70002E185 /* error_details.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = error_details.proto; sourceTree = "<group>"; };
+		983286A726D7D5D70002E185 /* Descriptor.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Descriptor.pbobjc.h; sourceTree = "<group>"; };
+		983286A826D7D5D70002E185 /* descriptor.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = descriptor.proto; sourceTree = "<group>"; };
+		983286A926D7D5D70002E185 /* Descriptor.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Descriptor.pbobjc.m; sourceTree = "<group>"; };
+		983286AA26D7D5D90002E185 /* googleapis.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = googleapis.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		984C68DA26CAB84C0046ED58 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		984C690C26CB54E60046ED58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
@@ -123,9 +185,6 @@
 		98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		98BB31CE26CC2BF100A6439D /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		98FD197E26C54C00009C4A5F /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
-		A56652A0F5D558737BEA884A /* Pods-VR_App-VR_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_App-VR_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VR_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE6356C62AF26C33E01525E1 /* Pods-VR_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VR_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-VR_AppTests/Pods-VR_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F267C99AB5379816744CED76 /* Pods_VR_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VR_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,7 +201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CD8F1EBCA8796A2281EDFCA /* Pods_VR_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB2B15D3B297C4B1F3512F77 /* Pods_VR_App_VR_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +218,16 @@
 			isa = PBXGroup;
 			children = (
 				F267C99AB5379816744CED76 /* Pods_VR_App.framework */,
-				44DADD11EC998829F98BA985 /* Pods_VR_App_VR_AppUITests.framework */,
-				B28F3982D23CF7987E06EE3C /* Pods_VR_AppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		980C9F4B26D831DE0043F3E3 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				980C9F4C26D832100043F3E3 /* Bridging-Header.h */,
+			);
+			path = sources;
 			sourceTree = "<group>";
 		};
 		982CCC5F26BA2B9500E260E3 /* helper */ = {
@@ -224,6 +287,115 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		9832867926D7D57D0002E185 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				9832867B26D7D5C30002E185 /* AudioController.swift */,
+				9832867A26D7D5C20002E185 /* SpeechRecognitionService.swift */,
+				980C9F5026D895160043F3E3 /* GoogleSpeechManager.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		9832867E26D7D5D70002E185 /* google */ = {
+			isa = PBXGroup;
+			children = (
+				9832867F26D7D5D70002E185 /* longrunning */,
+				9832868626D7D5D70002E185 /* cloud */,
+				9832868E26D7D5D70002E185 /* api */,
+				9832869B26D7D5D70002E185 /* rpc */,
+				983286A626D7D5D70002E185 /* protobuf */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		9832867F26D7D5D70002E185 /* longrunning */ = {
+			isa = PBXGroup;
+			children = (
+				9832868026D7D5D70002E185 /* operations.proto */,
+				9832868126D7D5D70002E185 /* Operations.pbrpc.m */,
+				9832868226D7D5D70002E185 /* Operations.pbobjc.m */,
+				9832868326D7D5D70002E185 /* README.md */,
+				9832868426D7D5D70002E185 /* Operations.pbobjc.h */,
+				9832868526D7D5D70002E185 /* Operations.pbrpc.h */,
+			);
+			path = longrunning;
+			sourceTree = "<group>";
+		};
+		9832868626D7D5D70002E185 /* cloud */ = {
+			isa = PBXGroup;
+			children = (
+				9832868726D7D5D70002E185 /* speech */,
+			);
+			path = cloud;
+			sourceTree = "<group>";
+		};
+		9832868726D7D5D70002E185 /* speech */ = {
+			isa = PBXGroup;
+			children = (
+				9832868826D7D5D70002E185 /* v1 */,
+			);
+			path = speech;
+			sourceTree = "<group>";
+		};
+		9832868826D7D5D70002E185 /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				9832868926D7D5D70002E185 /* CloudSpeech.pbobjc.h */,
+				9832868A26D7D5D70002E185 /* CloudSpeech.pbrpc.h */,
+				9832868B26D7D5D70002E185 /* cloud_speech.proto */,
+				9832868C26D7D5D70002E185 /* CloudSpeech.pbobjc.m */,
+				9832868D26D7D5D70002E185 /* CloudSpeech.pbrpc.m */,
+			);
+			path = v1;
+			sourceTree = "<group>";
+		};
+		9832868E26D7D5D70002E185 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				9832868F26D7D5D70002E185 /* http.proto */,
+				9832869026D7D5D70002E185 /* MonitoredResource.pbobjc.m */,
+				9832869126D7D5D70002E185 /* Annotations.pbobjc.h */,
+				9832869226D7D5D70002E185 /* Label.pbobjc.m */,
+				9832869326D7D5D70002E185 /* HTTP.pbobjc.h */,
+				9832869426D7D5D70002E185 /* monitored_resource.proto */,
+				9832869526D7D5D70002E185 /* annotations.proto */,
+				9832869626D7D5D70002E185 /* MonitoredResource.pbobjc.h */,
+				9832869726D7D5D70002E185 /* label.proto */,
+				9832869826D7D5D70002E185 /* HTTP.pbobjc.m */,
+				9832869926D7D5D70002E185 /* Label.pbobjc.h */,
+				9832869A26D7D5D70002E185 /* Annotations.pbobjc.m */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		9832869B26D7D5D70002E185 /* rpc */ = {
+			isa = PBXGroup;
+			children = (
+				9832869C26D7D5D70002E185 /* code.proto */,
+				9832869D26D7D5D70002E185 /* Status.pbobjc.h */,
+				9832869E26D7D5D70002E185 /* Code.pbobjc.h */,
+				9832869F26D7D5D70002E185 /* status.proto */,
+				983286A026D7D5D70002E185 /* ErrorDetails.pbobjc.h */,
+				983286A126D7D5D70002E185 /* README.md */,
+				983286A226D7D5D70002E185 /* Code.pbobjc.m */,
+				983286A326D7D5D70002E185 /* Status.pbobjc.m */,
+				983286A426D7D5D70002E185 /* ErrorDetails.pbobjc.m */,
+				983286A526D7D5D70002E185 /* error_details.proto */,
+			);
+			path = rpc;
+			sourceTree = "<group>";
+		};
+		983286A626D7D5D70002E185 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				983286A726D7D5D70002E185 /* Descriptor.pbobjc.h */,
+				983286A826D7D5D70002E185 /* descriptor.proto */,
+				983286A926D7D5D70002E185 /* Descriptor.pbobjc.m */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
 		984EDF8526C1713C00DBA40C /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +433,9 @@
 		986BB3DD26B8A45D00D6E492 = {
 			isa = PBXGroup;
 			children = (
+				980C9F4B26D831DE0043F3E3 /* sources */,
+				9832867E26D7D5D70002E185 /* google */,
+				983286AA26D7D5D90002E185 /* googleapis.podspec */,
 				986BB3E826B8A45D00D6E492 /* VR_App */,
 				986BB40226B8A46200D6E492 /* VR_AppTests */,
 				986BB40D26B8A46200D6E492 /* VR_AppUITests */,
@@ -283,6 +458,7 @@
 		986BB3E826B8A45D00D6E492 /* VR_App */ = {
 			isa = PBXGroup;
 			children = (
+				9832867926D7D57D0002E185 /* Speech */,
 				98FD197A26C54BA1009C4A5F /* extensions */,
 				984EDF8626C1714700DBA40C /* views */,
 				984EDF8526C1713C00DBA40C /* model */,
@@ -354,10 +530,6 @@
 			children = (
 				2B110CD5816E554680045A1A /* Pods-VR_App.debug.xcconfig */,
 				7B6377A8797A8AF8EDEE0EE7 /* Pods-VR_App.release.xcconfig */,
-				A56652A0F5D558737BEA884A /* Pods-VR_App-VR_AppUITests.debug.xcconfig */,
-				916D9875DF3EE2BBF74AAA11 /* Pods-VR_App-VR_AppUITests.release.xcconfig */,
-				BE6356C62AF26C33E01525E1 /* Pods-VR_AppTests.debug.xcconfig */,
-				716C668503DB1474B84223AA /* Pods-VR_AppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -389,7 +561,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 986BB41626B8A46200D6E492 /* Build configuration list for PBXNativeTarget "VR_AppTests" */;
 			buildPhases = (
-				A309F7A41B1A96D6898B9FAA /* [CP] Check Pods Manifest.lock */,
 				986BB3FB26B8A46200D6E492 /* Sources */,
 				986BB3FC26B8A46200D6E492 /* Frameworks */,
 				986BB3FD26B8A46200D6E492 /* Resources */,
@@ -408,12 +579,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 986BB41926B8A46200D6E492 /* Build configuration list for PBXNativeTarget "VR_AppUITests" */;
 			buildPhases = (
-				B222944806BCD8988B044939 /* [CP] Check Pods Manifest.lock */,
 				986BB40626B8A46200D6E492 /* Sources */,
 				986BB40726B8A46200D6E492 /* Frameworks */,
 				986BB40826B8A46200D6E492 /* Resources */,
-				ACC04BA0AF653AFFF4236DE9 /* [CP] Embed Pods Frameworks */,
-				0363D55DF5CE07FBC0C761DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -472,13 +640,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980C9F4F26D88F210043F3E3 /* GoogleService-Info.plist in Resources */,
 				982CCC7826BACFFB00E260E3 /* TabBar.storyboard in Resources */,
 				986BB3F926B8A46200D6E492 /* LaunchScreen.storyboard in Resources */,
 				984EDFB426C1C34200DBA40C /* Auth.storyboard in Resources */,
 				986BB3F626B8A46200D6E492 /* Assets.xcassets in Resources */,
 				987B64F426D00E8C003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist in Resources */,
 				986BB3F126B8A45D00D6E492 /* Main.storyboard in Resources */,
-				987B64F226CF2D2B003F21A8 /* GoogleService-Info.plist in Resources */,
+				983286BC26D7D5DA0002E185 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,23 +670,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0363D55DF5CE07FBC0C761DA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2AA254ECCAB77B89A9C9520A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,67 +726,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VR_App/Pods-VR_App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A309F7A41B1A96D6898B9FAA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VR_AppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ACC04BA0AF653AFFF4236DE9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VR_App-VR_AppUITests/Pods-VR_App-VR_AppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B222944806BCD8988B044939 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VR_App-VR_AppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -645,31 +736,56 @@
 				986BB3EE26B8A45D00D6E492 /* LoadingViewController.swift in Sources */,
 				982CCC9C26BAD9D700E260E3 /* ErrorViewController.swift in Sources */,
 				984EDF9B26C1942C00DBA40C /* Swipe.swift in Sources */,
+				9832867C26D7D5C30002E185 /* SpeechRecognitionService.swift in Sources */,
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
 				987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */,
 				982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */,
 				984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */,
 				984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */,
+				983286B726D7D5DA0002E185 /* label.proto in Sources */,
 				982CCC9226BAD98E00E260E3 /* SettingsViewController.swift in Sources */,
 				982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */,
 				986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */,
 				982CCCA126BAD9EB00E260E3 /* WelcomeViewController.swift in Sources */,
+				983286B826D7D5DA0002E185 /* HTTP.pbobjc.m in Sources */,
+				983286B326D7D5DA0002E185 /* MonitoredResource.pbobjc.m in Sources */,
 				982CCC8826BAD96000E260E3 /* HomeViewController.swift in Sources */,
 				982CCC6126BA2BC900E260E3 /* helper.swift in Sources */,
 				98FD197F26C54C00009C4A5F /* Validate.swift in Sources */,
+				983286AD26D7D5DA0002E185 /* Operations.pbobjc.m in Sources */,
 				9808544826D161A400A8538D /* NoteViewController.swift in Sources */,
 				982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */,
+				983286BF26D7D5DA0002E185 /* ErrorDetails.pbobjc.m in Sources */,
+				983286C126D7D5DA0002E185 /* descriptor.proto in Sources */,
+				983286AF26D7D5DA0002E185 /* cloud_speech.proto in Sources */,
+				983286BA26D7D5DA0002E185 /* code.proto in Sources */,
 				98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */,
+				983286BD26D7D5DA0002E185 /* Code.pbobjc.m in Sources */,
+				980C9F5126D895160043F3E3 /* GoogleSpeechManager.swift in Sources */,
 				982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */,
+				983286BB26D7D5DA0002E185 /* status.proto in Sources */,
+				983286C226D7D5DA0002E185 /* Descriptor.pbobjc.m in Sources */,
 				986BB3F426B8A45D00D6E492 /* VR_App.xcdatamodeld in Sources */,
+				983286B926D7D5DA0002E185 /* Annotations.pbobjc.m in Sources */,
 				982CCCB026BADA0900E260E3 /* SignInViewController.swift in Sources */,
+				983286C026D7D5DA0002E185 /* error_details.proto in Sources */,
+				983286B126D7D5DA0002E185 /* CloudSpeech.pbrpc.m in Sources */,
+				983286B026D7D5DA0002E185 /* CloudSpeech.pbobjc.m in Sources */,
+				983286AB26D7D5DA0002E185 /* operations.proto in Sources */,
+				9832867D26D7D5C30002E185 /* AudioController.swift in Sources */,
 				982CCCA626BAD9F600E260E3 /* OnboardingViewController.swift in Sources */,
 				982CCC7326BACDA900E260E3 /* PresenterManager.swift in Sources */,
 				984EDFA126C1951A00DBA40C /* SwiperCollectionViewCell.swift in Sources */,
 				982CCCBA26BADA3100E260E3 /* UserIdentityViewController.swift in Sources */,
+				983286BE26D7D5DA0002E185 /* Status.pbobjc.m in Sources */,
 				98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */,
 				982CCC6926BA305200E260E3 /* constants.swift in Sources */,
+				983286AC26D7D5DA0002E185 /* Operations.pbrpc.m in Sources */,
+				983286B526D7D5DA0002E185 /* monitored_resource.proto in Sources */,
+				983286B626D7D5DA0002E185 /* annotations.proto in Sources */,
 				989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */,
+				983286B426D7D5DA0002E185 /* Label.pbobjc.m in Sources */,
+				983286B226D7D5DA0002E185 /* http.proto in Sources */,
 				988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */,
 				9808544426D13E9400A8538D /* PulseAnimation.swift in Sources */,
 				984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */,
@@ -849,6 +965,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 445LZL99JS;
 				INFOPLIST_FILE = VR_App/Info.plist;
@@ -858,6 +975,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.babble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sources/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -869,6 +987,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 445LZL99JS;
 				INFOPLIST_FILE = VR_App/Info.plist;
@@ -878,6 +997,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.babble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sources/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -885,7 +1005,6 @@
 		};
 		986BB41726B8A46200D6E492 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE6356C62AF26C33E01525E1 /* Pods-VR_AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -908,7 +1027,6 @@
 		};
 		986BB41826B8A46200D6E492 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 716C668503DB1474B84223AA /* Pods-VR_AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -931,7 +1049,6 @@
 		};
 		986BB41A26B8A46200D6E492 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A56652A0F5D558737BEA884A /* Pods-VR_App-VR_AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -952,7 +1069,6 @@
 		};
 		986BB41B26B8A46200D6E492 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 916D9875DF3EE2BBF74AAA11 /* Pods-VR_App-VR_AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

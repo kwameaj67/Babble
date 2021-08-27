@@ -6,15 +6,10 @@ target 'VR_App' do
   use_frameworks!
   pod 'GoogleSignIn'
   pod 'MBProgressHUD'
-  pod 'loady'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'googleapis', :path => '.'
   # Pods for VR_App
-
-  target 'VR_AppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
   
   post_install do |installer|
    installer.pods_project.targets.each do |target|
@@ -24,8 +19,5 @@ target 'VR_App' do
    end
   end
   
-  target 'VR_AppUITests' do
-    # Pods for testing
-  end
 
 end
