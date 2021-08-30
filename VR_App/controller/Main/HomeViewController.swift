@@ -1,13 +1,13 @@
 //
 //  HomeViewController.swift
 //  VR_App
-//
 //  Created by Kwame Agyenim - Boateng on 04/08/2021.
 //
 
 import UIKit
 import Firebase
 import AVFoundation
+import googleapis
 
 class HomeViewController: UIViewController{
 
@@ -71,14 +71,20 @@ class HomeViewController: UIViewController{
         recordButton.isSelected = !recordButton.isSelected
         isRecording = !isRecording
         animatePulseButton(recordButton)
-        if recordButton.isSelected && isRecording{
-            GoogleSpeechManager.startRecording()
+//        if isRecording{
+//            GoogleSpeechManager.startRecording()
+//            startTimer()
+//        }else{
+//            GoogleSpeechManager.stopRecording()
+//            pauseTimer()
+//        }
+        if recordButton.isSelected{
+            
             captionTitleLabel.text = "Now listening for sound to captions"
             recordButton.setImage(UIImage(named: "icons8-pause-100"), for: .normal)
             print("recording")
             startTimer()
         }else{
-            GoogleSpeechManager.stopRecording()
             pauseTimer()
             captionTitleLabel.text = "Tap to record captions"
             recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
@@ -209,22 +215,20 @@ extension HomeViewController: AudioControllerDelegate {
             GoogleSpeechManager.stopRecording()
         }
     }
-//   audio delegate implementation
-//   function is responsible to take the audio input and relay back the response in the text format
+//   audio delegate implementation,function is responsible to take the audio input and relay back the response in the text format
     func processSampleData(_ data: Data) -> Void {
+//        audioData?.append(data)
         if let audio_data = audioData{
             audio_data.append(data)
         }
-//        print("audio input started")
-
       // We recommend sending samples in 100ms chunks
       let chunkSize : Int /* bytes/chunk */ = Int(0.1 /* seconds/chunk */
         * Double(Constants.Audio.SAMPLE_RATE) /* samples/second */
         * 2 /* bytes/sample */);
         if let checkAudioData = audioData{
-            if (checkAudioData.length > chunkSize) {
-              SpeechRecognitionService.sharedInstance.streamAudioData(audioData,
-                                                                      completion:
+        if (checkAudioData.length > chunkSize) {
+            print("audio input started")
+              SpeechRecognitionService.sharedInstance.streamAudioData(audioData, completion:
                 { [weak self] (response, error) in
                     guard let strongSelf = self else {
                         return
