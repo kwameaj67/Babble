@@ -8,6 +8,7 @@
 import UIKit
 
 class TranscriptionsViewController: UIViewController {
+   
     
     let searchBar = UISearchController()
     override func viewDidLoad() {
@@ -18,8 +19,8 @@ class TranscriptionsViewController: UIViewController {
 }
 
 extension TranscriptionsViewController{
+// MARK:- edits search bar
     func styles(){
-//        edits search bar
         let searchTextAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
         searchTextAppearance.font = UIFont(name: "Avenir", size: 18)
         searchTextAppearance.textColor = .black
@@ -27,9 +28,9 @@ extension TranscriptionsViewController{
         let attributes:[NSAttributedString.Key: Any] = [  // edits cancel button
             .foregroundColor: Constants.Colors.green,
             .font: UIFont.systemFont(ofSize: 16)
-            
-                
         ]
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
     }
+
+    
 }
