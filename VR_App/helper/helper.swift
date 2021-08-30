@@ -35,3 +35,6 @@ func inputConfig(input:UITextField){
     input.autocapitalizationType = .none
 }
 
+// referencing the managed object context
+ let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
