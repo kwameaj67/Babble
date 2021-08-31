@@ -8,25 +8,28 @@ import UIKit
 import Firebase
 import AVFoundation
 import googleapis
+import Speech
 
 class HomeViewController: UIViewController{
-
+// MARK:- local properties
     var isRecording: Bool = false
     var audioData: NSMutableData!
-    var timer = Timer()
-    var (hours,minutes,seconds,fractions) = (0,0,0,0)
+   
     var captionsTitles:[String] = ["Record your speech","Tap to start captions","Transcribe all captions with a tap"]
+//  speech local properties
+    var audioEngine = AVAudioEngine()
+    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+    let request = SFSpeechAudioBufferRecognitionRequest()
+    var task: SFSpeechRecognitionTask! = nil
+    
+//    MARK:- outlets
     @IBOutlet weak var nameTextLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var createNoteButton: UIButton!
     @IBOutlet weak var captionTitleLabel: UILabel!
-    @IBOutlet weak var hourLabel: UILabel!
-    @IBOutlet weak var minuteLabel: UILabel!
-    @IBOutlet weak var secondLabel: UILabel!
-    @IBOutlet var spokenTextView: UITextView!
+   
     
-    @IBOutlet weak var fractionLabel: UILabel!
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateButton(recordButton)
@@ -42,11 +45,10 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         microphonePermissions()
         styles()
-        timerFormat()
         getUserDefaultsData()
         let user = Auth.auth().currentUser?.email
         print(user ?? "user no found")
-        AudioController.sharedInstance.delegate = self
+//        AudioController.sharedInstance.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -55,6 +57,7 @@ class HomeViewController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+//        cancelSpeechRecognition()
     }
     
     
@@ -67,41 +70,38 @@ class HomeViewController: UIViewController{
     }
     @IBAction func onTapRecordBustton(_ sender: UIButton) {
         
-//        pulseSpringAnimation(sender: recordButton)
+        pulseSpringAnimation(sender: recordButton)
         recordButton.isSelected = !recordButton.isSelected
-        isRecording = !isRecording
         animatePulseButton(recordButton)
-//        if isRecording{
-//            GoogleSpeechManager.startRecording()
-//            startTimer()
-//        }else{
-//            GoogleSpeechManager.stopRecording()
-//            pauseTimer()
-//        }
         if recordButton.isSelected{
-            
             captionTitleLabel.text = "Now listening for sound to captions"
             recordButton.setImage(UIImage(named: "icons8-pause-100"), for: .normal)
             print("recording")
-            startTimer()
+            startSpeechRecognition()
         }else{
-            pauseTimer()
+            cancelSpeechRecognition()
             captionTitleLabel.text = "Tap to record captions"
             recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
             print("stopped recording")
             endPulseSpringAnimation(sender: recordButton)
             self.recordButton.layer.removeAnimation(forKey: "pulse")
         }
-//        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.errorViewController) as! ErrorViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true, completion: nil)
-        
-        
+    }
+    func showRecordingVC(){
+                let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.recordingViewController) as! RecordingViewController
+                vc.modalPresentationStyle = .fullScreen
+                present(vc, animated: true, completion: nil)
+             
     }
 }
 
-extension HomeViewController: AudioControllerDelegate {
-    
+extension HomeViewController {
+//  MARK: - alerts
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "Oops!", message:message, preferredStyle:UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 //    MARK: - Styles
     func styles(){
         roundCorners(button: recordButton)
@@ -142,8 +142,6 @@ extension HomeViewController: AudioControllerDelegate {
     func getUserDefaultsData(){
         // used to format name strings
         let nameFormatter = PersonNameComponentsFormatter()
-        
-        
         // read data from userDefaults
         let userData = userDefaultManager.userDefault.object(forKey: "user") as? [String:String]
         
@@ -163,49 +161,7 @@ extension HomeViewController: AudioControllerDelegate {
             avatarImage.image = UIImage(named: "icons8-woman-curly-hair-medium-skin-tone-100")
         }
     }
-//    MARK:- Timer functions
-    @objc func updateTimer(){
-        fractions += 1
-        if fractions > 99{
-            seconds += 1
-            fractions = 0
-        }
-        if seconds > 59{
-            minutes += 1
-            seconds = 0
-        }
-        if minutes > 59 {
-            hours += 1
-            minutes = 0
-        }
-        timerFormat()
-      
-    }
-    func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    }
-    func pauseTimer(){
-        timer.invalidate()
-    }
-    func stopTimer(){
-        timer.invalidate()
-        (hours,minutes,seconds,fractions) = (0,0,0,0)
-        hourLabel.text = "0\(hours):"
-        minuteLabel.text = "0\(minutes):"
-        secondLabel.text = "0\(seconds)."
-        fractionLabel.text = "0\(fractions)"
-    }
-    func timerFormat(){
-        let secondString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
-        let minuteString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
-        let hourString = hours > 9 ? "\(hours)" : "0\(hours)"
-        let fractionString = "\(fractions)"
-        
-        hourLabel.text = "\(hourString):"
-        minuteLabel.text = "\(minuteString):"
-        secondLabel.text = "\(secondString)."
-        fractionLabel.text = "\(fractionString)"
-    }
+
 //    MARK:- streaming recording
     func beginRecoding(){
         isRecording = !isRecording
@@ -216,65 +172,139 @@ extension HomeViewController: AudioControllerDelegate {
         }
     }
 //   audio delegate implementation,function is responsible to take the audio input and relay back the response in the text format
-    func processSampleData(_ data: Data) -> Void {
-//        audioData?.append(data)
-        if let audio_data = audioData{
-            audio_data.append(data)
-        }
-      // We recommend sending samples in 100ms chunks
-      let chunkSize : Int /* bytes/chunk */ = Int(0.1 /* seconds/chunk */
-        * Double(Constants.Audio.SAMPLE_RATE) /* samples/second */
-        * 2 /* bytes/sample */);
-        if let checkAudioData = audioData{
-        if (checkAudioData.length > chunkSize) {
-            print("audio input started")
-              SpeechRecognitionService.sharedInstance.streamAudioData(audioData, completion:
-                { [weak self] (response, error) in
-                    guard let strongSelf = self else {
-                        return
-                    }
-                    
-                    if let error = error {
-                      strongSelf.spokenTextView.text = error.localizedDescription
-                    } else if let response = response {
-                        var finished = false
-                        print(response)
-                        for result in response.resultsArray! {
-                            if let result = result as? StreamingRecognitionResult {
-                                if result.isFinal {
-                                    finished = true
-      //                            display streaming text
-                                    print("\(response.description)")
-                                  strongSelf.spokenTextView.text = response.description
-                                }
-                            }
-                        }
-                      strongSelf.spokenTextView.text = response.description
-                        if finished {
-                            strongSelf.stopAudio(strongSelf)
-                        }
-                    }
-              })
-              self.audioData = NSMutableData()
-            }
-          }
-        }
-     
+//    func processSampleData(_ data: Data) -> Void {
+////        audioData?.append(data)
+//        if let audio_data = audioData{
+//            audio_data.append(data)
+//        }
+//      // We recommend sending samples in 100ms chunks
+//      let chunkSize : Int /* bytes/chunk */ = Int(0.1 /* seconds/chunk */
+//        * Double(Constants.Audio.SAMPLE_RATE) /* samples/second */
+//        * 2 /* bytes/sample */);
+//        if let checkAudioData = audioData{
+//        if (checkAudioData.length > chunkSize) {
+//            print("audio input started")
+//              SpeechRecognitionService.sharedInstance.streamAudioData(audioData, completion:
+//                { [weak self] (response, error) in
+//                    guard let strongSelf = self else {
+//                        return
+//                    }
+//
+//                    if let error = error {
+////                      strongSelf.text = error.localizedDescription
+//                    } else if let response = response {
+//                        var finished = false
+//                        print(response)
+//                        for result in response.resultsArray! {
+//                            if let result = result as? StreamingRecognitionResult {
+//                                if result.isFinal {
+//                                    finished = true
+//      //                            display streaming text
+//                                    print("\(response.description)")
+////                                  strongSelf.text = response.description
+//                                }
+//                            }
+//                        }
+////                      strongSelf.text = response.description
+//                        if finished {
+//                            strongSelf.stopAudio(strongSelf)
+//                        }
+//                    }
+//              })
+//              self.audioData = NSMutableData()
+//            }
+//          }
+//        }
+//
     func stopAudio(_ sender: NSObject) {
         _ = AudioController.sharedInstance.stop()
         SpeechRecognitionService.sharedInstance.stopStreaming()
       }
 //    MARK:- grant microphone access
     func microphonePermissions(){
-        switch AVAudioSession.sharedInstance().recordPermission{
-        case AVAudioSession.RecordPermission.granted:
-            print("Granted")
-        case AVAudioSession.RecordPermission.denied:
-            print("Denied")
-        case AVAudioSession.RecordPermission.undetermined:
-            print("Request permission here")
-        @unknown default:
-            fatalError()
+        SFSpeechRecognizer.requestAuthorization { authState in
+            DispatchQueue.main.async {
+                self.recordButton.isEnabled = false
+            }
+            /*
+                       The callback may not be called on the main thread. Add an
+                       operation to the main queue to update the record button's state.
+                   */
+            OperationQueue.main.addOperation {
+                switch authState{
+                case .notDetermined:
+                    print("NOT KNOWN")
+                case .denied:
+                    print("DENIED")
+                    self.showAlert(message: "User denied Speech permission")
+                case .restricted:
+                    print("RESTRICTED")
+                    self.showAlert(message: "User has been restricted for using Speech recognition")
+                case .authorized:
+                    print("ACCEPTED")
+                    self.recordButton.isEnabled = true
+                @unknown default:
+                    fatalError()
+                }
+            }
         }
+    }
+    
+//    MARK: - start speech recognition
+    func startSpeechRecognition(){
+//        self.recordButton.isEnabled = false
+        let node = audioEngine.inputNode
+        //Remove tap first.
+        node.removeTap(onBus: 0)
+        // Configure the microphone input.
+        let recordingFormat = node.outputFormat(forBus: 0)
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
+            self.request.append(buffer)
+        }
+//        prepare audio engine
+        audioEngine.prepare()
+        do {
+            try audioEngine.start()
+        } catch _ {
+            showAlert(message : "Something went wrong starting audio listener!")
+        }
+        
+        guard let myRecognition = SFSpeechRecognizer() else {
+            self.showAlert(message: "Recognition isn't in your local")
+            return
+        }
+        if !myRecognition.isAvailable{
+            showAlert(message: "Recognition isn't free right now. Please try again sometime")
+        }
+//        start recognizing
+        task = speechRecognizer?.recognitionTask(with: request, resultHandler: { response, error in
+            guard let response = response else {
+                if error != nil {
+                    print("\(error.debugDescription)")
+                }
+                else{
+                    self.showAlert(message: "Something went wrong in getting audio response!")
+                }
+                return
+            }
+//            gets transcription
+            let message = response.bestTranscription.formattedString
+            print("got messages")
+            if message != "" {
+                self.showRecordingVC()
+                self.recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
+            }
+
+            
+        })
+    }
+//    MARK: - cancel speech recognition
+    func cancelSpeechRecognition(){
+        task.finish()
+        task.cancel()
+        task = nil
+        request.endAudio()
+        audioEngine.stop()
+        audioEngine.inputNode.removeTap(onBus: 0)
     }
 }
