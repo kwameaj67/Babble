@@ -42,6 +42,7 @@ struct Constants {
         static let errorViewController = "errorController"
         static let noteViewController = "noteViewController"
         static let recordingViewController = "recordingViewController"
+        static let detailedTranscriptViewController = "detailedTranscriptsViewController"
     }
     struct Colors {
         static let green = UIColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00)
