@@ -72,6 +72,8 @@
 		987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B64F526D04DD0003F21A8 /* userDefault.swift */; };
 		988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B499726CDC98900EC7DAE /* CoreDataManager.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
+		98A1262A26E9074700896A5C /* TranscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1262926E9074700896A5C /* TranscriptionTableViewCell.swift */; };
+		98A1262C26E912EA00896A5C /* DetailedTranscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1262B26E912EA00896A5C /* DetailedTranscriptionViewController.swift */; };
 		98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */; };
 		98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31CE26CC2BF100A6439D /* Actor.swift */; };
 		98FD197F26C54C00009C4A5F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD197E26C54C00009C4A5F /* Validate.swift */; };
@@ -182,6 +184,8 @@
 		987B64F526D04DD0003F21A8 /* userDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefault.swift; sourceTree = "<group>"; };
 		988B499726CDC98900EC7DAE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
+		98A1262926E9074700896A5C /* TranscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionTableViewCell.swift; sourceTree = "<group>"; };
+		98A1262B26E912EA00896A5C /* DetailedTranscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTranscriptionViewController.swift; sourceTree = "<group>"; };
 		98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		98BB31CE26CC2BF100A6439D /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		98FD197E26C54C00009C4A5F /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */,
 				982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */,
 				9808544726D161A400A8538D /* NoteViewController.swift */,
+				98A1262B26E912EA00896A5C /* DetailedTranscriptionViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 		984EDF8626C1714700DBA40C /* views */ = {
 			isa = PBXGroup;
 			children = (
+				98A1262826E9022C00896A5C /* Main */,
 				984EDF9F26C194FB00DBA40C /* Onboarding */,
 			);
 			path = views;
@@ -512,6 +518,14 @@
 			isa = PBXGroup;
 			children = (
 				989BE05A26C4332500A2F4CB /* Transcript.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		98A1262826E9022C00896A5C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				98A1262926E9074700896A5C /* TranscriptionTableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -742,6 +756,7 @@
 				982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */,
 				984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */,
 				984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */,
+				98A1262A26E9074700896A5C /* TranscriptionTableViewCell.swift in Sources */,
 				983286B726D7D5DA0002E185 /* label.proto in Sources */,
 				982CCC9226BAD98E00E260E3 /* SettingsViewController.swift in Sources */,
 				982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */,
@@ -789,6 +804,7 @@
 				988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */,
 				9808544426D13E9400A8538D /* PulseAnimation.swift in Sources */,
 				984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */,
+				98A1262C26E912EA00896A5C /* DetailedTranscriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
