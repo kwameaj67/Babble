@@ -6,7 +6,18 @@
 //
 
 import Foundation
+import CoreData
 
-struct CoreDataManager{
+class CoreDataManager{
  
+    static var shared = CoreDataManager()
+    
+    private init(){}
+    
+//    reference to managed object context
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
+    
+    
 }
