@@ -9,6 +9,8 @@ import UIKit
 
 class TranscriptionsViewController: UIViewController {
     
+    @IBOutlet var numOfNotes: UILabel!
+    @IBOutlet var emptyMsgLabel: UILabel!
     var transcriptionArray:[TranscriptModel] = TranscriptModel.transcriptData
     var myDate:String = ""
     var myTitle:String = ""
@@ -35,8 +37,9 @@ class TranscriptionsViewController: UIViewController {
 
 extension TranscriptionsViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        numOfNotes.text = transcriptionArray.count > 1 ? "\(transcriptionArray.count) notes" : "\(transcriptionArray.count) note"
         return transcriptionArray.count
-    }
+}
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TranscriptionTableViewCell
