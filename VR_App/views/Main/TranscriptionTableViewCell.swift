@@ -16,7 +16,13 @@ class TranscriptionTableViewCell: UITableViewCell {
     
     func setupTranscriptionCell(item: TranscriptModel){
         titleLabel.text = item.title
-        dateLabel.text = "\(item.date) ."
         descriptionLabel.text = item.description
+        
+//        let date = Date()
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "d/MM/yyyy"
+//        let transcriptionDate = formatter.string(from: item.date)
+        dateLabel.text = "\(item.date) ."
+        
     }
 }
