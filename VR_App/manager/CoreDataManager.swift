@@ -16,8 +16,48 @@ class CoreDataManager{
     
 //    reference to managed object context
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+//   method to save the context
+    func saveTranscriptions(){
+        if context.hasChanges{
+            do {
+                 try context.save()
+                print("Saved")
+            } catch  {
+                print("Something went wrong whilst saving data!\(error.localizedDescription)")
+            }
+            fetchTranscriptions()
+        }
+    }
+}
+//MARK: - helper functions
+extension CoreDataManager{
     
     
-    
-    
+    func createTranscription(title:String,text:String) -> Transcriptions{
+//        create transcription object
+        let note = Transcriptions(context: context)
+        note.id = UUID()
+        note.date = getDate()
+        note.title = title
+        note.text = text
+//        save note
+        saveTranscriptions()
+        return note
+    }
+    func fetchTranscriptions() -> [Transcriptions]{
+        print("Fetch notes...")
+        return try! context.fetch(Transcriptions.fetchRequest())
+    }
+    func deleteTranscription(transcript: Transcriptions){
+//        remove object
+        do {
+            print("Deleting note")
+            context.delete(transcript)
+            //        save data
+            saveTranscriptions()
+        }
+
+
+    }
 }
