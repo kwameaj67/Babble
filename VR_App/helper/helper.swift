@@ -22,10 +22,10 @@ func textInputRoundCorners(view:UIView){
 }
 // MARK:- pulse button animation
  func animatePulseButton(_ animateTo:UIView){
-    UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 2, initialSpringVelocity: 1.5, options: .curveEaseIn) {
+    UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn) {
         animateTo.transform = CGAffineTransform(scaleX: 0.93, y:0.93)
     } completion: { (_) in
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
             animateTo.transform = CGAffineTransform(scaleX: 1, y: 1)
         }, completion:nil)
     }
