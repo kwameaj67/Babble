@@ -63,6 +63,7 @@ class HomeViewController: UIViewController{
     
   
     @IBAction func onTapCreateNote(_ sender: Any) {
+        animatePulseButton(createNoteButton)
         let noteVC = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.noteViewController) as! NoteViewController
         noteVC.modalPresentationStyle = .fullScreen
         present(noteVC, animated: true, completion: nil)
