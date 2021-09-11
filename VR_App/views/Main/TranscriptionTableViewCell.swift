@@ -12,17 +12,22 @@ class TranscriptionTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var iconContainer: UIView!
     
-    
-    func setupTranscriptionCell(item: TranscriptModel){
+    func setupTranscriptionCell(item: Transcriptions){
         titleLabel.text = item.title
-        descriptionLabel.text = item.description
-        
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "d/MM/yyyy"
-//        let transcriptionDate = formatter.string(from: item.date)
-        dateLabel.text = "\(item.date) ."
-        
+        descriptionLabel.text = item.text
+        let date = Date()
+        let formatter = DateFormatter()
+        if Calendar.current.isDateInToday(date){
+            formatter.dateFormat = "h:mm:a"
+        }else{
+            formatter.dateFormat = "MMM d, yyyy"
+        }
+//        print(item.date!)
+        let transcriptDate = formatter.string(from: item.date ?? date)
+        dateLabel.text = transcriptDate
+        iconContainer.layer.cornerRadius = iconContainer.layer.frame.height/2.2
     }
 }
+
