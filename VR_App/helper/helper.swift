@@ -39,3 +39,18 @@ func inputConfig(input:UITextField){
 // MARK: -  referencing the managed object context
  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+// MARK: - get current date
+func getDate() -> Date{
+    let date = Date()
+    let formatter = DateFormatter()
+    formatter.locale = .current
+    formatter.dateStyle = .long
+    formatter.timeStyle = .short
+    if Calendar.current.isDateInToday(date){
+        formatter.dateFormat = "h:mm:a"
+    }else{
+        formatter.dateFormat = "MMM d, yyyy"
+    }
+  
+    return date
+}
