@@ -16,6 +16,8 @@ class RecordingViewController: UIViewController {
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var fractionLabel: UILabel!
     
+    var delegate: TranscriptionListDelegate?
+    
 //    MARK: - timer local properties
     var timer = Timer()
     var (hours,minutes,seconds,fractions) = (0,0,0,0)
@@ -47,9 +49,16 @@ class RecordingViewController: UIViewController {
         cancelRecordingAlert(msg: "Are you sure you want to cancel this transcript recording?")
        
     }
+//    MARK:- method to save transcription
     @IBAction func onTapSave(_ sender: Any) {
         pauseTimer()
         saveRecordingAlert(msg: "Do you really want to save this transcript?")
+    }
+    
+    private func createTranscription() -> Transcriptions{
+        let note = CoreDataManager.shared.createTranscription(title: "Untitled transcription", text: spokenTextArea.text ?? "")
+        delegate?.refreshTranscriptions()
+        return note 
     }
     func cancelRecordingAlert(msg:String){
         let alert = UIAlertController(title: "Cancel transcription", message: msg, preferredStyle: .alert)
@@ -68,9 +77,12 @@ class RecordingViewController: UIViewController {
         let alert = UIAlertController(title: "Save changes", message: msg, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { _ in
 //            save transcription here.
+            self.createTranscription()
+            self.dismiss(animated: true, completion: nil)
         }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel,handler: { _ in
             self.startTimer()
+            self.dismiss(animated: true, completion: nil)
         }))
         present(alert, animated: true, completion: nil)
     }
