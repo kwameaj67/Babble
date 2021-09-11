@@ -74,6 +74,8 @@
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
 		98A1262A26E9074700896A5C /* TranscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1262926E9074700896A5C /* TranscriptionTableViewCell.swift */; };
 		98A1262C26E912EA00896A5C /* DetailedTranscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1262B26E912EA00896A5C /* DetailedTranscriptionViewController.swift */; };
+		98A1262E26EA27BA00896A5C /* CustomUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1262D26EA27B900896A5C /* CustomUITabBarController.swift */; };
+		98A1263026EAF3E600896A5C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1262F26EAF3E600896A5C /* Date+Extension.swift */; };
 		98BB31C826CC05C100A6439D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */; };
 		98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB31CE26CC2BF100A6439D /* Actor.swift */; };
 		98FD197F26C54C00009C4A5F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD197E26C54C00009C4A5F /* Validate.swift */; };
@@ -186,6 +188,8 @@
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
 		98A1262926E9074700896A5C /* TranscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionTableViewCell.swift; sourceTree = "<group>"; };
 		98A1262B26E912EA00896A5C /* DetailedTranscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTranscriptionViewController.swift; sourceTree = "<group>"; };
+		98A1262D26EA27B900896A5C /* CustomUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITabBarController.swift; sourceTree = "<group>"; };
+		98A1262F26EAF3E600896A5C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		98BB31CE26CC2BF100A6439D /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		98FD197E26C54C00009C4A5F /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */,
 				984C68DA26CAB84C0046ED58 /* Alert.swift */,
 				9808544326D13E9400A8538D /* PulseAnimation.swift */,
+				98A1262D26EA27B900896A5C /* CustomUITabBarController.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 			children = (
 				98FD197E26C54C00009C4A5F /* Validate.swift */,
 				98BB31C726CC05C100A6439D /* UserDefaults+Extension.swift */,
+				98A1262F26EAF3E600896A5C /* Date+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -752,6 +758,7 @@
 				984EDF9B26C1942C00DBA40C /* Swipe.swift in Sources */,
 				9832867C26D7D5C30002E185 /* SpeechRecognitionService.swift in Sources */,
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
+				98A1263026EAF3E600896A5C /* Date+Extension.swift in Sources */,
 				987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */,
 				982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */,
 				984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */,
@@ -768,6 +775,7 @@
 				982CCC6126BA2BC900E260E3 /* helper.swift in Sources */,
 				98FD197F26C54C00009C4A5F /* Validate.swift in Sources */,
 				983286AD26D7D5DA0002E185 /* Operations.pbobjc.m in Sources */,
+				98A1262E26EA27BA00896A5C /* CustomUITabBarController.swift in Sources */,
 				9808544826D161A400A8538D /* NoteViewController.swift in Sources */,
 				982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */,
 				983286BF26D7D5DA0002E185 /* ErrorDetails.pbobjc.m in Sources */,
