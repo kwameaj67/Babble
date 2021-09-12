@@ -12,10 +12,18 @@ import FirebaseAuth
 class SettingsViewController: UIViewController {
     
     private let authManager = AuthManager()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setToolbarHidden(true, animated: animated)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setToolbarHidden(false, animated: animated)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
     
     @IBAction func onTapLogoutIcon(_ sender: UIBarButtonItem) {
