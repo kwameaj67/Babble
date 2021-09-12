@@ -15,6 +15,7 @@ class TranscriptionsViewController: UIViewController{
     @IBOutlet var iconContainer: UIView!
     @IBOutlet var numOfNotes: UILabel!
     @IBOutlet var emptyMsgLabel: UILabel!
+    var delegate: TranscriptionListDelegate?
 //    var transcriptionArray:[TranscriptModel] = TranscriptModel.transcriptData
     var transcriptionArray:[Transcriptions]? {
         didSet {
@@ -30,6 +31,7 @@ class TranscriptionsViewController: UIViewController{
         transcriptionTableVIew.delegate = self
         transcriptionTableVIew.dataSource = self
         transcriptionTableVIew.layer.cornerRadius = 10
+        transcriptionTableVIew.tableFooterView = UIView() //hides extra empty cells in tableView
         configureSearchBar()
         fetchTranscriptions()
     }
@@ -42,8 +44,9 @@ class TranscriptionsViewController: UIViewController{
     
     //    fetch transcriptions
         func fetchTranscriptions(){
-            transcriptionArray  = CoreDataManager.shared.fetchTranscriptions()
+            self.transcriptionArray  = CoreDataManager.shared.fetchTranscriptions()
             transcriptionArray?.reverse()
+            refreshTranscriptions()
         }
 
 }
@@ -120,7 +123,9 @@ extension TranscriptionsViewController:UITableViewDelegate,UITableViewDataSource
 
 extension TranscriptionsViewController: TranscriptionListDelegate{
     func refreshTranscriptions() {
-        transcriptionTableVIew.reloadData()
+        DispatchQueue.main.async {
+            self.transcriptionTableVIew.reloadData()
+        }
     }
 }
 extension TranscriptionsViewController: UISearchBarDelegate, UISearchControllerDelegate {
