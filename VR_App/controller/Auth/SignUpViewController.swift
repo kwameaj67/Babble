@@ -37,6 +37,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.becomeFirstResponder()
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+         view.addGestureRecognizer(tapGesture)
         scrollView.showsVerticalScrollIndicator = false
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true

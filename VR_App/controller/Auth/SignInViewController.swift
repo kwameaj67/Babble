@@ -26,6 +26,8 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         Styles()
         emailTextField.becomeFirstResponder()
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+         view.addGestureRecognizer(tapGesture)
         scrollView.showsVerticalScrollIndicator = false
 
     }

@@ -19,6 +19,8 @@ class NoteViewController: UIViewController {
         currentDate()
         hideBottomBar()
         topicTextField.becomeFirstResponder()
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+         view.addGestureRecognizer(tapGesture)
     }
     
 
@@ -54,10 +56,9 @@ extension NoteViewController{
         navigationController?.navigationBar.isTranslucent = true
     }
 //    save notes
-    private func createTranscription() -> Transcriptions{
-        let note = CoreDataManager.shared.createTranscription(title: topicTextField.text ?? "Untitled transcription", text: noteTextField.text ?? "")
+    private func createTranscription() {
+        CoreDataManager.shared.createTranscription(title: topicTextField.text ?? "Untitled transcription", text: noteTextField.text ?? "")
         delegate?.refreshTranscriptions()
-        return note
     }
 
 //    show cancel alert
