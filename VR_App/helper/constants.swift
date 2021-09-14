@@ -43,6 +43,7 @@ struct Constants {
         static let noteViewController = "noteViewController"
         static let recordingViewController = "recordingViewController"
         static let detailedTranscriptViewController = "detailedTranscriptsViewController"
+        static let profileViewController = "profileViewController"
     }
     struct Colors {
         static let green = UIColor(red: 0.26, green: 0.52, blue: 0.54, alpha: 1.00)
@@ -56,8 +57,12 @@ struct Constants {
     }
     struct DBCollection {
         static let users = "users"
+        static let transcriptions = "transcriptions"
     }
     struct Audio {
         static let SAMPLE_RATE = 44100.0
+    }
+    struct TableViewCell{
+        static let profile = "profile"
     }
 }
