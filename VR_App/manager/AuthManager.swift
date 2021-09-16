@@ -48,21 +48,22 @@ struct AuthManager{
     func logoutUser() -> Result<Void,Error>{
         do {
             try auth.signOut()
+            userDefaultManager.removeData
             return .success(())
         } catch let error {
             return .failure(error)
         }
     }
     
-//  MARK:-  configure firestore
+//  MARK:-  configure firestore functions
     func createUserCollection(email:String,gender:String,username:String,identity:String,uid:String,completion:@escaping (Result<Void,Error>) -> Void){
         var ref: DocumentReference? = nil
         let userData: [String:Any] = [
-           "email":email,
-           "username":username,
-           "gender":gender,
-           "identity":identity,
-           "uuid":uid,
+            "email":email,
+            "username":username,
+            "gender":gender,
+            "identity":identity,
+            "uuid":uid,
             "timestamp":FieldValue.serverTimestamp()
             ]
         ref = db.collection("users").addDocument(data: userData) { err in
@@ -75,4 +76,5 @@ struct AuthManager{
             }
         }
     }
+
 }
