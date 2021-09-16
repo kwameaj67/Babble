@@ -28,7 +28,8 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var createNoteButton: UIButton!
     @IBOutlet weak var captionTitleLabel: UILabel!
-   
+    @IBOutlet var statusLabel: UILabel!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -70,22 +71,27 @@ class HomeViewController: UIViewController{
        
     }
     @IBAction func onTapRecordBustton(_ sender: UIButton) {
-        
-        pulseSpringAnimation(sender: recordButton)
+        statusLabel.isHidden = false
+//        pulseSpringAnimation(sender: recordButton)
         recordButton.isSelected = !recordButton.isSelected
         animatePulseButton(recordButton)
         if recordButton.isSelected{
             captionTitleLabel.text = "Now listening for sound to captions"
             recordButton.setImage(UIImage(named: "icons8-pause-100"), for: .normal)
             print("recording")
+            statusLabel.text = "Recording now..."
             startSpeechRecognition()
         }else{
             cancelSpeechRecognition()
             captionTitleLabel.text = "Tap to record captions"
             recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
             print("stopped recording")
-            endPulseSpringAnimation(sender: recordButton)
-            self.recordButton.layer.removeAnimation(forKey: "pulse")
+            statusLabel.text = "Stopped recording"
+            delay(duration: 1.0) {
+                self.statusLabel.isHidden = true
+            }
+//            endPulseSpringAnimation(sender: recordButton)
+//            self.recordButton.layer.removeAnimation(forKey: "pulse")
         }
     }
     func showRecordingVC(){
@@ -144,13 +150,13 @@ extension HomeViewController {
         // used to format name strings
         let nameFormatter = PersonNameComponentsFormatter()
         // read data from userDefaults
-        let userData = userDefaultManager.userDefault.object(forKey: "user") as? [String:String]
+        let userData = userDefaultManager.getData
         
         for data in userData ?? [:]{
             print("\(data)")
         }
-        let name:String = userData?["username"] ?? ""
-        let gender:String = userData?["gender"] ?? ""
+        let name:String = userDefaultManager.userDetails.name
+        let gender:String = userDefaultManager.userDetails.gender
         if let userName = nameFormatter.personNameComponents(from: name){
             nameFormatter.style = .short
             nameTextLabel.text =  "Hey, \(nameFormatter.string(from: userName)) 👋"
@@ -277,6 +283,7 @@ extension HomeViewController {
         if !myRecognition.isAvailable{
             showAlert(message: "Recognition isn't free right now. Please try again sometime")
         }
+        request.shouldReportPartialResults = true
 //        start recognizing
         task = speechRecognizer?.recognitionTask(with: request, resultHandler: { response, error in
             guard let response = response else {
@@ -294,6 +301,9 @@ extension HomeViewController {
             if message != "" {
                 self.showRecordingVC()
                 self.recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
+                delay(duration: 1.0) {
+                    self.statusLabel.isHidden = true
+                }
             }
 
             
@@ -301,9 +311,11 @@ extension HomeViewController {
     }
 //    MARK: - cancel speech recognition
     func cancelSpeechRecognition(){
+//        stop recognition
         task.finish()
         task.cancel()
         task = nil
+//        stop audio
         request.endAudio()
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
