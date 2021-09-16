@@ -421,12 +421,13 @@
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gT4-qK-dqP">
-                                <rect key="frame" x="20" y="98" width="374" height="689"/>
+                                <rect key="frame" x="20" y="136" width="374" height="658"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="...">
                                         <attributes>
-                                            <font key="NSFont" size="22" name="AvenirNext-Medium"/>
+                                            <color key="NSColor" red="0.3552268147" green="0.50512009859999996" blue="0.52306431529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="40" name="AvenirNext-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -434,7 +435,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Dil-5l-hcd">
-                                <rect key="frame" x="161.5" y="814" width="91" height="18"/>
+                                <rect key="frame" x="161.5" y="103" width="91" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnu-gl-chf">
                                         <rect key="frame" x="0.0" y="0.0" width="22" height="18"/>
@@ -465,17 +466,34 @@
                                     <constraint firstAttribute="height" constant="18" id="bLI-Jj-3kG"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfI-Jb-tkG">
+                                <rect key="frame" x="132" y="812" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2Yy-xc-7JS"/>
+                                    <constraint firstAttribute="height" constant="40" id="gZ3-Rj-UJZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                <state key="normal" title="Stop recording">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapStopRecording:" destination="SM7-R1-q5v" eventType="touchUpInside" id="DRN-UE-ehw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="93W-KQ-Z0T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="93W-KQ-Z0T" firstAttribute="bottom" secondItem="JfI-Jb-tkG" secondAttribute="bottom" constant="10" id="6LR-ev-trl"/>
                             <constraint firstItem="JqU-AO-J3I" firstAttribute="leading" secondItem="93W-KQ-Z0T" secondAttribute="leading" id="CfH-fY-Yd1"/>
+                            <constraint firstItem="JfI-Jb-tkG" firstAttribute="centerX" secondItem="93W-KQ-Z0T" secondAttribute="centerX" id="JS6-Iy-6tt"/>
                             <constraint firstItem="JqU-AO-J3I" firstAttribute="top" secondItem="93W-KQ-Z0T" secondAttribute="top" id="NFF-99-8Oh"/>
-                            <constraint firstItem="Dil-5l-hcd" firstAttribute="top" secondItem="gT4-qK-dqP" secondAttribute="bottom" constant="27" id="Q7c-OS-wRj"/>
-                            <constraint firstItem="93W-KQ-Z0T" firstAttribute="bottom" secondItem="Dil-5l-hcd" secondAttribute="bottom" constant="30" id="jvN-Ki-yy2"/>
-                            <constraint firstItem="Dil-5l-hcd" firstAttribute="centerX" secondItem="93W-KQ-Z0T" secondAttribute="centerX" id="kOV-cc-7ql"/>
+                            <constraint firstItem="JfI-Jb-tkG" firstAttribute="top" secondItem="gT4-qK-dqP" secondAttribute="bottom" constant="18" id="OjL-xa-9O8"/>
+                            <constraint firstItem="Dil-5l-hcd" firstAttribute="centerX" secondItem="93W-KQ-Z0T" secondAttribute="centerX" id="QDQ-pb-MPh"/>
+                            <constraint firstItem="Dil-5l-hcd" firstAttribute="top" secondItem="JqU-AO-J3I" secondAttribute="bottom" constant="15" id="c96-Os-Uf7"/>
+                            <constraint firstItem="gT4-qK-dqP" firstAttribute="top" secondItem="Dil-5l-hcd" secondAttribute="bottom" constant="15" id="k5a-Vl-ZAi"/>
                             <constraint firstItem="93W-KQ-Z0T" firstAttribute="trailing" secondItem="gT4-qK-dqP" secondAttribute="trailing" constant="20" id="lwS-QC-zVR"/>
-                            <constraint firstItem="gT4-qK-dqP" firstAttribute="top" secondItem="JqU-AO-J3I" secondAttribute="bottom" constant="10" id="m0h-Y5-KgX"/>
                             <constraint firstItem="gT4-qK-dqP" firstAttribute="leading" secondItem="93W-KQ-Z0T" secondAttribute="leading" constant="20" id="o9Q-yu-nHx"/>
                             <constraint firstItem="JqU-AO-J3I" firstAttribute="centerX" secondItem="gT4-qK-dqP" secondAttribute="centerX" id="v5y-J4-dIZ"/>
                         </constraints>
@@ -486,6 +504,7 @@
                         <outlet property="minuteLabel" destination="Woa-NB-LXL" id="AEW-Fk-TXl"/>
                         <outlet property="secondLabel" destination="fyf-Db-3c7" id="ch4-Bd-XvK"/>
                         <outlet property="spokenTextArea" destination="gT4-qK-dqP" id="hiB-SV-1b5"/>
+                        <outlet property="stopRecordingButton" destination="JfI-Jb-tkG" id="c5R-gL-wFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSA-wU-z8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
