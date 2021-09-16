@@ -11,8 +11,9 @@ import CoreData
 class CoreDataManager{
  
     static var shared = CoreDataManager()
-    
     private init(){}
+    
+    var delegate: TranscriptionListDelegate?
     
 //    reference to managed object context
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -34,7 +35,7 @@ class CoreDataManager{
 extension CoreDataManager{
     
     
-    func createTranscription(title:String,text:String) -> Transcriptions{
+    func createTranscription(title:String,text:String){
 //        create transcription object
         let note = Transcriptions(context: context)
         note.id = UUID()
@@ -43,10 +44,11 @@ extension CoreDataManager{
         note.text = text
 //        save note
         saveTranscriptions()
-        return note
+        
     }
     func fetchTranscriptions() -> [Transcriptions]{
         print("Fetch notes...")
+        delegate?.refreshTranscriptions()
         return try! context.fetch(Transcriptions.fetchRequest())
     }
     func deleteTranscription(transcript: Transcriptions){
@@ -57,7 +59,8 @@ extension CoreDataManager{
             //        save data
             saveTranscriptions()
         }
-
-
+    }
+    func removeAllTranscriptions(){
+//        context.delete(<#T##object: NSManagedObject##NSManagedObject#>)
     }
 }
