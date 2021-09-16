@@ -14,12 +14,8 @@ class DetailedTranscriptionViewController: UIViewController {
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var descriptionTextArea: UITextView!
     
-    var transcripts: Transcriptions!
+    var transcript: Transcriptions!
     var delegate: TranscriptionListDelegate?
-    
-    var noteDate: String = ""
-    var noteTitle:String = ""
-    var noteDescription:String = ""
     
     override func viewDidAppear(_ animated: Bool) {
         titleTextField.becomeFirstResponder()
@@ -27,14 +23,28 @@ class DetailedTranscriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Files"
-        dateLabel.text = noteDate
-        titleTextField.text = noteTitle
-        descriptionTextArea.text = noteDescription
+        getData()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        updateTranscriptions()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func getData(){
+        let formatter = DateFormatter()
+        let transcriptDate = formatter.string(from: transcript.date!)
+        dateLabel.text = transcriptDate   //not working
+        titleTextField.text = transcript?.title
+        descriptionTextArea.text = transcript?.text
     }
     
     func updateTranscriptions(){
-        print("updating note")
-        transcripts.date = Date()
+        transcript.date = Date()
+        transcript.title = titleTextField.text ?? ""
+        transcript.text = descriptionTextArea.text
         CoreDataManager.shared.saveTranscriptions()
         delegate?.refreshTranscriptions()
     }
@@ -42,11 +52,11 @@ class DetailedTranscriptionViewController: UIViewController {
 }
 extension DetailedTranscriptionViewController: UITextViewDelegate,UITextFieldDelegate{
     func textViewDidEndEditing(_ textView: UITextView) {
-        transcripts?.text = descriptionTextArea.text
+        descriptionTextArea.text =  transcript?.text
         updateTranscriptions()
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        transcripts?.title = titleTextField.text
+        titleTextField.text = transcript?.title
         updateTranscriptions()
     }
 }
