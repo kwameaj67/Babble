@@ -19,10 +19,10 @@ class TranscriptionTableViewCell: UITableViewCell {
         descriptionLabel.text = item.text
         let date = Date()
         let formatter = DateFormatter()
-        if Calendar.current.isDateInToday(date){
-            formatter.dateFormat = "h:mm:a"
+        if Calendar.current.isDateInToday(item.date ?? date){
+            formatter.dateFormat = "h:mm:a・"
         }else{
-            formatter.dateFormat = "MMM d, yyyy"
+            formatter.dateFormat = "MMM d,yy・"
         }
 //        print(item.date!)
         let transcriptDate = formatter.string(from: item.date ?? date)
