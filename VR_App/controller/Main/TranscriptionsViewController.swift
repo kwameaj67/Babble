@@ -12,6 +12,8 @@ protocol TranscriptionListDelegate{
 }
 class TranscriptionsViewController: UIViewController{
     
+    let TimeStamp = NSDate().timeIntervalSince1970
+    
     @IBOutlet var iconContainer: UIView!
     @IBOutlet var numOfNotes: UILabel!
     @IBOutlet var emptyMsgLabel: UILabel!
@@ -33,6 +35,7 @@ class TranscriptionsViewController: UIViewController{
         transcriptionTableVIew.layer.cornerRadius = 10
         transcriptionTableVIew.tableFooterView = UIView() //hides extra empty cells in tableView
         configureSearchBar()
+//        fetchData()
         fetchTranscriptions()
     }
     private func configureSearchBar(){
@@ -41,13 +44,32 @@ class TranscriptionsViewController: UIViewController{
         searchController.searchBar.delegate = self
         searchController.delegate = self
     }
+//    func fetchData(){
+//        TranscriptionManager.shared.getTranscriptions { result in
+//            switch result{
+//            case .failure(let err):
+//                print("\(err.localizedDescription)")
+//            case .success(let data):
+//                print("fetched data from firestore:\(data)")
+//                let item = TranscriptModel(title: data["title"] as! String , description: data["description"] as! String, date: data["date"] as! Date)
+//                self.transcriptionArray.append(item)
+//            }
+//        }
+//    }
     
     //    fetch transcriptions
-        func fetchTranscriptions(){
+    func fetchTranscriptions(){
             self.transcriptionArray  = CoreDataManager.shared.fetchTranscriptions()
-            transcriptionArray?.reverse()
+        transcriptionArray?.reverse()
             refreshTranscriptions()
         }
+    func goToDetailedTranscript(transcript: Transcriptions){
+        //        move to new screen
+        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.detailedTranscriptViewController) as! DetailedTranscriptionViewController
+        vc.delegate = self
+        vc.transcript = transcript
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
@@ -67,16 +89,8 @@ extension TranscriptionsViewController:UITableViewDelegate,UITableViewDataSource
         return 78.0
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = transcriptionArray![indexPath.row]
-        
-//        move to new screen
-        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.detailedTranscriptViewController) as! DetailedTranscriptionViewController
-        let formatter = DateFormatter()
-        let transcriptDate = formatter.string(from: row.date ?? getDate())
-        vc.noteDate = transcriptDate
-        vc.noteTitle = row.title ?? ""
-        vc.noteDescription = row.text ?? ""
-        navigationController?.pushViewController(vc, animated: true)
+        let item = transcriptionArray![indexPath.row]
+        goToDetailedTranscript(transcript:item)
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandlder in
@@ -91,21 +105,6 @@ extension TranscriptionsViewController:UITableViewDelegate,UITableViewDataSource
         }
         return UISwipeActionsConfiguration(actions: [action])
     }
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        let transcriptObject = self.transcriptionArray![indexPath.row]
-//        if editingStyle == .delete{
-//           let delete = CoreDataManager.shared.deleteTranscription(transcript: transcriptObject)
-//            switch delete {
-//            case .success():
-//                DispatchQueue.main.async {
-//                    self.transcriptionTableVIew.reloadData()
-//                }
-//            case .failure(_):
-//                print("cannot delete item")
-//            }
-//
-//        }
-//    }
     
 // MARK:- edits search bar
     func styles(){
