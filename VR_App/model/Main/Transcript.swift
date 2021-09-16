@@ -30,7 +30,7 @@ import UIKit
 struct TranscriptModel{
     var title: String
     var description:String
-    var date:String
+    var date:Date
     
     static let transcriptData: [TranscriptModel] = [
 //        TranscriptModel(title: "Beats", description: "Album 150 130Bmp", date:"05/05/2021"),
