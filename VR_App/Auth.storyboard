@@ -24,13 +24,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sB-Gy-Fxa">
                                 <rect key="frame" x="35" y="612" width="344" height="65"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="C5F-Qz-ZvL"/>
                                     <constraint firstAttribute="height" constant="65" id="cef-jB-2af"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Get started">
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="Create an account">
                                     <color key="titleColor" red="0.26326613269999999" green="0.51634088789999999" blue="0.53542798759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="dlK-Yt-1Op"/>
                                     <constraint firstAttribute="height" constant="65" id="xUl-Hx-wcg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -62,7 +62,7 @@
                                     <fragment content="Babble is useful for people with disabilities that make it difficult for them to use a keyboard.">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="18" name="AvenirNext-Regular"/>
+                                            <font key="NSFont" size="16" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6000000000000001" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -236,7 +236,7 @@
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="validateConfirmPassword:" destination="X9V-Y4-iUY" eventType="editingChanged" id="x2O-c7-DCu"/>
                                                             <action selector="validatePassword:" destination="X9V-Y4-iUY" eventType="editingChanged" id="ha4-fl-WYy"/>
@@ -366,7 +366,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="zUD-3E-HfX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="Signup with Google">
                                     <color key="titleColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -380,7 +380,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="WJR-Z2-zsD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -466,7 +466,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="J67-Wa-t9j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.94902146229999995" green="0.95116599899999998" blue="0.95317509199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -482,7 +482,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="ZD8-Yl-GsO"/>
                                     <constraint firstAttribute="height" constant="65" id="n5l-5e-0Ef"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="👦🏻  Male">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -497,7 +497,7 @@
                                     <constraint firstAttribute="height" constant="65" id="j3P-J4-GhZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="pc5-D3-1Cy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="👩🏻  Female">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -513,7 +513,7 @@
                                         <rect key="frame" x="0.0" y="8" width="344" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="onTapGenderField:" destination="NyG-Wu-jRt" eventType="touchUpInside" id="Hms-yY-fD9"/>
@@ -527,7 +527,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qEP-Vu-M7p"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jyM-37-fbA" firstAttribute="leading" secondItem="qEP-Vu-M7p" secondAttribute="leading" constant="35" id="67Z-5w-vql"/>
                             <constraint firstItem="qEP-Vu-M7p" firstAttribute="trailing" secondItem="I8a-AQ-YUu" secondAttribute="trailing" constant="35" id="6Eu-YR-CoY"/>
@@ -620,7 +620,7 @@
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="validatePassword:" destination="X9V-Y4-iUY" eventType="editingChanged" id="NF7-Tk-Zis"/>
                                                             <action selector="validatePassword:" destination="Cyc-Hz-Nln" eventType="editingChanged" id="X7l-Kv-eQ0"/>
@@ -705,7 +705,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="YRR-hS-rbv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -719,7 +719,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="PXR-ag-gMJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="Continue with Google">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -727,19 +727,17 @@
                                     <action selector="onTapGoogleButton:" destination="Cyc-Hz-Nln" eventType="touchUpInside" id="DHF-TR-XSx"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAu-dI-W6q" userLabel="Container">
-                                <rect key="frame" x="66" y="780" width="282" height="42"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ETN-zs-Ehe">
+                                <rect key="frame" x="76.5" y="780" width="261" height="34"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-M4-9A2">
-                                        <rect key="frame" x="24" y="10" width="171" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-M4-9A2">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="34"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2z6-tY-ciS">
-                                        <rect key="frame" x="195" y="10" width="88" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2z6-tY-ciS">
+                                        <rect key="frame" x="179" y="0.0" width="82" height="34"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                         <state key="normal" title="Create one">
                                             <color key="titleColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -749,26 +747,21 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="0iF-Ca-zUA"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g56-FA-uGI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NAu-dI-W6q" firstAttribute="leading" secondItem="g56-FA-uGI" secondAttribute="leading" constant="66" id="83X-31-CaV"/>
                             <constraint firstItem="2i2-eK-l7W" firstAttribute="leading" secondItem="g56-FA-uGI" secondAttribute="leading" id="8z7-7f-D8B"/>
+                            <constraint firstItem="ETN-zs-Ehe" firstAttribute="top" secondItem="v6s-PR-LjU" secondAttribute="bottom" constant="8" id="Gom-Wu-2de"/>
                             <constraint firstItem="2i2-eK-l7W" firstAttribute="trailing" secondItem="g56-FA-uGI" secondAttribute="trailing" id="O4L-Np-Fxt"/>
                             <constraint firstItem="g56-FA-uGI" firstAttribute="trailing" secondItem="fHi-Ka-K8v" secondAttribute="trailing" constant="35" id="ODs-To-PDl"/>
+                            <constraint firstItem="g56-FA-uGI" firstAttribute="bottom" secondItem="ETN-zs-Ehe" secondAttribute="bottom" constant="48" id="SgM-Az-2jp"/>
                             <constraint firstItem="v6s-PR-LjU" firstAttribute="top" secondItem="fHi-Ka-K8v" secondAttribute="bottom" constant="20" id="SkV-Zo-af3"/>
-                            <constraint firstItem="NAu-dI-W6q" firstAttribute="centerX" secondItem="g56-FA-uGI" secondAttribute="centerX" id="VCM-l7-jH7"/>
                             <constraint firstItem="v6s-PR-LjU" firstAttribute="leading" secondItem="g56-FA-uGI" secondAttribute="leading" constant="35" id="aMp-XM-ERC"/>
                             <constraint firstItem="fHi-Ka-K8v" firstAttribute="leading" secondItem="g56-FA-uGI" secondAttribute="leading" constant="35" id="bex-BX-0Cv"/>
                             <constraint firstItem="87Y-Fe-MS3" firstAttribute="width" secondItem="Nps-S2-c0n" secondAttribute="width" id="gOl-eD-fW0"/>
-                            <constraint firstItem="g56-FA-uGI" firstAttribute="bottom" secondItem="NAu-dI-W6q" secondAttribute="bottom" constant="40" id="jGx-Yv-AyA"/>
-                            <constraint firstItem="NAu-dI-W6q" firstAttribute="top" secondItem="v6s-PR-LjU" secondAttribute="bottom" constant="8" id="tdc-mE-MSA"/>
+                            <constraint firstItem="ETN-zs-Ehe" firstAttribute="centerX" secondItem="g56-FA-uGI" secondAttribute="centerX" id="i0f-QZ-nkY"/>
                             <constraint firstItem="2i2-eK-l7W" firstAttribute="top" secondItem="Nps-S2-c0n" secondAttribute="top" id="xTl-Jc-7zt"/>
                             <constraint firstItem="g56-FA-uGI" firstAttribute="trailing" secondItem="v6s-PR-LjU" secondAttribute="trailing" constant="35" id="zOG-pm-JWc"/>
                         </constraints>
@@ -807,7 +800,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Sve-LE-EXD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" red="0.97118188159999996" green="0.97337649500000001" blue="0.97543250189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -822,7 +815,7 @@
                                     <constraint firstAttribute="height" constant="88" id="Unv-2M-SpL"/>
                                     <constraint firstAttribute="width" constant="218" id="r7h-vg-X48"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -832,7 +825,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="TGY-Hs-5at"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="I am Deaf and use signs🧏🏻‍♀️">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -847,7 +840,7 @@
                                     <constraint firstAttribute="height" constant="65" id="7Pu-2e-MGc"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="Y9f-VA-7T4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <state key="normal" title="I am Dumb and use signs 🧏🏻‍♂️">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -879,7 +872,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G4y-mh-Bkw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="61u-ce-ifc" firstAttribute="top" secondItem="Nd3-p8-N57" secondAttribute="bottom" constant="20" id="D72-lU-sJJ"/>
                             <constraint firstItem="Nd3-p8-N57" firstAttribute="top" secondItem="9Ci-jA-LDa" secondAttribute="bottom" constant="20" id="GOT-fS-iqs"/>
@@ -923,7 +916,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                         </textAttributes>

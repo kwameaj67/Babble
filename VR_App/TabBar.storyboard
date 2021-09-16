@@ -336,6 +336,12 @@
                                     <action selector="onTapCreateNote:" destination="Rxx-xF-anN" eventType="touchUpInside" id="fVJ-uq-XMA"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8c-Se-ZmY">
+                                <rect key="frame" x="185.5" y="563" width="43.5" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ho2-gj-tvQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -347,9 +353,11 @@
                             <constraint firstItem="nEc-hA-LVj" firstAttribute="centerY" secondItem="y1I-mX-TaQ" secondAttribute="centerY" id="Sq9-Pj-5sy"/>
                             <constraint firstItem="b0y-UD-Vhc" firstAttribute="centerX" secondItem="ho2-gj-tvQ" secondAttribute="centerX" id="V33-Ed-gQv"/>
                             <constraint firstItem="5im-rP-G1w" firstAttribute="leading" secondItem="ho2-gj-tvQ" secondAttribute="leading" constant="25" id="b4O-4J-tec"/>
+                            <constraint firstItem="X8c-Se-ZmY" firstAttribute="top" secondItem="y1I-mX-TaQ" secondAttribute="bottom" constant="30" id="cmD-Zc-Bho"/>
                             <constraint firstItem="y1I-mX-TaQ" firstAttribute="centerX" secondItem="5ft-f2-VeX" secondAttribute="centerX" id="g5R-O9-sa7"/>
                             <constraint firstItem="y1I-mX-TaQ" firstAttribute="centerY" secondItem="5ft-f2-VeX" secondAttribute="centerY" id="gB7-fC-m0d"/>
                             <constraint firstItem="ho2-gj-tvQ" firstAttribute="trailing" secondItem="5im-rP-G1w" secondAttribute="trailing" constant="25" id="oNp-4s-9uo"/>
+                            <constraint firstItem="X8c-Se-ZmY" firstAttribute="centerX" secondItem="ho2-gj-tvQ" secondAttribute="centerX" id="rAB-l0-hre"/>
                             <constraint firstItem="ho2-gj-tvQ" firstAttribute="trailing" secondItem="NOx-O6-XbM" secondAttribute="trailing" constant="55" id="zFa-dK-Gjl"/>
                             <constraint firstItem="NOx-O6-XbM" firstAttribute="leading" secondItem="ho2-gj-tvQ" secondAttribute="leading" constant="55" id="zkr-7W-v99"/>
                         </constraints>
@@ -363,6 +371,7 @@
                         <outlet property="createNoteButton" destination="NOx-O6-XbM" id="kC5-we-qai"/>
                         <outlet property="nameTextLabel" destination="1Th-1j-NoO" id="Jz7-hb-JQa"/>
                         <outlet property="recordButton" destination="y1I-mX-TaQ" id="oRO-Y8-q6y"/>
+                        <outlet property="statusLabel" destination="X8c-Se-ZmY" id="ylH-wI-cqV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRV-XQ-84W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -548,26 +557,26 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Untitled Note" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlF-i6-YVP">
-                                                                <rect key="frame" x="15" y="48" width="384" height="32"/>
+                                                                <rect key="frame" x="15" y="48" width="384" height="26.5"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukF-Jo-Yl6">
-                                                                <rect key="frame" x="8" y="85" width="398" height="0.5"/>
+                                                                <rect key="frame" x="8" y="79.5" width="398" height="0.5"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="0.5" id="nrT-a0-F3y"/>
                                                                 </constraints>
                                                             </view>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pFe-wh-Wwb">
-                                                                <rect key="frame" x="15" y="110.5" width="384" height="889.5"/>
+                                                                <rect key="frame" x="15" y="105" width="384" height="895"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Write a new note...">
                                                                         <attributes>
                                                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="18" name="AvenirNext-Regular"/>
+                                                                            <font key="NSFont" size="18" name="AvenirNext-Medium"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -658,7 +667,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pk9-9N-Wik">
-                                <rect key="frame" x="35" y="309.5" width="344" height="277"/>
+                                <rect key="frame" x="35" y="312" width="344" height="272"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-error-cloud-100" translatesAutoresizingMaskIntoConstraints="NO" id="UrN-Td-cMM">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
@@ -667,19 +676,19 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwA-Xu-QBr">
-                                        <rect key="frame" x="0.0" y="60" width="344" height="55"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="60" width="344" height="50"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, we can't find any sound to caption😬" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed5-VJ-vy4">
-                                        <rect key="frame" x="0.0" y="125" width="344" height="77"/>
+                                        <rect key="frame" x="0.0" y="120" width="344" height="77"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epg-oF-ISg">
-                                        <rect key="frame" x="0.0" y="212" width="344" height="65"/>
+                                        <rect key="frame" x="0.0" y="207" width="344" height="65"/>
                                         <color key="backgroundColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="bn9-xw-nmq"/>
