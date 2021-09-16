@@ -16,14 +16,14 @@ class NoteViewController: UIViewController {
     var delegate: TranscriptionListDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentDate()
+        let date = currentDate()
+        dateLabel.text = date
         hideBottomBar()
         topicTextField.becomeFirstResponder()
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
          view.addGestureRecognizer(tapGesture)
     }
     
-
     @IBAction func onTapClose(_ sender: Any) {
         if topicTextField.text?.isEmpty == false || noteTextField.text.isEmpty == false{
             showCancelAlert(msg: "You've made changes. Do you want to cancel transcription note?")
@@ -38,7 +38,7 @@ class NoteViewController: UIViewController {
 }
 extension NoteViewController{
 //    MARK:- datetime
-    func currentDate(){
+    func currentDate() -> String{
         let date = Date()
         let formatter = DateFormatter()
         formatter.locale = .current
@@ -47,7 +47,7 @@ extension NoteViewController{
         formatter.dateFormat = "EEEE, MMMM d,yyyy"
         
         let curr = formatter.string(from: date)
-        dateLabel.text = curr
+        return curr
     }
 //    hide bottomLine
     func hideBottomBar(){
@@ -57,6 +57,15 @@ extension NoteViewController{
     }
 //    save notes
     private func createTranscription() {
+//        TranscriptionManager.shared.createTranscription(date: Date(), title: topicTextField.text ?? "Untitled transcription", desc: noteTextField.text ?? "") { result in
+//            switch result{
+//            case .failure(let err):
+//                print("\(err.localizedDescription)")
+//            case .success():
+//                print("added successfully")
+//            }
+//
+//        }
         CoreDataManager.shared.createTranscription(title: topicTextField.text ?? "Untitled transcription", text: noteTextField.text ?? "")
         delegate?.refreshTranscriptions()
     }
