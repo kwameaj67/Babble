@@ -27,7 +27,7 @@ class RecordingViewController: UIViewController {
         let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
         let request = SFSpeechAudioBufferRecognitionRequest()
         var task: SFSpeechRecognitionTask! = nil
-    var transcription: String?
+        var transcription: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +55,10 @@ class RecordingViewController: UIViewController {
         saveRecordingAlert(msg: "Do you really want to save this transcript?")
     }
     
-    private func createTranscription() -> Transcriptions{
-        let note = CoreDataManager.shared.createTranscription(title: "Untitled transcription", text: spokenTextArea.text ?? "")
+    private func createTranscription() {
+        CoreDataManager.shared.createTranscription(title: "Untitled transcription", text: spokenTextArea.text ?? "")
         delegate?.refreshTranscriptions()
-        return note 
+        
     }
     func cancelRecordingAlert(msg:String){
         let alert = UIAlertController(title: "Cancel transcription", message: msg, preferredStyle: .alert)
@@ -171,6 +171,7 @@ extension RecordingViewController{
             if !myRecognition.isAvailable{
                 showAlert(message: "Recognition isn't free right now. Please try again sometime")
             }
+            request.shouldReportPartialResults = true
     //        start recognizing
             task = speechRecognizer?.recognitionTask(with: request, resultHandler: { response, error in
                 guard let response = response else {
@@ -195,7 +196,7 @@ extension RecordingViewController{
         func cancelSpeechRecognition(){
             if let audiotask = task{
                 audiotask.finish()
-                audiotask.cancel()
+//                audiotask.cancel()
             }
             task = nil
             request.endAudio()
