@@ -15,6 +15,7 @@ class RecordingViewController: UIViewController {
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var fractionLabel: UILabel!
+    @IBOutlet var stopRecordingButton: UIButton!
     
     var delegate: TranscriptionListDelegate?
     
@@ -35,7 +36,7 @@ class RecordingViewController: UIViewController {
         startTimer()
         startSpeechRecognition()
         hideBottomBar()
-      
+        roundCorners(button: stopRecordingButton)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -44,6 +45,20 @@ class RecordingViewController: UIViewController {
     }
 
 
+    @IBAction func onTapStopRecording(_ sender: Any) {
+        animatePulseButton(stopRecordingButton)
+        stopRecordingButton.isSelected = !stopRecordingButton.isSelected
+        if stopRecordingButton.isSelected{
+            cancelSpeechRecognition()
+            stopTimer()
+            stopRecordingButton.setTitle("Start recording", for: .normal)
+        }else{
+            startTimer()
+            startSpeechRecognition()
+            stopRecordingButton.setTitle("Stop recording", for: .normal)
+        }
+       
+    }
     @IBAction func onTapCancel(_ sender: Any) {
         pauseTimer()
         cancelRecordingAlert(msg: "Are you sure you want to cancel this transcript recording?")
