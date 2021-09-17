@@ -29,7 +29,7 @@ class SignInViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
          view.addGestureRecognizer(tapGesture)
         scrollView.showsVerticalScrollIndicator = false
-
+        addToolBarToFields()
     }
     func Styles(){
         roundCorners(button: loginButton)
@@ -43,8 +43,30 @@ class SignInViewController: UIViewController {
         googleButton.setTitleColor(Constants.Colors.green, for: .normal)
     }
 
-
+    func createToolBar() -> UIToolbar{
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(onDone))
+        done.tintColor = Constants.Colors.green
+        toolbar.setItems([space1,space2,done], animated: true)
+                                   
+        return toolbar
+    }
    
+    @objc func onDone(){
+        if emailTextField.isEditing{
+            emailTextField.resignFirstResponder()
+        }else if passwordTextField.isEditing{
+            passwordTextField.resignFirstResponder()
+        }
+    }
+    func addToolBarToFields(){
+        [emailTextField,passwordTextField].forEach { item in
+            item?.inputAccessoryView = createToolBar()
+        }
+    }
     @IBAction func validateEmail(_ sender: Any) {
         let email = emailTextField.text ?? ""
         
@@ -56,6 +78,9 @@ class SignInViewController: UIViewController {
         if email.isValidEmail(){
             emailError.textColor = Constants.Colors.green
             emailError.text = "Email address is valid ✅"
+            delay(duration: 1.0) {
+                self.emailError.isHidden = true
+            }
         }else{
             emailError.textColor = Constants.Colors.red
             emailError.text = "Incorrect email was entered ❌"
@@ -72,6 +97,9 @@ class SignInViewController: UIViewController {
         if password.isValidPassword(){
             passwordError.textColor = Constants.Colors.green
             passwordError.text = "Password valid ✅"
+            delay(duration: 1.0) {
+                self.passwordError.isHidden = true
+            }
         }else{
             passwordError.textColor = Constants.Colors.red
             passwordError.text = "Password must have small, capital characters & numbers from 6-15 "

@@ -37,18 +37,44 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.becomeFirstResponder()
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-         view.addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+//         view.addGestureRecognizer(tapGesture)
         scrollView.showsVerticalScrollIndicator = false
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true
         styles()
         print("\(finalGender)\n\(finalIdentity)")
+        addToolBarToFields()
         
     }
     
-    
-  
+    func createToolBar() -> UIToolbar{
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(onDone))
+        done.tintColor = Constants.Colors.green
+        toolbar.setItems([space1,space2,done], animated: true)
+                                   
+        return toolbar
+    }
+    @objc func onDone(){
+        if nameTextField.isEditing{
+            nameTextField.resignFirstResponder()
+        }else if emailTextField.isEditing{
+            emailTextField.resignFirstResponder()
+        }else if passwordTextField.isEditing{
+            passwordTextField.resignFirstResponder()
+        }else if confirmPasswordTextField.isEditing{
+            confirmPasswordTextField.resignFirstResponder()
+        }
+    }
+    func addToolBarToFields(){
+        [nameTextField,emailTextField,passwordTextField,confirmPasswordTextField].forEach { item in
+            item?.inputAccessoryView = createToolBar()
+        }
+    }
    
     @IBAction func validateEmail(_ sender: Any) {
         let email = emailTextField.text ?? ""
@@ -60,6 +86,9 @@ class SignUpViewController: UIViewController {
         if email.isValidEmail(){
             emailError.textColor = Constants.Colors.green
             emailError.text = "Email address is valid ✅"
+            delay(duration: 1.0) {
+                self.emailError.isHidden = true
+            }
         }else{
             emailError.textColor = Constants.Colors.red
             emailError.text = "Incorrect email was entered ❌"
@@ -76,6 +105,9 @@ class SignUpViewController: UIViewController {
         if password.isValidPassword(){
             passwordError.textColor = Constants.Colors.green
             passwordError.text = "Password valid ✅"
+            delay(duration: 1.0) {
+                self.passwordError.isHidden = true
+            }
         }else{
             passwordError.textColor = Constants.Colors.red
             passwordError.text = "Password must have small, capital characters & numbers from 6-15"
@@ -94,6 +126,9 @@ class SignUpViewController: UIViewController {
         if (password2.isValidPassword() && password == password2){
             confirmPasswordError.textColor = Constants.Colors.green
             confirmPasswordError.text = "Password valid ✅"
+            delay(duration: 1.0) {
+                self.confirmPasswordError.isHidden = true
+            }
         }else if(password != password2){
             confirmPasswordError.textColor = Constants.Colors.red
             confirmPasswordError.text = "Passwords do not match. Check again❌"
@@ -126,8 +161,7 @@ class SignUpViewController: UIViewController {
         }
     }
     @IBAction func onTapLogin(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.signinController) as! SignInViewController
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func onTapSignup(_ sender: Any) {
         
