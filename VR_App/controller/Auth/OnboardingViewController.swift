@@ -41,20 +41,13 @@ class OnboardingViewController: UIViewController {
     private func setupPageControls(){
         swipePageControl.numberOfPages = Swipe.swipeData.count
     }
+    @IBAction func onPressSkipButton(_ sender: Any) {
+        PresenterManager.shared.showViewController(vc: .authInit)
+    }
     @IBAction func onPressGetStartedButton(_ sender: UIButton){
         animatePulseButton(getStartedButton)
-        swiperCollectionView.scrollToNextItem()
-        let index = Int(swiperCollectionView.contentOffset.x) / Int(swiperCollectionView.frame.width)
-        self.swipePageControl.currentPage = index
-        print(index)
-        if index == 0{
-            getStartedButton.setTitle("Next", for: .normal)
-        }else if index == 1{
-            getStartedButton.setTitle("Next", for: .normal)
-        }else{
-                getStartedButton.setTitle("Get started 👊🏽", for: .normal)
-                PresenterManager.shared.showViewController(vc: .authInit)
-        }
+        //        swiperCollectionView.scrollToNextItem()
+        PresenterManager.shared.showViewController(vc: .authInit)
     }
 }
 
@@ -77,13 +70,8 @@ extension OnboardingViewController:UICollectionViewDelegate,UICollectionViewData
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let index = Int(swiperCollectionView.contentOffset.x) / Int(swiperCollectionView.frame.width)
-        print(index)
+//        print(index)
         self.swipePageControl.currentPage = index
-       if index == 1{
-            getStartedButton.setTitle("Next", for: .normal)
-        }else if index == 2{
-            getStartedButton.setTitle("Get started 👊🏽", for: .normal)
-        }
     }
     func setupCollectionView(){
         swiperCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
