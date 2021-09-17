@@ -51,11 +51,11 @@ class RecordingViewController: UIViewController {
         if stopRecordingButton.isSelected{
             cancelSpeechRecognition()
             stopTimer()
-            stopRecordingButton.setTitle("Start recording", for: .normal)
+            stopRecordingButton.setTitle("Start r ecording", for: .normal)
         }else{
             startTimer()
             startSpeechRecognition()
-            stopRecordingButton.setTitle("Stop recording", for: .normal)
+            stopRecordingButton.setTitle("Stop recording", for: .normal )
         }
        
     }

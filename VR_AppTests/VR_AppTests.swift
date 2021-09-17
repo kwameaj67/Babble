@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import VR_App
+//@testable import VR_App
 
 class VR_AppTests: XCTestCase {
 
