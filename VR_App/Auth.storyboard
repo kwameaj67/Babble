@@ -121,7 +121,7 @@
                                                             <constraint firstAttribute="height" constant="38" id="PsJ-FO-DHf"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="beU-on-3LC">
@@ -152,7 +152,7 @@
                                                             <constraint firstAttribute="height" constant="38" id="eHi-kx-ghv"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                         <connections>
                                                             <action selector="validateEmail:" destination="X9V-Y4-iUY" eventType="editingChanged" id="dxb-eL-dYt"/>
@@ -186,7 +186,7 @@
                                                             <constraint firstAttribute="height" constant="38" id="6p7-S3-ZFi"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="validatePassword:" destination="X9V-Y4-iUY" eventType="editingChanged" id="2kz-98-8kH"/>
@@ -233,7 +233,7 @@
                                                             <constraint firstAttribute="height" constant="38" id="aXZ-yb-6vk"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="validateConfirmPassword:" destination="X9V-Y4-iUY" eventType="editingChanged" id="x2O-c7-DCu"/>
@@ -581,7 +581,7 @@
                                                             <constraint firstAttribute="height" constant="38" id="B3T-E8-eV8"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                         <connections>
                                                             <action selector="validateEmail:" destination="Cyc-Hz-Nln" eventType="editingChanged" id="xqJ-IB-qrF"/>
@@ -615,7 +615,7 @@
                                                             <constraint firstAttribute="height" constant="38" id="0Uc-cT-h08"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.32057336359999999" green="0.32057336359999999" blue="0.32057336359999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="validatePassword:" destination="X9V-Y4-iUY" eventType="editingChanged" id="NF7-Tk-Zis"/>
