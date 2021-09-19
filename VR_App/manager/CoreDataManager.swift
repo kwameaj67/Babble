@@ -60,7 +60,4 @@ extension CoreDataManager{
             saveTranscriptions()
         }
     }
-    func removeAllTranscriptions(){
-//        context.delete(<#T##object: NSManagedObject##NSManagedObject#>)
-    }
 }

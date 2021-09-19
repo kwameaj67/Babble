@@ -51,7 +51,7 @@ class RecordingViewController: UIViewController {
         if stopRecordingButton.isSelected{
             cancelSpeechRecognition()
             stopTimer()
-            stopRecordingButton.setTitle("Start r ecording", for: .normal)
+            stopRecordingButton.setTitle("Start recording", for: .normal)
         }else{
             startTimer()
             startSpeechRecognition()

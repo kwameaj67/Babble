@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct Constants {
+    //        Main App Segue IDs
     struct Segue {
         static let showOnboarding = "showOnboarding"
         static let showWelcome = "showWelcome"
@@ -16,15 +17,12 @@ struct Constants {
         static let showSignup = "showSignup"
         static let showGender = "showGender"
         static let showIdentity = "showIdentity"
-        
-//        Main App Segue IDs
-    }
     
+    }
+    //      Main App Storyborad file names
     struct StoryboardName{
         static let onboardingStoryboard = "Main"
         static let authStoryboard = "Auth"
-        
-//      Main App Storyborad file names
         static let tabBarStoryboard = "TabBar"
     }
     struct StoryboardID{
