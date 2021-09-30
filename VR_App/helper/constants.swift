@@ -33,6 +33,8 @@ struct Constants {
         static let signinController = "signinController"
         static let genderController = "genderController"
         static let identityController = "identityController"
+        static let forgotPasswordController = "forgotPasswordController"
+        
         
         
 //        Main App IDs
