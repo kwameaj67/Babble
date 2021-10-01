@@ -21,5 +21,4 @@ struct userDefaultManager {
         static let email = getData?["email"] ?? ""
         static let identity = getData?["identity"] ?? ""
     }
-    
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 import PDFKit
-
+// https://medium.com/@artempoluektov/ios-pdfkit-create-document-insert-delete-pages-2c53829de6c8
 class DetailedTranscriptionViewController: UIViewController {
 
 //    MARK: - variables
