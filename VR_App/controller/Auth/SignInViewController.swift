@@ -157,6 +157,9 @@ class SignInViewController: UIViewController {
     @IBAction func onTapGoogleButton(_ sender: Any) {
         animatePulseButton(googleButton)
     }
+    @IBAction func onTapForgotPassword(_ sender: Any) {
+       print("move to forgotPassword")
+    }
 }
 
 extension SignInViewController{
