@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Cg-xf-rBQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VOs-GD-Afm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VOs-GD-Afm" userLabel="Transcription TableView">
                                 <rect key="frame" x="20" y="98" width="374" height="675.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="EKT-N2-arS" customClass="TranscriptionTableViewCell" customModule="VR_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="transcript" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transcript" rowHeight="70" id="EKT-N2-arS" customClass="TranscriptionTableViewCell" customModule="VR_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="374" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EKT-N2-arS" id="M4Y-3l-ELh">
@@ -248,7 +248,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title=" Notes" id="dr9-NV-5GI">
-                        <barButtonItem key="backBarButtonItem" title=" " id="neF-tZ-8su"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="neF-tZ-8su">
+                            <color key="tintColor" red="0.86074473080000002" green="0.88377626980000001" blue="0.87339045420000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="GD7-dH-jrF" id="XnG-2b-teK"/>
@@ -280,8 +282,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-Gx-ioO">
                                         <rect key="frame" x="0.0" y="0.0" width="164" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Hey, Kwame 👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="1Th-1j-NoO">
-                                                <rect key="frame" x="0.0" y="0.0" width="163" height="30.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Hey,  👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="1Th-1j-NoO">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -783,19 +785,19 @@
             </objects>
             <point key="canvasLocation" x="1419" y="2146"/>
         </scene>
-        <!--Profile-->
+        <!--More View-->
         <scene sceneID="kl6-XM-lWN">
             <objects>
-                <viewController id="7Cg-xf-rBQ" customClass="ProfileViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="moreViewController" title="More View" id="7Cg-xf-rBQ" customClass="MoreViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fo-e8-ml4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWx-Qo-0rh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWx-Qo-0rh" userLabel="More Table View">
                                 <rect key="frame" x="20" y="98" width="374" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="profile" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profile" rowHeight="56" id="lna-O0-xhz" customClass="ProfileTableViewCell" customModule="VR_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="more" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="more" rowHeight="56" id="lna-O0-xhz" customClass="MoreTableViewCell" customModule="VR_App">
                                         <rect key="frame" x="0.0" y="24.5" width="374" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lna-O0-xhz" id="bhS-1g-sMj">
@@ -825,8 +827,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="iconImage" destination="1p6-CP-Kv8" id="6Hr-sw-kHT"/>
-                                            <outlet property="title" destination="QV3-AP-8xY" id="RFT-4O-90T"/>
+                                            <outlet property="icon" destination="1p6-CP-Kv8" id="BRf-aA-Vtr"/>
+                                            <outlet property="title" destination="QV3-AP-8xY" id="APv-Mq-gSx"/>
+                                            <segue destination="tGY-zF-dk0" kind="show" id="T9u-Vu-w9m"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -841,7 +844,8 @@
                             <constraint firstItem="nI5-Go-APm" firstAttribute="trailing" secondItem="YWx-Qo-0rh" secondAttribute="trailing" constant="20" id="wFb-SW-GQ5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="LMQ-uN-J2B">
+                    <navigationItem key="navigationItem" title="Account" id="LMQ-uN-J2B">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Oqj-2f-nte"/>
                         <barButtonItem key="rightBarButtonItem" title="Logout" landscapeImage="square.and.arrow.up" catalog="system" id="CcA-vG-j3S">
                             <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
                             <color key="tintColor" red="0.31833800670000001" green="0.51168340440000004" blue="0.52988934519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -851,12 +855,90 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="profileTableView" destination="YWx-Qo-0rh" id="LJO-8Y-g7p"/>
+                        <outlet property="moreTableView" destination="YWx-Qo-0rh" id="Xz9-9b-55h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1X-LJ-2GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5721.739130434783" y="1472.5446428571429"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="erC-Qf-Sap">
+            <objects>
+                <viewController storyboardIdentifier="profileViewController" modalPresentationStyle="fullScreen" id="tGY-zF-dk0" customClass="ProfileViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t5e-SH-u9k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vTP-SU-2AK">
+                                <rect key="frame" x="20" y="98" width="374" height="370"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="370" id="zQa-wd-YIr"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profile" rowHeight="70" id="Uuk-ma-0x3" customClass="ProfileTableViewCell" customModule="VR_App">
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uuk-ma-0x3" id="HFv-JQ-CZt">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="edQ-dY-ppr">
+                                                    <rect key="frame" x="20" y="11" width="334" height="52"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearing Profile" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPl-nZ-cYi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="52"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="52" id="SZL-n6-zXv"/>
+                                                                <constraint firstAttribute="width" constant="100" id="aHy-sj-yTz"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                            <color key="textColor" red="0.28638119169999998" green="0.28638119169999998" blue="0.28638119169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard hearing" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEY-Jd-VPc">
+                                                            <rect key="frame" x="261" y="0.0" width="73" height="52"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="nbp-8s-IBi"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                            <color key="textColor" red="0.51533092150000004" green="0.51533092150000004" blue="0.51533092150000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="edQ-dY-ppr" secondAttribute="trailing" constant="20" id="RNK-6B-yQd"/>
+                                                <constraint firstItem="edQ-dY-ppr" firstAttribute="leading" secondItem="HFv-JQ-CZt" secondAttribute="leading" constant="20" id="rM6-AF-5su"/>
+                                                <constraint firstItem="edQ-dY-ppr" firstAttribute="top" secondItem="HFv-JQ-CZt" secondAttribute="topMargin" id="tZR-p8-62Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLbl" destination="SEY-Jd-VPc" id="7Rz-qi-MxD"/>
+                                            <outlet property="titleLbl" destination="xPl-nZ-cYi" id="88H-aZ-dbb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0TK-qU-xz4"/>
+                        <color key="backgroundColor" red="0.90876910300000002" green="0.93308566319999997" blue="0.92212038159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0TK-qU-xz4" firstAttribute="trailing" secondItem="vTP-SU-2AK" secondAttribute="trailing" constant="20" id="dsG-c5-PvI"/>
+                            <constraint firstItem="vTP-SU-2AK" firstAttribute="leading" secondItem="0TK-qU-xz4" secondAttribute="leading" constant="20" id="fWM-Ea-QdB"/>
+                            <constraint firstItem="vTP-SU-2AK" firstAttribute="top" secondItem="0TK-qU-xz4" secondAttribute="top" constant="10" id="i9M-Eb-WvX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KAB-jQ-lDE"/>
+                    <connections>
+                        <outlet property="profileTableView" destination="vTP-SU-2AK" id="pjk-uc-VOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gso-kL-I3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6544.9275362318849" y="1472.5446428571429"/>
         </scene>
         <!--CustomUI Tab Bar Controller-->
         <scene sceneID="d8Y-uT-ryL">
@@ -928,15 +1010,16 @@
             </objects>
             <point key="canvasLocation" x="3667" y="700"/>
         </scene>
-        <!--Custom Navigation View Controller-->
+        <!-- -->
         <scene sceneID="Jkc-mi-ke5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tLJ-gZ-DMh" customClass="CustomNavigationViewController" customModule="VR_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="gearshape.fill" catalog="system" id="FKo-Pa-eYH"/>
+                    <tabBarItem key="tabBarItem" title=" " image="gearshape.fill" catalog="system" id="FKo-Pa-eYH"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lCp-4x-Vew">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.left" catalog="system" backIndicatorTransitionMaskImage="arrow.left" id="lCp-4x-Vew">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                         </textAttributes>
@@ -947,6 +1030,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="7Cg-xf-rBQ" kind="relationship" relationship="rootViewController" id="hNz-U7-PIe"/>
+                        <segue destination="tGY-zF-dk0" kind="show" id="91K-Vd-UGJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oY0-ZJ-mwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -954,6 +1038,9 @@
             <point key="canvasLocation" x="5170" y="700"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T9u-Vu-w9m"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
