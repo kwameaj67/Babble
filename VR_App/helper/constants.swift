@@ -26,6 +26,7 @@ struct Constants {
         static let tabBarStoryboard = "TabBar"
     }
     struct StoryboardID{
+//        authentication IDs
         static let onboardingController = "onboardingController"
         static let authInitController = "authInitController"
         static let welcomeController = "welcomeController"
@@ -43,6 +44,7 @@ struct Constants {
         static let noteViewController = "noteViewController"
         static let recordingViewController = "recordingViewController"
         static let detailedTranscriptViewController = "detailedTranscriptsViewController"
+        static let moreViewController = "moreViewController"
         static let profileViewController = "profileViewController"
     }
     struct Colors {
@@ -63,6 +65,8 @@ struct Constants {
         static let SAMPLE_RATE = 44100.0
     }
     struct TableViewCell{
+        static let transcript = "transcript"
+        static let more = "more"
         static let profile = "profile"
     }
 }
