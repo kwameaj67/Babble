@@ -30,6 +30,7 @@ class SignInViewController: UIViewController {
          view.addGestureRecognizer(tapGesture)
         scrollView.showsVerticalScrollIndicator = false
         addToolBarToFields()
+        
     }
     func Styles(){
         roundCorners(button: loginButton)

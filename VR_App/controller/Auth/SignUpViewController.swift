@@ -185,9 +185,9 @@ class SignUpViewController: UIViewController {
         }else if(!email.isValidEmail()){
             showAlert(message: "Email address is not valid.")
         }
-        else if(!password1.isValidPassword() || !password2.isValidPassword()){
+        else if(!password1.isValidPassword() ){
             showAlert(message: "Password is not valid.")
-        }else if(email.isValidEmail() && password1.isValidPassword() && password2.isValidPassword()){
+        }else if(email.isValidEmail() && password1.isValidPassword()){
             MBProgressHUD.showAdded(to: view, animated: true)
             print("Name:\(name)\nEmail:\(email)\nPassword: \(password2)")
             authManager.signUpUser(withEmail: email, password: password2) { [weak self] (result) in
