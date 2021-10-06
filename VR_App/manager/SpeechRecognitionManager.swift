@@ -10,10 +10,11 @@ import Speech
 
 struct SpeechRecognitionManager{
     
-    let audioEngine = AVAudioEngine()
-    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-    let request = SFSpeechAudioBufferRecognitionRequest()
-    var task: SFSpeechRecognitionTask! = nil
+    private let audioEngine = AVAudioEngine()
+    private let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
+    private var request =  SFSpeechAudioBufferRecognitionRequest() // recreates recognitionRequest object.
+    
+    private var task: SFSpeechRecognitionTask?
     
     enum SpeechError:Error{
         case noAudioListener
@@ -28,13 +29,24 @@ struct SpeechRecognitionManager{
         
     }
     
-    mutating func recordSpeech(completion: @escaping (Result<String,SpeechError>) -> Void){
+    mutating func recordSpeech(completion: @escaping (Result<String,SpeechError>) -> Void) throws{
+//        // Cancel the previous task if it's running.
+        task?.cancel()
+        self.task = nil
+        // Configure the audio session for the app.
+        let audioSession = AVAudioSession.sharedInstance()
+        try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
+        try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        
         let node = audioEngine.inputNode
         //  Remove tap first.
         node.removeTap(onBus: 0)
+        
+        request.shouldReportPartialResults = true
+        //        start recognizing
+        
         let recordingFormat = node.outputFormat(forBus: 0)
-        //            let recordingFormat = AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 1)
-        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { [self] (buffer, _) in
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {[ self](buffer , _) in
             self.request.append(buffer)
         }
         //        prepare audio engine
@@ -46,47 +58,71 @@ struct SpeechRecognitionManager{
         }
         
         guard let myRecognition = SFSpeechRecognizer() else {
+            audioEngine.stop()
             completion(.failure(.localRecognition))
             return
         }
+    
         if !myRecognition.isAvailable{
             completion(.failure(.busyRecognition))
-        }
-        request.shouldReportPartialResults = true
-        //        start recognizing
-        task = speechRecognizer?.recognitionTask(with: request, resultHandler: { response, error in
-            guard let response = response else {
-                if error != nil {
-                    print("\(error.debugDescription)")
-                }else{
-                    completion(.failure(.noAudioResponse))
-                }
-                
-                return
+            if audioEngine.isRunning{
+                request.endAudio()
+                audioEngine.stop()
             }
-            //    gets transcription text
-            let message = response.bestTranscription.formattedString
-            completion(.success(message))
-            print("message: \(message) ")
-            
-            
+            task?.finish()
+            task = nil
+        }
+       
+       
+        task = speechRecognizer?.recognitionTask(with: request, resultHandler: { response, error in
+            print("starting recording")
+            //            guard let response = response else {
+            //                if error != nil {
+            //                    print("\(error.debugDescription)")
+            //                }else{
+            //                    completion(.failure(.noAudioResponse))
+            //                }
+            //                return
+            //            }
+            //            //                gets transcription text
+            //            let message = response.bestTranscription.formattedString
+            //            print("recording")
+            //            completion(.success(message))
+            //            print("message: \(message) ")
+            if response != nil { // check to see if result is empty (i.e. no speech found)
+                if let result = response {
+                    let bestString = result.bestTranscription.formattedString
+                    print(bestString)
+                    completion(.success(bestString))
+                    
+                } else if let error = error {
+                    print("error:\(error.localizedDescription)")
+                }
+            }else{
+                completion(.failure(.noAudioResponse))
+            }
         })
     }
     
     mutating func stopSpeech(completion: @escaping (Result<Void,Error>) -> Void){
+        //        stop audio
+        if audioEngine.isRunning{
+            request.endAudio()
+            audioEngine.stop()
+        }
+        //        stop recognition
         if let audiotask = task{
             audiotask.finish()
-            //                audiotask.cancel()
         }
         task = nil
-        request.endAudio()
-        audioEngine.stop()
+        
+        
         let input_Node = audioEngine.inputNode
         if (input_Node.inputFormat(forBus: 0).channelCount == 0){
             NSLog("Not enough available inputs!")
         }
         input_Node.removeTap(onBus: 0)
-        audioEngine.reset()
+        print("stopped recording")
         completion(.success(()))
     }
 }
