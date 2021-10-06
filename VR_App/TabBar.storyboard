@@ -871,10 +871,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vTP-SU-2AK">
-                                <rect key="frame" x="20" y="98" width="374" height="370"/>
+                                <rect key="frame" x="20" y="98" width="374" height="330"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="370" id="zQa-wd-YIr"/>
+                                    <constraint firstAttribute="height" constant="330" id="zQa-wd-YIr"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profile" rowHeight="70" id="Uuk-ma-0x3" customClass="ProfileTableViewCell" customModule="VR_App">
@@ -884,24 +884,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="edQ-dY-ppr">
-                                                    <rect key="frame" x="20" y="11" width="334" height="52"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edQ-dY-ppr">
+                                                    <rect key="frame" x="10" y="24" width="354" height="22"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearing Profile" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPl-nZ-cYi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="52"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="52" id="SZL-n6-zXv"/>
-                                                                <constraint firstAttribute="width" constant="100" id="aHy-sj-yTz"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearing Profile" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPl-nZ-cYi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="22"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                             <color key="textColor" red="0.28638119169999998" green="0.28638119169999998" blue="0.28638119169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard hearing" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEY-Jd-VPc">
-                                                            <rect key="frame" x="261" y="0.0" width="73" height="52"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="120" id="nbp-8s-IBi"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard hearing" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEY-Jd-VPc">
+                                                            <rect key="frame" x="177" y="0.0" width="177" height="22"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                             <color key="textColor" red="0.51533092150000004" green="0.51533092150000004" blue="0.51533092150000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -910,9 +903,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="edQ-dY-ppr" secondAttribute="trailing" constant="20" id="RNK-6B-yQd"/>
-                                                <constraint firstItem="edQ-dY-ppr" firstAttribute="leading" secondItem="HFv-JQ-CZt" secondAttribute="leading" constant="20" id="rM6-AF-5su"/>
-                                                <constraint firstItem="edQ-dY-ppr" firstAttribute="top" secondItem="HFv-JQ-CZt" secondAttribute="topMargin" id="tZR-p8-62Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="edQ-dY-ppr" secondAttribute="trailing" constant="10" id="RNK-6B-yQd"/>
+                                                <constraint firstItem="edQ-dY-ppr" firstAttribute="centerY" secondItem="HFv-JQ-CZt" secondAttribute="centerY" id="nf3-rt-3Ss"/>
+                                                <constraint firstItem="edQ-dY-ppr" firstAttribute="leading" secondItem="HFv-JQ-CZt" secondAttribute="leading" constant="10" id="rM6-AF-5su"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
