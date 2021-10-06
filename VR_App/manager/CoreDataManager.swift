@@ -42,6 +42,7 @@ extension CoreDataManager{
         note.date = getDate()
         note.title = title
         note.text = text
+        print("Created transcription file")
 //        save note
         saveTranscriptions()
         
