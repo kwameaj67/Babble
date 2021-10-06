@@ -33,7 +33,6 @@ class RecordingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timerFormat()
-        startTimer()
         startSpeechRecognition()
         hideBottomBar()
         roundCorners(button: stopRecordingButton)
@@ -161,27 +160,30 @@ extension RecordingViewController{
     //    MARK: - start speech recognition
     func startSpeechRecognition(){
         startTimer()
-        SpeechRecognitionManager.shared.recordSpeech { results in
-            switch results{
-            case .failure(.noAudioListener):
-                self.showAlert(message : "Something went wrong starting audio listener!")
-            case .failure(.localRecognition):
-                self.showAlert(message: "Recognition isn't in your local")
-            case .failure(.busyRecognition):
-                self.showAlert(message: "Recognition isn't free right now. Please try again sometime")
-            case .failure(.noAudioResponse):
-                self.showAlert(message: "Something went wrong in getting audio response!")
-            case .success(let data):
-                self.spokenTextArea.text = data
-                self.transcription = data
-            }
+        do {
+            try RecordingRecognitionManager.shared.recordSpeech { results in
+                 switch results{
+                 case .failure(.noAudioListener):
+                     self.showAlert(message : "Something went wrong starting audio listener!")
+                 case .failure(.localRecognition):
+                     self.showAlert(message: "Recognition isn't in your local")
+                 case .failure(.busyRecognition):
+                     self.showAlert(message: "Recognition isn't free right now due to netowrk connectivity. Please try again sometime")
+                 case .failure(.noAudioResponse):
+                     self.showAlert(message: "Something went wrong in getting audio response!")
+                 case .success(let data):
+                     self.spokenTextArea.text = data
+                     self.transcription = data
+                 }
+             }
+        } catch  {
+            print("error")
         }
         
     }
     //    MARK: - cancel speech recognition
     func cancelSpeechRecognition(){
-      
-        SpeechRecognitionManager.shared.stopSpeech { results in
+        RecordingRecognitionManager.shared.stopSpeech { results in
             switch results{
             case .success():
                 print("recording stopped!")
