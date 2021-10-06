@@ -9,29 +9,31 @@ import UIKit
 import MBProgressHUD
 import FirebaseAuth
 
-class ProfileViewController: UIViewController {
+class MoreViewController: UIViewController {
     
-    @IBOutlet var profileTableView: UITableView!
+    
+    @IBOutlet var moreTableView: UITableView!
     private let authManager = AuthManager()
     var profileItems = ProfileItems()
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-       
+        
     }
     func configureTableView(){
-        profileTableView.delegate = self
-        profileTableView.dataSource = self
-        profileTableView.tableFooterView = UIView()
-        profileTableView.layer.cornerRadius = 10
-//        profileTableView.separatorStyle = .none
-        profileTableView.showsVerticalScrollIndicator = false
-        profileTableView.allowsMultipleSelection = false
-        profileTableView.backgroundColor = .clear
+        moreTableView.delegate = self
+        moreTableView.dataSource = self
+        moreTableView.tableFooterView = UIView()
+        moreTableView.layer.cornerRadius = 10
+        //        moreTableView.separatorStyle = .none
+        moreTableView.showsVerticalScrollIndicator = false
+        moreTableView.allowsMultipleSelection = false
+        moreTableView.backgroundColor = .clear
+        moreTableView.tableFooterView = UIView()
         
     }
     @IBAction func onTapLogoutIcon(_ sender: UIBarButtonItem) {
-       showAlert()
+        showAlert()
     }
     func logoutUser(){
         MBProgressHUD.showAdded(to: view, animated: true)
@@ -46,11 +48,12 @@ class ProfileViewController: UIViewController {
                 MBProgressHUD.hide(for: self.view, animated: true )
                 PresenterManager.shared.showViewController(vc: .authInit)
             }
-        
+            
         }
     }
+    
 }
-extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
+extension MoreViewController: UITableViewDelegate,UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.sectionArray.count
     }
@@ -76,9 +79,7 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCell.profile) as? ProfileTableViewCell else {
-            fatalError("ProfileTableViewCell not found")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCell.more) as! MoreTableViewCell
         let item = Section.sectionArray[indexPath.section].sectionItems[indexPath.row]
         cell.setupProfile(with: item)
         cell.accessoryType = .disclosureIndicator
@@ -87,17 +88,21 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = Section.sectionArray[indexPath.section].sectionItems[indexPath.row]
-        print("\(item.profileOptions.rawValue)")
-        if indexPath.row == 0{
-//            go to profile screen
-        }
+        print("\(indexPath.row) \(item.profileOptions.rawValue)")
+        
+        //        if indexPath.row == 0{
+        ////            go to profile screen
+        //            let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.profileViewController) as! ProfileViewController
+        //            navigationController?.pushViewController(vc, animated: true)
+        //
+        //        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 70
     }
 }
 
-extension ProfileViewController{
+extension MoreViewController{
     func showAlert(){
         let alert = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)
         let Yes = UIAlertAction(title: "Yes", style: .cancel) { _ in
