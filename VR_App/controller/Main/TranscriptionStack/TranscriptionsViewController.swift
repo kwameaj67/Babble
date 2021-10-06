@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 protocol TranscriptionListDelegate{
     func refreshTranscriptions()
@@ -59,9 +60,14 @@ class TranscriptionsViewController: UIViewController{
     
     //    fetch transcriptions
     func fetchTranscriptions(){
+        MBProgressHUD.showAdded(to: view, animated: true)
+        delay(duration: 2.0) {
+            MBProgressHUD.hide(for: self.view, animated: true)
             self.transcriptionArray  = CoreDataManager.shared.fetchTranscriptions()
-        transcriptionArray?.reverse()
-            refreshTranscriptions()
+            self.transcriptionArray?.reverse()
+            self.refreshTranscriptions()
+        }
+          
         }
     func goToDetailedTranscript(transcript: Transcriptions){
         //        move to new screen
@@ -79,7 +85,7 @@ extension TranscriptionsViewController:UITableViewDelegate,UITableViewDataSource
 }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TranscriptionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier:Constants.TableViewCell.transcript, for: indexPath) as! TranscriptionTableViewCell
         cell.selectionStyle = .none
         let item = self.transcriptionArray![indexPath.row]
         cell.setupTranscriptionCell(item: item)
