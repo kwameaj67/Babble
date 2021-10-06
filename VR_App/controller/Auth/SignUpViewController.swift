@@ -161,7 +161,8 @@ class SignUpViewController: UIViewController {
         }
     }
     @IBAction func onTapLogin(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.signinController) as! SignInViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func onTapSignup(_ sender: Any) {
         
@@ -178,19 +179,21 @@ class SignUpViewController: UIViewController {
             showAlert(message: "Please enter your email address")
         }else if(password1 == ""){
             showAlert(message: "Please enter a unique password")
-        }else if(password2 == ""){
-            showAlert(message: "Please re-type your unique password")
-        }else if(password1 != password2){
-            showAlert(message: "Passwords do not match. Kindly check again❌")
-        }else if(!email.isValidEmail()){
+        }
+//        else if(password2 == ""){
+//            showAlert(message: "Please re-type your unique password")
+//        }else if(password1 != password2){
+//            showAlert(message: "Passwords do not match. Kindly check again❌")
+//        }
+        else if(!email.isValidEmail()){
             showAlert(message: "Email address is not valid.")
         }
         else if(!password1.isValidPassword() ){
             showAlert(message: "Password is not valid.")
         }else if(email.isValidEmail() && password1.isValidPassword()){
             MBProgressHUD.showAdded(to: view, animated: true)
-            print("Name:\(name)\nEmail:\(email)\nPassword: \(password2)")
-            authManager.signUpUser(withEmail: email, password: password2) { [weak self] (result) in
+            print("Name:\(name)\nEmail:\(email)\nPassword: \(password1)")
+            authManager.signUpUser(withEmail: email, password: password1) { [weak self] (result) in
                 switch result{
                 case .failure(let error):
                     self!.showAlert(message: "\(error.localizedDescription)")
