@@ -6,4 +6,4 @@
 ## Screenshots
 # HomeScreen
 ![](VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png)
-<img src="VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png"  width="120" height="120">
+<img src="VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png"  width="400" height="400">
