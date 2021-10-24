@@ -120,7 +120,7 @@ extension DetailedTranscriptionViewController: UITextViewDelegate,UITextFieldDel
 
             text.draw(in: textRect, withAttributes: attributes)
         }
-        let pdfDocument = PDFDocument(data: data)
+//        let pdfDocument = PDFDocument(data: data)
     }
     func pinTranscription(){
         

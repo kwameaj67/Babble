@@ -170,7 +170,7 @@ class SignUpViewController: UIViewController {
         let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
         let password1 = passwordTextField.text ?? ""
-        let password2 = confirmPasswordTextField.text ?? ""
+//        let password2 = confirmPasswordTextField.text ?? ""
         
         
         if(name == "") {
