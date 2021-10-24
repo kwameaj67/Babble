@@ -4,5 +4,5 @@
 
 
 ## Screenshots
-#HomeScreen
-![](VR_App/Assets.xcassets/homeScreen.imageSet/homeScreen.png)
+# HomeScreen
+![](VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png)
