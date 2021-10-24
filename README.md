@@ -17,12 +17,14 @@ The application was built using:
 * Xcode 12.5.1
 * Swift 5.4
 * macOS Big Sur 11.5.2
+* MCV Pattern
 
-### Technologies 📲
+### Core Technologies 📲
 * Swift
 * Firebase/firestore
 * GoogleSignIn
 * googleapis
+* Persistence with Core Data
 
 # Screenshots
 
