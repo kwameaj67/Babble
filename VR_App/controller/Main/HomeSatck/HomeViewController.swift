@@ -13,7 +13,6 @@ import Speech
 class HomeViewController: UIViewController{
     // MARK:- local properties
     var isRecording: Bool = false
-    var audioData: NSMutableData!
     
     var captionsTitles:[String] = ["Record your speech","Tap to start captions","Transcribe all captions with a tap"]
     //  speech local properties
@@ -73,23 +72,30 @@ class HomeViewController: UIViewController{
     @IBAction func onTapRecordBustton(_ sender: UIButton) {
         statusLabel.isHidden = false
         //        pulseSpringAnimation(sender: recordButton)
+        
         recordButton.isSelected = !recordButton.isSelected
         animatePulseButton(recordButton)
-        if recordButton.isSelected{
-            captionTitleLabel.text = "Now listening for sound to captions"
-            recordButton.setImage(UIImage(named: "icons8-pause-100"), for: .normal)
-            statusLabel.text = "Recording now..."
-            startSpeechRecognition()
-        }else{
+        isRecording = !isRecording
+        if isRecording == false{
             cancelSpeechRecognition()
             captionTitleLabel.text = "Tap to record captions"
+            showRecordingStatusElements()
+        }else{
+            startSpeechRecognition()
+            captionTitleLabel.text = "Now listening for sound to captions"
+            showRecordingStatusElements()
+        }
+    }
+    func showRecordingStatusElements(){
+        if isRecording == false{
             recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
             statusLabel.text = "Stopped recording"
             delay(duration: 1.0) {
                 self.statusLabel.isHidden = true
             }
-            //            endPulseSpringAnimation(sender: recordButton)
-            //            self.recordButton.layer.removeAnimation(forKey: "pulse")
+        }else{
+            statusLabel.text = "Recording now..."
+            recordButton.setImage(UIImage(named: "icons8-pause-100"), for: .normal)
         }
     }
     func showRecordingVC(){
@@ -257,27 +263,38 @@ extension HomeViewController {
     
     //    MARK: - start speech recognition
     func startSpeechRecognition(){
-        SpeechRecognitionManager.shared.recordSpeech { results in
-            switch results{
-            case .failure(.noAudioListener):
-                self.showAlert(message : "Something went wrong starting audio listener!")
-            case .failure(.localRecognition):
-                self.showAlert(message: "Recognition isn't in your local")
-            case .failure(.busyRecognition):
-                self.showAlert(message: "Recognition isn't free right now. Please try again sometime")
-            case .failure(.noAudioResponse):
-                self.showAlert(message: "Something went wrong in getting audio response!")
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.errorViewController) as! ErrorViewController
-                self.present(vc, animated: true, completion: nil)
-            case .success(let message):
-                if message != "" {
-                    self.showRecordingVC()
-                    self.recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
-                    delay(duration: 1.0) {
-                        self.statusLabel.isHidden = true
+        do {
+            try  SpeechRecognitionManager.shared.recordSpeech { results in
+                switch results{
+                case .failure(.noAudioListener):
+                    self.showAlert(message : "Something went wrong starting audio listener!")
+                    self.isRecording = false
+                    self.showRecordingStatusElements()
+                case .failure(.localRecognition):
+                    self.showAlert(message: "Recognition isn't in your local")
+                    self.isRecording = false
+                    self.showRecordingStatusElements()
+                case .failure(.busyRecognition):
+                    self.showAlert(message: "Recognition isn't free right now due to netowrk connectivity. Please try again sometime")
+                    self.isRecording = false
+                    self.showRecordingStatusElements()
+                case .failure(.noAudioResponse):
+                    self.showAlert(message: "Something went wrong in getting audio response!")
+                    self.isRecording = false
+                    self.showRecordingStatusElements()
+                case .success(let message):
+                    if message != "" {
+                        self.showRecordingVC()
+                        self.isRecording = false
+                        self.recordButton.setImage(UIImage(named: "icons8-microphone-100"), for: .normal)
+                        delay(duration: 1.0) {
+                            self.statusLabel.isHidden = true
+                        }
                     }
                 }
             }
+        } catch {
+            print("error")
         }
     }
     //    MARK: - cancel speech recognition

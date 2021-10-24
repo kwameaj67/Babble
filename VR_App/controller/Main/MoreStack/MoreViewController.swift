@@ -89,13 +89,12 @@ extension MoreViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = Section.sectionArray[indexPath.section].sectionItems[indexPath.row]
         print("\(indexPath.row) \(item.profileOptions.rawValue)")
-        
-        //        if indexPath.row == 0{
-        ////            go to profile screen
-        //            let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.profileViewController) as! ProfileViewController
-        //            navigationController?.pushViewController(vc, animated: true)
-        //
-        //        }
+        if (indexPath.row == 0){
+            //            go to profile screen
+            let vc = storyboard?.instantiateViewController(identifier: Constants.StoryboardID.profileViewController) as! ProfileViewController
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70

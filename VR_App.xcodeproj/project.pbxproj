@@ -17,7 +17,7 @@
 		982CCC7826BACFFB00E260E3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982CCC7726BACFFB00E260E3 /* TabBar.storyboard */; };
 		982CCC8826BAD96000E260E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC8726BAD96000E260E3 /* HomeViewController.swift */; };
 		982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC8C26BAD97500E260E3 /* TranscriptionsViewController.swift */; };
-		982CCC9226BAD98E00E260E3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC9126BAD98E00E260E3 /* ProfileViewController.swift */; };
+		982CCC9226BAD98E00E260E3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC9126BAD98E00E260E3 /* MoreViewController.swift */; };
 		982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */; };
 		982CCC9C26BAD9D700E260E3 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */; };
 		982CCCA126BAD9EB00E260E3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CCCA026BAD9EB00E260E3 /* WelcomeViewController.swift */; };
@@ -53,10 +53,11 @@
 		983286C226D7D5DA0002E185 /* Descriptor.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 983286A926D7D5D70002E185 /* Descriptor.pbobjc.m */; };
 		983E570A26EFE3DD00E2E31F /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E570926EFE3DD00E2E31F /* SettingsOptions.swift */; };
 		983E570C26EFE65900E2E31F /* ProfileOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E570B26EFE65900E2E31F /* ProfileOptions.swift */; };
-		983E571026EFE71C00E2E31F /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E570F26EFE71C00E2E31F /* ProfileTableViewCell.swift */; };
+		983E571026EFE71C00E2E31F /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E570F26EFE71C00E2E31F /* MoreTableViewCell.swift */; };
 		983E571426EFE7DE00E2E31F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E571326EFE7DE00E2E31F /* Profile.swift */; };
 		983E571626EFED7A00E2E31F /* ProfileItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E571526EFED7A00E2E31F /* ProfileItems.swift */; };
 		983E571826F115BB00E2E31F /* TranscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E571726F115BB00E2E31F /* TranscriptionManager.swift */; };
+		983E57B32703CDC200E2E31F /* SpeechRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E57B22703CDC200E2E31F /* SpeechRecognitionManager.swift */; };
 		984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C68DA26CAB84C0046ED58 /* Alert.swift */; };
 		984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C690C26CB54E60046ED58 /* AuthManager.swift */; };
 		984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */; };
@@ -75,7 +76,12 @@
 		986BB40426B8A46200D6E492 /* VR_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40326B8A46200D6E492 /* VR_AppTests.swift */; };
 		986BB40F26B8A46200D6E492 /* VR_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BB40E26B8A46200D6E492 /* VR_AppUITests.swift */; };
 		987B64F426D00E8C003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987B64F326D00E8B003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist */; };
-		987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B64F526D04DD0003F21A8 /* userDefault.swift */; };
+		987B64F626D04DD0003F21A8 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B64F526D04DD0003F21A8 /* UserDefaultManager.swift */; };
+		987F628D270545FC0043A247 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F628C270545FC0043A247 /* ForgotPasswordViewController.swift */; };
+		987F628F27064C630043A247 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F628E27064C630043A247 /* Section.swift */; };
+		987F6294270A4A0C0043A247 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F6293270A4A0C0043A247 /* ProfileViewController.swift */; };
+		987F6298270A4DDD0043A247 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F6297270A4DDD0043A247 /* ProfileTableViewCell.swift */; };
+		987F629A270D062D0043A247 /* RecordingRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F6299270D062C0043A247 /* RecordingRecognitionManager.swift */; };
 		988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B499726CDC98900EC7DAE /* CoreDataManager.swift */; };
 		989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BE05A26C4332500A2F4CB /* Transcript.swift */; };
 		98A1262A26E9074700896A5C /* TranscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1262926E9074700896A5C /* TranscriptionTableViewCell.swift */; };
@@ -118,7 +124,7 @@
 		982CCC7726BACFFB00E260E3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		982CCC8726BAD96000E260E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		982CCC8C26BAD97500E260E3 /* TranscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionsViewController.swift; sourceTree = "<group>"; };
-		982CCC9126BAD98E00E260E3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		982CCC9126BAD98E00E260E3 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		982CCCA026BAD9EB00E260E3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -168,10 +174,11 @@
 		983286AA26D7D5D90002E185 /* googleapis.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = googleapis.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		983E570926EFE3DD00E2E31F /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
 		983E570B26EFE65900E2E31F /* ProfileOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptions.swift; sourceTree = "<group>"; };
-		983E570F26EFE71C00E2E31F /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		983E570F26EFE71C00E2E31F /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		983E571326EFE7DE00E2E31F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		983E571526EFED7A00E2E31F /* ProfileItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItems.swift; sourceTree = "<group>"; };
 		983E571726F115BB00E2E31F /* TranscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionManager.swift; sourceTree = "<group>"; };
+		983E57B22703CDC200E2E31F /* SpeechRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionManager.swift; sourceTree = "<group>"; };
 		984C68DA26CAB84C0046ED58 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		984C690C26CB54E60046ED58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		984EDF9426C1818E00DBA40C /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +202,12 @@
 		986BB41026B8A46200D6E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		987B64F126CF2D2B003F21A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		987B64F326D00E8B003F21A8 /* client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_675781880683-vmst0ctj63uvii5kmps89bhotjsj5r4h.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
-		987B64F526D04DD0003F21A8 /* userDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefault.swift; sourceTree = "<group>"; };
+		987B64F526D04DD0003F21A8 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		987F628C270545FC0043A247 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		987F628E27064C630043A247 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		987F6293270A4A0C0043A247 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		987F6297270A4DDD0043A247 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		987F6299270D062C0043A247 /* RecordingRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingRecognitionManager.swift; sourceTree = "<group>"; };
 		988B499726CDC98900EC7DAE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		989BE05A26C4332500A2F4CB /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
 		98A1262926E9074700896A5C /* TranscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -276,8 +288,10 @@
 				982CCC7226BACDA900E260E3 /* PresenterManager.swift */,
 				984C690C26CB54E60046ED58 /* AuthManager.swift */,
 				988B499726CDC98900EC7DAE /* CoreDataManager.swift */,
-				987B64F526D04DD0003F21A8 /* userDefault.swift */,
+				987B64F526D04DD0003F21A8 /* UserDefaultManager.swift */,
 				983E571726F115BB00E2E31F /* TranscriptionManager.swift */,
+				983E57B22703CDC200E2E31F /* SpeechRecognitionManager.swift */,
+				987F6299270D062C0043A247 /* RecordingRecognitionManager.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -292,6 +306,7 @@
 				982CCCAF26BADA0900E260E3 /* SignInViewController.swift */,
 				982CCCB426BADA1A00E260E3 /* GenderViewController.swift */,
 				982CCCB926BADA3100E260E3 /* UserIdentityViewController.swift */,
+				987F628C270545FC0043A247 /* ForgotPasswordViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -299,13 +314,10 @@
 		982CCC8626BAD93000E260E3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				982CCC8726BAD96000E260E3 /* HomeViewController.swift */,
-				982CCC8C26BAD97500E260E3 /* TranscriptionsViewController.swift */,
-				982CCC9126BAD98E00E260E3 /* ProfileViewController.swift */,
-				982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */,
+				987F6292270A49EC0043A247 /* MoreStack */,
+				987F6291270A49CF0043A247 /* TranscriptionStack */,
+				987F6290270A49BE0043A247 /* HomeSatck */,
 				982CCC9B26BAD9D700E260E3 /* ErrorViewController.swift */,
-				9808544726D161A400A8538D /* NoteViewController.swift */,
-				98A1262B26E912EA00896A5C /* DetailedTranscriptionViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -422,7 +434,8 @@
 		983E570D26EFE6C100E2E31F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				983E570F26EFE71C00E2E31F /* ProfileTableViewCell.swift */,
+				983E570F26EFE71C00E2E31F /* MoreTableViewCell.swift */,
+				987F6297270A4DDD0043A247 /* ProfileTableViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -442,6 +455,7 @@
 				983E571326EFE7DE00E2E31F /* Profile.swift */,
 				983E571526EFED7A00E2E31F /* ProfileItems.swift */,
 				983E571226EFE7C200E2E31F /* Settings */,
+				987F628E27064C630043A247 /* Section.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -565,6 +579,34 @@
 				982CCC8526BAD92500E260E3 /* Auth */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		987F6290270A49BE0043A247 /* HomeSatck */ = {
+			isa = PBXGroup;
+			children = (
+				982CCC9626BAD9B400E260E3 /* RecordingViewController.swift */,
+				9808544726D161A400A8538D /* NoteViewController.swift */,
+				982CCC8726BAD96000E260E3 /* HomeViewController.swift */,
+			);
+			path = HomeSatck;
+			sourceTree = "<group>";
+		};
+		987F6291270A49CF0043A247 /* TranscriptionStack */ = {
+			isa = PBXGroup;
+			children = (
+				98A1262B26E912EA00896A5C /* DetailedTranscriptionViewController.swift */,
+				982CCC8C26BAD97500E260E3 /* TranscriptionsViewController.swift */,
+			);
+			path = TranscriptionStack;
+			sourceTree = "<group>";
+		};
+		987F6292270A49EC0043A247 /* MoreStack */ = {
+			isa = PBXGroup;
+			children = (
+				982CCC9126BAD98E00E260E3 /* MoreViewController.swift */,
+				987F6293270A4A0C0043A247 /* ProfileViewController.swift */,
+			);
+			path = MoreStack;
 			sourceTree = "<group>";
 		};
 		989BE05926C432FC00A2F4CB /* Main */ = {
@@ -810,14 +852,15 @@
 				9832867C26D7D5C30002E185 /* SpeechRecognitionService.swift in Sources */,
 				986BB3EA26B8A45D00D6E492 /* AppDelegate.swift in Sources */,
 				98A1263026EAF3E600896A5C /* Date+Extension.swift in Sources */,
-				987B64F626D04DD0003F21A8 /* userDefault.swift in Sources */,
+				987B64F626D04DD0003F21A8 /* UserDefaultManager.swift in Sources */,
 				982CCC8D26BAD97500E260E3 /* TranscriptionsViewController.swift in Sources */,
 				984EDF9526C1818E00DBA40C /* CustomNavigationViewController.swift in Sources */,
 				983E570C26EFE65900E2E31F /* ProfileOptions.swift in Sources */,
 				984C68DB26CAB84C0046ED58 /* Alert.swift in Sources */,
 				98A1262A26E9074700896A5C /* TranscriptionTableViewCell.swift in Sources */,
 				983286B726D7D5DA0002E185 /* label.proto in Sources */,
-				982CCC9226BAD98E00E260E3 /* ProfileViewController.swift in Sources */,
+				982CCC9226BAD98E00E260E3 /* MoreViewController.swift in Sources */,
+				987F628F27064C630043A247 /* Section.swift in Sources */,
 				983E570A26EFE3DD00E2E31F /* SettingsOptions.swift in Sources */,
 				982CCCB526BADA1A00E260E3 /* GenderViewController.swift in Sources */,
 				986BB3EC26B8A45D00D6E492 /* SceneDelegate.swift in Sources */,
@@ -831,11 +874,15 @@
 				98A1262E26EA27BA00896A5C /* CustomUITabBarController.swift in Sources */,
 				9808544826D161A400A8538D /* NoteViewController.swift in Sources */,
 				982CCCAB26BAD9FF00E260E3 /* SignUpViewController.swift in Sources */,
+				987F628D270545FC0043A247 /* ForgotPasswordViewController.swift in Sources */,
 				983286BF26D7D5DA0002E185 /* ErrorDetails.pbobjc.m in Sources */,
+				987F629A270D062D0043A247 /* RecordingRecognitionManager.swift in Sources */,
 				983286C126D7D5DA0002E185 /* descriptor.proto in Sources */,
+				987F6294270A4A0C0043A247 /* ProfileViewController.swift in Sources */,
 				983286AF26D7D5DA0002E185 /* cloud_speech.proto in Sources */,
 				983286BA26D7D5DA0002E185 /* code.proto in Sources */,
 				98BB31CF26CC2BF100A6439D /* Actor.swift in Sources */,
+				987F6298270A4DDD0043A247 /* ProfileTableViewCell.swift in Sources */,
 				983286BD26D7D5DA0002E185 /* Code.pbobjc.m in Sources */,
 				980C9F5126D895160043F3E3 /* GoogleSpeechManager.swift in Sources */,
 				982CCC9726BAD9B400E260E3 /* RecordingViewController.swift in Sources */,
@@ -863,12 +910,13 @@
 				989BE05B26C4332500A2F4CB /* Transcript.swift in Sources */,
 				983286B426D7D5DA0002E185 /* Label.pbobjc.m in Sources */,
 				983E571426EFE7DE00E2E31F /* Profile.swift in Sources */,
-				983E571026EFE71C00E2E31F /* ProfileTableViewCell.swift in Sources */,
+				983E571026EFE71C00E2E31F /* MoreTableViewCell.swift in Sources */,
 				983286B226D7D5DA0002E185 /* http.proto in Sources */,
 				988B499826CDC98900EC7DAE /* CoreDataManager.swift in Sources */,
 				9808544426D13E9400A8538D /* PulseAnimation.swift in Sources */,
 				984C690D26CB54E60046ED58 /* AuthManager.swift in Sources */,
 				98A1262C26E912EA00896A5C /* DetailedTranscriptionViewController.swift in Sources */,
+				983E57B32703CDC200E2E31F /* SpeechRecognitionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

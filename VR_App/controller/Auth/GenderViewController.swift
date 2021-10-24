@@ -10,14 +10,15 @@ import UIKit
 
 class GenderViewController: UIViewController {
     
-    let otherGenders = ["Transexual Man","Transexual Woman","Transgender Man","Transgender Woman","Neither"]
+    private var otherGenders:[Any] = ["Transexual Man","Transexual Woman","Transgender Man","Transgender Woman","Neither"]
     var userGender:String = ""
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var InputContainer: UIView!
     @IBOutlet weak var genderTextField: UITextField!
-    var genderPicker = UIPickerView()
+    var genderPicker = UIPickerView(frame: .zero)
+    private var lastSelectedRow: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,18 +40,17 @@ class GenderViewController: UIViewController {
     }
     
     func styles(){
-        roundCorners(button: maleButton)
-        roundCorners(button: femaleButton)
-        roundCorners(button: continueButton)
+        [maleButton,femaleButton,continueButton].forEach { item in
+            roundCorners(button: item)
+        }
         textInputRoundCorners(view: InputContainer)
         
     }
     func otherCornerStyles(btn1:UIButton,btn2:UIButton){
-        btn1.layer.borderColor = Constants.Colors.CGgreen
-        btn2.layer.borderColor = Constants.Colors.CGgreen
-        btn1.layer.borderWidth = 1.0
-        btn2.layer.borderWidth = 1.0
-        
+        [btn1,btn2].forEach { item in
+            item.layer.borderColor = Constants.Colors.CGgreen
+            item.layer.borderWidth = 1.0
+        }
     }
 
    
@@ -134,9 +134,21 @@ class GenderViewController: UIViewController {
         cancel.tintColor = Constants.Colors.green
         toolBar.setItems([done,flexibleSpace,cancel], animated: true)
         toolBar.layer.backgroundColor = Constants.Colors.CGwhite
+        
         return toolBar
     }
+    func updateToolBarText(){
+        if self.lastSelectedRow == nil{
+            self.lastSelectedRow = 0
+        }
+        if self.lastSelectedRow! > self.otherGenders.count{
+            return
+        }
+        let data = self.otherGenders[self.lastSelectedRow!]
+        genderTextField.text = data as? String
+    }
     @objc func onSelectGender(){
+//        genderTextField.text = userGender
         genderTextField.resignFirstResponder()
         deSelectedFemale()
         deSelectedMale()
@@ -163,16 +175,16 @@ extension GenderViewController:UIPickerViewDataSource,UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return otherGenders.count
+        return self.otherGenders.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return otherGenders[row]
+        return self.otherGenders[row] as? String
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
         {
             let pickerLabel = UILabel()
             pickerLabel.textColor = UIColor.black
-            pickerLabel.text = otherGenders[row]
+            pickerLabel.text = otherGenders[row] as? String
             pickerLabel.font = UIFont(name: "Avenir", size: 14.0)
             pickerLabel.font = UIFont.boldSystemFont(ofSize: 20) // In this use your custom font
             pickerLabel.textAlignment = NSTextAlignment.center
@@ -180,11 +192,14 @@ extension GenderViewController:UIPickerViewDataSource,UIPickerViewDelegate{
         }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderTextField.text = otherGenders[row]
-        userGender =  genderTextField.text ?? ""
-        print(userGender)
-     
-//        genderTextField.resignFirstResponder()
+//        self.lastSelectedRow = row
+//        self.updateToolBarText()
+        genderTextField.text = self.otherGenders[row] as? String
+        userGender = self.otherGenders[row] as? String ?? ""
+        print(otherGenders[row])
+        deSelectedFemale()
+        deSelectedMale()
+        genderTextField.resignFirstResponder()
     }
     func showAlert(message:String){
         let alert = UIAlertController(title: "Sorry!", message:message, preferredStyle:UIAlertController.Style.alert)

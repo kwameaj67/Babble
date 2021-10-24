@@ -289,9 +289,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-Yg-aKk">
-                                                <rect key="frame" x="0.0" y="36.5" width="108.5" height="18.5"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="36.5" width="109" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -829,7 +829,6 @@
                                         <connections>
                                             <outlet property="icon" destination="1p6-CP-Kv8" id="BRf-aA-Vtr"/>
                                             <outlet property="title" destination="QV3-AP-8xY" id="APv-Mq-gSx"/>
-                                            <segue destination="tGY-zF-dk0" kind="show" id="T9u-Vu-w9m"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -871,7 +870,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vTP-SU-2AK">
-                                <rect key="frame" x="20" y="98" width="374" height="330"/>
+                                <rect key="frame" x="20" y="54" width="374" height="330"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="330" id="zQa-wd-YIr"/>
@@ -1031,9 +1030,6 @@
             <point key="canvasLocation" x="5170" y="700"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="T9u-Vu-w9m"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
@@ -1052,6 +1048,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -39,17 +39,17 @@ class UserIdentityViewController: UIViewController {
         
     }
     func Styles(){
-        roundCorners(button: doneButton)
-        roundCorners(button: deafButton)
-        roundCorners(button: dumbButton)
+        [doneButton,deafButton,dumbButton].forEach { item in
+            roundCorners(button: item)
+        }
         textInputRoundCorners(view: inputContainer)
         otherCornerStyles(btn1: deafButton, btn2: dumbButton)
     }
     func otherCornerStyles(btn1:UIButton,btn2:UIButton){
-        btn1.layer.borderColor = Constants.Colors.CGgreen
-        btn2.layer.borderColor = Constants.Colors.CGgreen
-        btn1.layer.borderWidth = 1.0
-        btn2.layer.borderWidth = 1.0        
+        [btn1,btn2].forEach { item in
+            item.layer.borderColor = Constants.Colors.CGgreen
+            item.layer.borderWidth = 1.0
+        }
     }
     
     func createToolBar() -> UIToolbar{
@@ -155,6 +155,9 @@ extension UserIdentityViewController:UIPickerViewDelegate,UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         identityTextField.text = othersIdentity[row]
         userIdentity = identityTextField.text ?? ""
+        identityTextField.resignFirstResponder()
+        deselectDumb()
+        deselectDeaf()
         print(userIdentity)
     }
     func showAlert(message:String){
