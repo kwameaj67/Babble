@@ -32,13 +32,13 @@ The application was built using:
 <img align='left' src="VR_App/Assets.xcassets/onboardingScreen3.imageset/onboardingScreen3.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/welcomeScreen.imageset/welcomeScreen.png"  width="230">
 
-\ \
+&nbsp;
 ### Authentication Screens
 <img align='left' src="VR_App/Assets.xcassets/genderScreen.imageset/genderScreen.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/identityScreen.imageset/identityScreen.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/signupScreen.imageset/signupScreen.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/signinScreen.imageset/signinScreen.png"  width="230">
 
-\ \
+&nbsp;
 ### ForgotPassword Screen
 <img align='left' src="VR_App/Assets.xcassets/forgotPasswordScreen.imageset/forgotPasswordScreen.png"  width="230">
