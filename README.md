@@ -15,8 +15,14 @@ Babble is also extremely valuable to anyone who needs to generate a lot of writt
 ### Note ⚙️
 The application was built using: 
 * Xcode 12.5.1
+* Swift 5.4
+* macOS Big Sur 11.5.2
 
-### Technologies
+### Technologies 📲
+* Swift
+* Firebase/firestore
+* GoogleSignIn
+* googleapis
 
 # Screenshots
 
@@ -25,12 +31,14 @@ The application was built using:
 <img align='left' src="VR_App/Assets.xcassets/onboardingScreen2.imageset/onboardingScreen2.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/onboardingScreen3.imageset/onboardingScreen3.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/welcomeScreen.imageset/welcomeScreen.png"  width="230">
-<br/>
+
+
 ### Authentication Screens
 <img align='left' src="VR_App/Assets.xcassets/genderScreen.imageset/genderScreen.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/identityScreen.imageset/identityScreen.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/signupScreen.imageset/signupScreen.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/signinScreen.imageset/signinScreen.png"  width="230">
-<br/>
+
+
 ### ForgotPassword Screen
 <img align='left' src="VR_App/Assets.xcassets/forgotPasswordScreen.imageset/forgotPasswordScreen.png"  width="230">
