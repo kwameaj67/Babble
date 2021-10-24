@@ -14,6 +14,6 @@ Babble is also extremely valuable to anyone who needs to generate a lot of writt
 # Screenshots
 
 ### OnboardingScreens
-<img align='left'  src="VR_App/Assets.xcassets/onboardingScreen1.imageset/onboardingScreen1.png"  width="250">
-<img align='left' src="VR_App/Assets.xcassets/onboardingScreen2.imageset/onboardingScreen2.png"  width="250">
-<img align='left' src="VR_App/Assets.xcassets/onboardingScreen3.imageset/onboardingScreen3.png"  width="250">
+<img align='left' src="VR_App/Assets.xcassets/onboardingScreen1.imageset/onboardingScreen1.png"  width="230">
+<img align='left' src="VR_App/Assets.xcassets/onboardingScreen2.imageset/onboardingScreen2.png"  width="230">
+<img align='left' src="VR_App/Assets.xcassets/onboardingScreen3.imageset/onboardingScreen3.png"  width="230">
