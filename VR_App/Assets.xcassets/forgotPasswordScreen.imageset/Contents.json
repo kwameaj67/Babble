@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "onboardingScreen.png",
+      "filename" : "forgotPasswordScreen.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
