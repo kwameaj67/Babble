@@ -32,7 +32,7 @@ The application was built using:
 <img align='left' src="VR_App/Assets.xcassets/onboardingScreen1.imageset/onboardingScreen1.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/onboardingScreen2.imageset/onboardingScreen2.png"  width="230">
 <img align='left' src="VR_App/Assets.xcassets/onboardingScreen3.imageset/onboardingScreen3.png"  width="230">
-<img align='left' src="VR_App/Assets.xcassets/welcomeScreen.imageset/welcomeScreen.png"  width="230">
+<img  src="VR_App/Assets.xcassets/welcomeScreen.imageset/welcomeScreen.png"  width="230">
 
 &nbsp;
 ### Authentication Screens
@@ -43,4 +43,4 @@ The application was built using:
 
 &nbsp;
 ### ForgotPassword Screen
-<img align='left' src="VR_App/Assets.xcassets/forgotPasswordScreen.imageset/forgotPasswordScreen.png"  width="230">
+<img  src="VR_App/Assets.xcassets/forgotPasswordScreen.imageset/forgotPasswordScreen.png"  width="230">
