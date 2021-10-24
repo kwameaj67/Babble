@@ -5,5 +5,5 @@
 
 ## Screenshots
 # HomeScreen
-![](VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png)
-<!-- <img src="VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png"  width="200" height="400"> -->
+<!-- ![](VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png) -->
+<img src="VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png"  width="250">
