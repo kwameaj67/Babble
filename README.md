@@ -46,4 +46,13 @@ The application was built using:
 <img  src="VR_App/Assets.xcassets/forgotPasswordScreen.imageset/forgotPasswordScreen.png"  width="250">
 
 
+## Main App Screens
+<img align='left' src="VR_App/Assets.xcassets/homeScreen.imageset/homeScreen.png"  width="250">
+<img align='left' src="VR_App/Assets.xcassets/transcriptionScreen.imageset/transcriptionScreen.png"  width="250">
+<img src="VR_App/Assets.xcassets/settingScreen.imageset/settingScreen.png"  width="250">
+
+## Other Main App Screens
+<img align='left' src="VR_App/Assets.xcassets/recordingScreen.imageset/recordingScreen.png"  width="250">
+<img align='left' src="VR_App/Assets.xcassets/createTranscriptionScreen.imageset/createTranscriptionScreen.png"  width="250">
+<img src="VR_App/Assets.xcassets/transcriptionDetailScreen.imageset/transcriptionDetailScreen.png"  width="250">
 
