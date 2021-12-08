@@ -1,4 +1,4 @@
-# Final Year Project ⚡️
+# Project ⚡️
 
 ## Using ASR Technology To Aid Communication Between Persons With Hearing Disabilities.(Babble) 
 
