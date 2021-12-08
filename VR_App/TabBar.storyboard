@@ -596,8 +596,8 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Write a new note...">
                                                                         <attributes>
-                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                                                            <color key="NSColor" red="0.3552268147" green="0.50512009859999996" blue="0.52306431529999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="22" name="AvenirNext-Medium"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>

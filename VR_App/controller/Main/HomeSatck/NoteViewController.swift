@@ -16,6 +16,7 @@ class NoteViewController: UIViewController {
     var delegate: TranscriptionListDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Create Transcription"
         let date = currentDate()
         dateLabel.text = date
         hideBottomBar()
